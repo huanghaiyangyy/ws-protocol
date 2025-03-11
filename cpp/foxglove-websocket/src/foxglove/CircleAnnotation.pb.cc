@@ -5,477 +5,385 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
-#include <google/protobuf/stubs/port.h>
 #include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/wire_format_lite_inl.h>
+#include <google/protobuf/extension_set.h>
+#include <google/protobuf/wire_format_lite.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
+#include <google/protobuf/port_def.inc>
 
-namespace protobuf_foxglove_2fColor_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_foxglove_2fColor_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Color;
-}  // namespace protobuf_foxglove_2fColor_2eproto
-namespace protobuf_foxglove_2fPoint2_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_foxglove_2fPoint2_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Point2;
-}  // namespace protobuf_foxglove_2fPoint2_2eproto
-namespace protobuf_google_2fprotobuf_2ftimestamp_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_google_2fprotobuf_2ftimestamp_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Timestamp;
-}  // namespace protobuf_google_2fprotobuf_2ftimestamp_2eproto
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace foxglove {
-class CircleAnnotationDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<CircleAnnotation>
-      _instance;
-} _CircleAnnotation_default_instance_;
+PROTOBUF_CONSTEXPR CircleAnnotation::CircleAnnotation(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.timestamp_)*/nullptr
+  , /*decltype(_impl_.position_)*/nullptr
+  , /*decltype(_impl_.fill_color_)*/nullptr
+  , /*decltype(_impl_.outline_color_)*/nullptr
+  , /*decltype(_impl_.diameter_)*/0
+  , /*decltype(_impl_.thickness_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct CircleAnnotationDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CircleAnnotationDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CircleAnnotationDefaultTypeInternal() {}
+  union {
+    CircleAnnotation _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CircleAnnotationDefaultTypeInternal _CircleAnnotation_default_instance_;
 }  // namespace foxglove
-namespace protobuf_foxglove_2fCircleAnnotation_2eproto {
-static void InitDefaultsCircleAnnotation() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_foxglove_2fCircleAnnotation_2eproto[1];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_foxglove_2fCircleAnnotation_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_foxglove_2fCircleAnnotation_2eproto = nullptr;
 
-  {
-    void* ptr = &::foxglove::_CircleAnnotation_default_instance_;
-    new (ptr) ::foxglove::CircleAnnotation();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::foxglove::CircleAnnotation::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<3> scc_info_CircleAnnotation =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 3, InitDefaultsCircleAnnotation}, {
-      &protobuf_google_2fprotobuf_2ftimestamp_2eproto::scc_info_Timestamp.base,
-      &protobuf_foxglove_2fPoint2_2eproto::scc_info_Point2.base,
-      &protobuf_foxglove_2fColor_2eproto::scc_info_Color.base,}};
-
-void InitDefaults() {
-  ::google::protobuf::internal::InitSCC(&scc_info_CircleAnnotation.base);
-}
-
-::google::protobuf::Metadata file_level_metadata[1];
-
-const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_foxglove_2fCircleAnnotation_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::CircleAnnotation, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::CircleAnnotation, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::CircleAnnotation, timestamp_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::CircleAnnotation, position_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::CircleAnnotation, diameter_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::CircleAnnotation, thickness_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::CircleAnnotation, fill_color_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::CircleAnnotation, outline_color_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::foxglove::CircleAnnotation, _impl_.timestamp_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::CircleAnnotation, _impl_.position_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::CircleAnnotation, _impl_.diameter_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::CircleAnnotation, _impl_.thickness_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::CircleAnnotation, _impl_.fill_color_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::CircleAnnotation, _impl_.outline_color_),
 };
-static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::foxglove::CircleAnnotation)},
-};
-
-static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::foxglove::_CircleAnnotation_default_instance_),
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::foxglove::CircleAnnotation)},
 };
 
-void protobuf_AssignDescriptors() {
-  AddDescriptors();
-  AssignDescriptors(
-      "foxglove/CircleAnnotation.proto", schemas, file_default_instances, TableStruct::offsets,
-      file_level_metadata, NULL, NULL);
+static const ::_pb::Message* const file_default_instances[] = {
+  &::foxglove::_CircleAnnotation_default_instance_._instance,
+};
+
+const char descriptor_table_protodef_foxglove_2fCircleAnnotation_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n\037foxglove/CircleAnnotation.proto\022\010foxgl"
+  "ove\032\024foxglove/Color.proto\032\025foxglove/Poin"
+  "t2.proto\032\037google/protobuf/timestamp.prot"
+  "o\"\327\001\n\020CircleAnnotation\022-\n\ttimestamp\030\001 \001("
+  "\0132\032.google.protobuf.Timestamp\022\"\n\010positio"
+  "n\030\002 \001(\0132\020.foxglove.Point2\022\020\n\010diameter\030\003 "
+  "\001(\001\022\021\n\tthickness\030\004 \001(\001\022#\n\nfill_color\030\005 \001"
+  "(\0132\017.foxglove.Color\022&\n\routline_color\030\006 \001"
+  "(\0132\017.foxglove.Colorb\006proto3"
+  ;
+static const ::_pbi::DescriptorTable* const descriptor_table_foxglove_2fCircleAnnotation_2eproto_deps[3] = {
+  &::descriptor_table_foxglove_2fColor_2eproto,
+  &::descriptor_table_foxglove_2fPoint2_2eproto,
+  &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
+};
+static ::_pbi::once_flag descriptor_table_foxglove_2fCircleAnnotation_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_foxglove_2fCircleAnnotation_2eproto = {
+    false, false, 347, descriptor_table_protodef_foxglove_2fCircleAnnotation_2eproto,
+    "foxglove/CircleAnnotation.proto",
+    &descriptor_table_foxglove_2fCircleAnnotation_2eproto_once, descriptor_table_foxglove_2fCircleAnnotation_2eproto_deps, 3, 1,
+    schemas, file_default_instances, TableStruct_foxglove_2fCircleAnnotation_2eproto::offsets,
+    file_level_metadata_foxglove_2fCircleAnnotation_2eproto, file_level_enum_descriptors_foxglove_2fCircleAnnotation_2eproto,
+    file_level_service_descriptors_foxglove_2fCircleAnnotation_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_foxglove_2fCircleAnnotation_2eproto_getter() {
+  return &descriptor_table_foxglove_2fCircleAnnotation_2eproto;
 }
 
-void protobuf_AssignDescriptorsOnce() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, protobuf_AssignDescriptors);
-}
-
-void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
-void protobuf_RegisterTypes(const ::std::string&) {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 1);
-}
-
-void AddDescriptorsImpl() {
-  InitDefaults();
-  static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\037foxglove/CircleAnnotation.proto\022\010foxgl"
-      "ove\032\024foxglove/Color.proto\032\025foxglove/Poin"
-      "t2.proto\032\037google/protobuf/timestamp.prot"
-      "o\"\327\001\n\020CircleAnnotation\022-\n\ttimestamp\030\001 \001("
-      "\0132\032.google.protobuf.Timestamp\022\"\n\010positio"
-      "n\030\002 \001(\0132\020.foxglove.Point2\022\020\n\010diameter\030\003 "
-      "\001(\001\022\021\n\tthickness\030\004 \001(\001\022#\n\nfill_color\030\005 \001"
-      "(\0132\017.foxglove.Color\022&\n\routline_color\030\006 \001"
-      "(\0132\017.foxglove.Colorb\006proto3"
-  };
-  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 347);
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
-    "foxglove/CircleAnnotation.proto", &protobuf_RegisterTypes);
-  ::protobuf_foxglove_2fColor_2eproto::AddDescriptors();
-  ::protobuf_foxglove_2fPoint2_2eproto::AddDescriptors();
-  ::protobuf_google_2fprotobuf_2ftimestamp_2eproto::AddDescriptors();
-}
-
-void AddDescriptors() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, AddDescriptorsImpl);
-}
-// Force AddDescriptors() to be called at dynamic initialization time.
-struct StaticDescriptorInitializer {
-  StaticDescriptorInitializer() {
-    AddDescriptors();
-  }
-} static_descriptor_initializer;
-}  // namespace protobuf_foxglove_2fCircleAnnotation_2eproto
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_foxglove_2fCircleAnnotation_2eproto(&descriptor_table_foxglove_2fCircleAnnotation_2eproto);
 namespace foxglove {
 
 // ===================================================================
 
-void CircleAnnotation::InitAsDefaultInstance() {
-  ::foxglove::_CircleAnnotation_default_instance_._instance.get_mutable()->timestamp_ = const_cast< ::google::protobuf::Timestamp*>(
-      ::google::protobuf::Timestamp::internal_default_instance());
-  ::foxglove::_CircleAnnotation_default_instance_._instance.get_mutable()->position_ = const_cast< ::foxglove::Point2*>(
-      ::foxglove::Point2::internal_default_instance());
-  ::foxglove::_CircleAnnotation_default_instance_._instance.get_mutable()->fill_color_ = const_cast< ::foxglove::Color*>(
-      ::foxglove::Color::internal_default_instance());
-  ::foxglove::_CircleAnnotation_default_instance_._instance.get_mutable()->outline_color_ = const_cast< ::foxglove::Color*>(
-      ::foxglove::Color::internal_default_instance());
+class CircleAnnotation::_Internal {
+ public:
+  static const ::PROTOBUF_NAMESPACE_ID::Timestamp& timestamp(const CircleAnnotation* msg);
+  static const ::foxglove::Point2& position(const CircleAnnotation* msg);
+  static const ::foxglove::Color& fill_color(const CircleAnnotation* msg);
+  static const ::foxglove::Color& outline_color(const CircleAnnotation* msg);
+};
+
+const ::PROTOBUF_NAMESPACE_ID::Timestamp&
+CircleAnnotation::_Internal::timestamp(const CircleAnnotation* msg) {
+  return *msg->_impl_.timestamp_;
+}
+const ::foxglove::Point2&
+CircleAnnotation::_Internal::position(const CircleAnnotation* msg) {
+  return *msg->_impl_.position_;
+}
+const ::foxglove::Color&
+CircleAnnotation::_Internal::fill_color(const CircleAnnotation* msg) {
+  return *msg->_impl_.fill_color_;
+}
+const ::foxglove::Color&
+CircleAnnotation::_Internal::outline_color(const CircleAnnotation* msg) {
+  return *msg->_impl_.outline_color_;
 }
 void CircleAnnotation::clear_timestamp() {
-  if (GetArenaNoVirtual() == NULL && timestamp_ != NULL) {
-    delete timestamp_;
+  if (GetArenaForAllocation() == nullptr && _impl_.timestamp_ != nullptr) {
+    delete _impl_.timestamp_;
   }
-  timestamp_ = NULL;
+  _impl_.timestamp_ = nullptr;
 }
 void CircleAnnotation::clear_position() {
-  if (GetArenaNoVirtual() == NULL && position_ != NULL) {
-    delete position_;
+  if (GetArenaForAllocation() == nullptr && _impl_.position_ != nullptr) {
+    delete _impl_.position_;
   }
-  position_ = NULL;
+  _impl_.position_ = nullptr;
 }
 void CircleAnnotation::clear_fill_color() {
-  if (GetArenaNoVirtual() == NULL && fill_color_ != NULL) {
-    delete fill_color_;
+  if (GetArenaForAllocation() == nullptr && _impl_.fill_color_ != nullptr) {
+    delete _impl_.fill_color_;
   }
-  fill_color_ = NULL;
+  _impl_.fill_color_ = nullptr;
 }
 void CircleAnnotation::clear_outline_color() {
-  if (GetArenaNoVirtual() == NULL && outline_color_ != NULL) {
-    delete outline_color_;
+  if (GetArenaForAllocation() == nullptr && _impl_.outline_color_ != nullptr) {
+    delete _impl_.outline_color_;
   }
-  outline_color_ = NULL;
+  _impl_.outline_color_ = nullptr;
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int CircleAnnotation::kTimestampFieldNumber;
-const int CircleAnnotation::kPositionFieldNumber;
-const int CircleAnnotation::kDiameterFieldNumber;
-const int CircleAnnotation::kThicknessFieldNumber;
-const int CircleAnnotation::kFillColorFieldNumber;
-const int CircleAnnotation::kOutlineColorFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-CircleAnnotation::CircleAnnotation()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_foxglove_2fCircleAnnotation_2eproto::scc_info_CircleAnnotation.base);
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:foxglove.CircleAnnotation)
+CircleAnnotation::CircleAnnotation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:foxglove.CircleAnnotation)
 }
 CircleAnnotation::CircleAnnotation(const CircleAnnotation& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_timestamp()) {
-    timestamp_ = new ::google::protobuf::Timestamp(*from.timestamp_);
-  } else {
-    timestamp_ = NULL;
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CircleAnnotation* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.timestamp_){nullptr}
+    , decltype(_impl_.position_){nullptr}
+    , decltype(_impl_.fill_color_){nullptr}
+    , decltype(_impl_.outline_color_){nullptr}
+    , decltype(_impl_.diameter_){}
+    , decltype(_impl_.thickness_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_timestamp()) {
+    _this->_impl_.timestamp_ = new ::PROTOBUF_NAMESPACE_ID::Timestamp(*from._impl_.timestamp_);
   }
-  if (from.has_position()) {
-    position_ = new ::foxglove::Point2(*from.position_);
-  } else {
-    position_ = NULL;
+  if (from._internal_has_position()) {
+    _this->_impl_.position_ = new ::foxglove::Point2(*from._impl_.position_);
   }
-  if (from.has_fill_color()) {
-    fill_color_ = new ::foxglove::Color(*from.fill_color_);
-  } else {
-    fill_color_ = NULL;
+  if (from._internal_has_fill_color()) {
+    _this->_impl_.fill_color_ = new ::foxglove::Color(*from._impl_.fill_color_);
   }
-  if (from.has_outline_color()) {
-    outline_color_ = new ::foxglove::Color(*from.outline_color_);
-  } else {
-    outline_color_ = NULL;
+  if (from._internal_has_outline_color()) {
+    _this->_impl_.outline_color_ = new ::foxglove::Color(*from._impl_.outline_color_);
   }
-  ::memcpy(&diameter_, &from.diameter_,
-    static_cast<size_t>(reinterpret_cast<char*>(&thickness_) -
-    reinterpret_cast<char*>(&diameter_)) + sizeof(thickness_));
+  ::memcpy(&_impl_.diameter_, &from._impl_.diameter_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.thickness_) -
+    reinterpret_cast<char*>(&_impl_.diameter_)) + sizeof(_impl_.thickness_));
   // @@protoc_insertion_point(copy_constructor:foxglove.CircleAnnotation)
 }
 
-void CircleAnnotation::SharedCtor() {
-  ::memset(&timestamp_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&thickness_) -
-      reinterpret_cast<char*>(&timestamp_)) + sizeof(thickness_));
+inline void CircleAnnotation::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.timestamp_){nullptr}
+    , decltype(_impl_.position_){nullptr}
+    , decltype(_impl_.fill_color_){nullptr}
+    , decltype(_impl_.outline_color_){nullptr}
+    , decltype(_impl_.diameter_){0}
+    , decltype(_impl_.thickness_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CircleAnnotation::~CircleAnnotation() {
   // @@protoc_insertion_point(destructor:foxglove.CircleAnnotation)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
 
-void CircleAnnotation::SharedDtor() {
-  if (this != internal_default_instance()) delete timestamp_;
-  if (this != internal_default_instance()) delete position_;
-  if (this != internal_default_instance()) delete fill_color_;
-  if (this != internal_default_instance()) delete outline_color_;
+inline void CircleAnnotation::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.timestamp_;
+  if (this != internal_default_instance()) delete _impl_.position_;
+  if (this != internal_default_instance()) delete _impl_.fill_color_;
+  if (this != internal_default_instance()) delete _impl_.outline_color_;
 }
 
 void CircleAnnotation::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* CircleAnnotation::descriptor() {
-  ::protobuf_foxglove_2fCircleAnnotation_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_foxglove_2fCircleAnnotation_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const CircleAnnotation& CircleAnnotation::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_foxglove_2fCircleAnnotation_2eproto::scc_info_CircleAnnotation.base);
-  return *internal_default_instance();
-}
-
 
 void CircleAnnotation::Clear() {
 // @@protoc_insertion_point(message_clear_start:foxglove.CircleAnnotation)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == NULL && timestamp_ != NULL) {
-    delete timestamp_;
+  if (GetArenaForAllocation() == nullptr && _impl_.timestamp_ != nullptr) {
+    delete _impl_.timestamp_;
   }
-  timestamp_ = NULL;
-  if (GetArenaNoVirtual() == NULL && position_ != NULL) {
-    delete position_;
+  _impl_.timestamp_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.position_ != nullptr) {
+    delete _impl_.position_;
   }
-  position_ = NULL;
-  if (GetArenaNoVirtual() == NULL && fill_color_ != NULL) {
-    delete fill_color_;
+  _impl_.position_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.fill_color_ != nullptr) {
+    delete _impl_.fill_color_;
   }
-  fill_color_ = NULL;
-  if (GetArenaNoVirtual() == NULL && outline_color_ != NULL) {
-    delete outline_color_;
+  _impl_.fill_color_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.outline_color_ != nullptr) {
+    delete _impl_.outline_color_;
   }
-  outline_color_ = NULL;
-  ::memset(&diameter_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&thickness_) -
-      reinterpret_cast<char*>(&diameter_)) + sizeof(thickness_));
-  _internal_metadata_.Clear();
+  _impl_.outline_color_ = nullptr;
+  ::memset(&_impl_.diameter_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.thickness_) -
+      reinterpret_cast<char*>(&_impl_.diameter_)) + sizeof(_impl_.thickness_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-bool CircleAnnotation::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:foxglove.CircleAnnotation)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+const char* CircleAnnotation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
       // .google.protobuf.Timestamp timestamp = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_timestamp()));
-        } else {
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_timestamp(), ptr);
+          CHK_(ptr);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // .foxglove.Point2 position = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_position()));
-        } else {
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_position(), ptr);
+          CHK_(ptr);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // double diameter = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(25u /* 25 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &diameter_)));
-        } else {
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 25)) {
+          _impl_.diameter_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // double thickness = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(33u /* 33 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &thickness_)));
-        } else {
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 33)) {
+          _impl_.thickness_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // .foxglove.Color fill_color = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_fill_color()));
-        } else {
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
+          ptr = ctx->ParseMessage(_internal_mutable_fill_color(), ptr);
+          CHK_(ptr);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // .foxglove.Color outline_color = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_outline_color()));
-        } else {
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
+          ptr = ctx->ParseMessage(_internal_mutable_outline_color(), ptr);
+          CHK_(ptr);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
     }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:foxglove.CircleAnnotation)
-  return true;
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:foxglove.CircleAnnotation)
-  return false;
-#undef DO_
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-void CircleAnnotation::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:foxglove.CircleAnnotation)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .google.protobuf.Timestamp timestamp = 1;
-  if (this->has_timestamp()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, this->_internal_timestamp(), output);
-  }
-
-  // .foxglove.Point2 position = 2;
-  if (this->has_position()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, this->_internal_position(), output);
-  }
-
-  // double diameter = 3;
-  if (this->diameter() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(3, this->diameter(), output);
-  }
-
-  // double thickness = 4;
-  if (this->thickness() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(4, this->thickness(), output);
-  }
-
-  // .foxglove.Color fill_color = 5;
-  if (this->has_fill_color()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      5, this->_internal_fill_color(), output);
-  }
-
-  // .foxglove.Color outline_color = 6;
-  if (this->has_outline_color()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      6, this->_internal_outline_color(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:foxglove.CircleAnnotation)
-}
-
-::google::protobuf::uint8* CircleAnnotation::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+uint8_t* CircleAnnotation::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:foxglove.CircleAnnotation)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .google.protobuf.Timestamp timestamp = 1;
-  if (this->has_timestamp()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, this->_internal_timestamp(), deterministic, target);
+  if (this->_internal_has_timestamp()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::timestamp(this),
+        _Internal::timestamp(this).GetCachedSize(), target, stream);
   }
 
   // .foxglove.Point2 position = 2;
-  if (this->has_position()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, this->_internal_position(), deterministic, target);
+  if (this->_internal_has_position()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::position(this),
+        _Internal::position(this).GetCachedSize(), target, stream);
   }
 
   // double diameter = 3;
-  if (this->diameter() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(3, this->diameter(), target);
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_diameter = this->_internal_diameter();
+  uint64_t raw_diameter;
+  memcpy(&raw_diameter, &tmp_diameter, sizeof(tmp_diameter));
+  if (raw_diameter != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(3, this->_internal_diameter(), target);
   }
 
   // double thickness = 4;
-  if (this->thickness() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(4, this->thickness(), target);
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_thickness = this->_internal_thickness();
+  uint64_t raw_thickness;
+  memcpy(&raw_thickness, &tmp_thickness, sizeof(tmp_thickness));
+  if (raw_thickness != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(4, this->_internal_thickness(), target);
   }
 
   // .foxglove.Color fill_color = 5;
-  if (this->has_fill_color()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        5, this->_internal_fill_color(), deterministic, target);
+  if (this->_internal_has_fill_color()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(5, _Internal::fill_color(this),
+        _Internal::fill_color(this).GetCachedSize(), target, stream);
   }
 
   // .foxglove.Color outline_color = 6;
-  if (this->has_outline_color()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        6, this->_internal_outline_color(), deterministic, target);
+  if (this->_internal_has_outline_color()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(6, _Internal::outline_color(this),
+        _Internal::outline_color(this).GetCachedSize(), target, stream);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:foxglove.CircleAnnotation)
   return target;
@@ -485,101 +393,105 @@ size_t CircleAnnotation::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:foxglove.CircleAnnotation)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // .google.protobuf.Timestamp timestamp = 1;
-  if (this->has_timestamp()) {
+  if (this->_internal_has_timestamp()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *timestamp_);
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.timestamp_);
   }
 
   // .foxglove.Point2 position = 2;
-  if (this->has_position()) {
+  if (this->_internal_has_position()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *position_);
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.position_);
   }
 
   // .foxglove.Color fill_color = 5;
-  if (this->has_fill_color()) {
+  if (this->_internal_has_fill_color()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *fill_color_);
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.fill_color_);
   }
 
   // .foxglove.Color outline_color = 6;
-  if (this->has_outline_color()) {
+  if (this->_internal_has_outline_color()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *outline_color_);
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.outline_color_);
   }
 
   // double diameter = 3;
-  if (this->diameter() != 0) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_diameter = this->_internal_diameter();
+  uint64_t raw_diameter;
+  memcpy(&raw_diameter, &tmp_diameter, sizeof(tmp_diameter));
+  if (raw_diameter != 0) {
     total_size += 1 + 8;
   }
 
   // double thickness = 4;
-  if (this->thickness() != 0) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_thickness = this->_internal_thickness();
+  uint64_t raw_thickness;
+  memcpy(&raw_thickness, &tmp_thickness, sizeof(tmp_thickness));
+  if (raw_thickness != 0) {
     total_size += 1 + 8;
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CircleAnnotation::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:foxglove.CircleAnnotation)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CircleAnnotation* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const CircleAnnotation>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:foxglove.CircleAnnotation)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:foxglove.CircleAnnotation)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CircleAnnotation::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CircleAnnotation::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CircleAnnotation::GetClassData() const { return &_class_data_; }
 
-void CircleAnnotation::MergeFrom(const CircleAnnotation& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:foxglove.CircleAnnotation)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+
+void CircleAnnotation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CircleAnnotation*>(&to_msg);
+  auto& from = static_cast<const CircleAnnotation&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:foxglove.CircleAnnotation)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_timestamp()) {
-    mutable_timestamp()->::google::protobuf::Timestamp::MergeFrom(from.timestamp());
+  if (from._internal_has_timestamp()) {
+    _this->_internal_mutable_timestamp()->::PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(
+        from._internal_timestamp());
   }
-  if (from.has_position()) {
-    mutable_position()->::foxglove::Point2::MergeFrom(from.position());
+  if (from._internal_has_position()) {
+    _this->_internal_mutable_position()->::foxglove::Point2::MergeFrom(
+        from._internal_position());
   }
-  if (from.has_fill_color()) {
-    mutable_fill_color()->::foxglove::Color::MergeFrom(from.fill_color());
+  if (from._internal_has_fill_color()) {
+    _this->_internal_mutable_fill_color()->::foxglove::Color::MergeFrom(
+        from._internal_fill_color());
   }
-  if (from.has_outline_color()) {
-    mutable_outline_color()->::foxglove::Color::MergeFrom(from.outline_color());
+  if (from._internal_has_outline_color()) {
+    _this->_internal_mutable_outline_color()->::foxglove::Color::MergeFrom(
+        from._internal_outline_color());
   }
-  if (from.diameter() != 0) {
-    set_diameter(from.diameter());
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_diameter = from._internal_diameter();
+  uint64_t raw_diameter;
+  memcpy(&raw_diameter, &tmp_diameter, sizeof(tmp_diameter));
+  if (raw_diameter != 0) {
+    _this->_internal_set_diameter(from._internal_diameter());
   }
-  if (from.thickness() != 0) {
-    set_thickness(from.thickness());
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_thickness = from._internal_thickness();
+  uint64_t raw_thickness;
+  memcpy(&raw_thickness, &tmp_thickness, sizeof(tmp_thickness));
+  if (raw_thickness != 0) {
+    _this->_internal_set_thickness(from._internal_thickness());
   }
-}
-
-void CircleAnnotation::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:foxglove.CircleAnnotation)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CircleAnnotation::CopyFrom(const CircleAnnotation& from) {
@@ -593,35 +505,31 @@ bool CircleAnnotation::IsInitialized() const {
   return true;
 }
 
-void CircleAnnotation::Swap(CircleAnnotation* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void CircleAnnotation::InternalSwap(CircleAnnotation* other) {
   using std::swap;
-  swap(timestamp_, other->timestamp_);
-  swap(position_, other->position_);
-  swap(fill_color_, other->fill_color_);
-  swap(outline_color_, other->outline_color_);
-  swap(diameter_, other->diameter_);
-  swap(thickness_, other->thickness_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(CircleAnnotation, _impl_.thickness_)
+      + sizeof(CircleAnnotation::_impl_.thickness_)
+      - PROTOBUF_FIELD_OFFSET(CircleAnnotation, _impl_.timestamp_)>(
+          reinterpret_cast<char*>(&_impl_.timestamp_),
+          reinterpret_cast<char*>(&other->_impl_.timestamp_));
 }
 
-::google::protobuf::Metadata CircleAnnotation::GetMetadata() const {
-  protobuf_foxglove_2fCircleAnnotation_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_foxglove_2fCircleAnnotation_2eproto::file_level_metadata[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata CircleAnnotation::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_foxglove_2fCircleAnnotation_2eproto_getter, &descriptor_table_foxglove_2fCircleAnnotation_2eproto_once,
+      file_level_metadata_foxglove_2fCircleAnnotation_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace foxglove
-namespace google {
-namespace protobuf {
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::foxglove::CircleAnnotation* Arena::CreateMaybeMessage< ::foxglove::CircleAnnotation >(Arena* arena) {
-  return Arena::CreateInternal< ::foxglove::CircleAnnotation >(arena);
+PROTOBUF_NAMESPACE_OPEN
+template<> PROTOBUF_NOINLINE ::foxglove::CircleAnnotation*
+Arena::CreateMaybeMessage< ::foxglove::CircleAnnotation >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::foxglove::CircleAnnotation >(arena);
 }
-}  // namespace protobuf
-}  // namespace google
+PROTOBUF_NAMESPACE_CLOSE
 
 // @@protoc_insertion_point(global_scope)
+#include <google/protobuf/port_undef.inc>

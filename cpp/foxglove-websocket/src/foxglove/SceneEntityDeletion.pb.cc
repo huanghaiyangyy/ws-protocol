@@ -5,122 +5,92 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
-#include <google/protobuf/stubs/port.h>
 #include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/wire_format_lite_inl.h>
+#include <google/protobuf/extension_set.h>
+#include <google/protobuf/wire_format_lite.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
+#include <google/protobuf/port_def.inc>
 
-namespace protobuf_google_2fprotobuf_2ftimestamp_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_google_2fprotobuf_2ftimestamp_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Timestamp;
-}  // namespace protobuf_google_2fprotobuf_2ftimestamp_2eproto
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace foxglove {
-class SceneEntityDeletionDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SceneEntityDeletion>
-      _instance;
-} _SceneEntityDeletion_default_instance_;
+PROTOBUF_CONSTEXPR SceneEntityDeletion::SceneEntityDeletion(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.timestamp_)*/nullptr
+  , /*decltype(_impl_.type_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct SceneEntityDeletionDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SceneEntityDeletionDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SceneEntityDeletionDefaultTypeInternal() {}
+  union {
+    SceneEntityDeletion _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SceneEntityDeletionDefaultTypeInternal _SceneEntityDeletion_default_instance_;
 }  // namespace foxglove
-namespace protobuf_foxglove_2fSceneEntityDeletion_2eproto {
-static void InitDefaultsSceneEntityDeletion() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_foxglove_2fSceneEntityDeletion_2eproto[1];
+static const ::_pb::EnumDescriptor* file_level_enum_descriptors_foxglove_2fSceneEntityDeletion_2eproto[1];
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_foxglove_2fSceneEntityDeletion_2eproto = nullptr;
 
-  {
-    void* ptr = &::foxglove::_SceneEntityDeletion_default_instance_;
-    new (ptr) ::foxglove::SceneEntityDeletion();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::foxglove::SceneEntityDeletion::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<1> scc_info_SceneEntityDeletion =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsSceneEntityDeletion}, {
-      &protobuf_google_2fprotobuf_2ftimestamp_2eproto::scc_info_Timestamp.base,}};
-
-void InitDefaults() {
-  ::google::protobuf::internal::InitSCC(&scc_info_SceneEntityDeletion.base);
-}
-
-::google::protobuf::Metadata file_level_metadata[1];
-const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[1];
-
-const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_foxglove_2fSceneEntityDeletion_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::SceneEntityDeletion, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::SceneEntityDeletion, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::SceneEntityDeletion, timestamp_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::SceneEntityDeletion, type_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::SceneEntityDeletion, id_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::foxglove::SceneEntityDeletion, _impl_.timestamp_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::SceneEntityDeletion, _impl_.type_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::SceneEntityDeletion, _impl_.id_),
 };
-static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::foxglove::SceneEntityDeletion)},
-};
-
-static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::foxglove::_SceneEntityDeletion_default_instance_),
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::foxglove::SceneEntityDeletion)},
 };
 
-void protobuf_AssignDescriptors() {
-  AddDescriptors();
-  AssignDescriptors(
-      "foxglove/SceneEntityDeletion.proto", schemas, file_default_instances, TableStruct::offsets,
-      file_level_metadata, file_level_enum_descriptors, NULL);
+static const ::_pb::Message* const file_default_instances[] = {
+  &::foxglove::_SceneEntityDeletion_default_instance_._instance,
+};
+
+const char descriptor_table_protodef_foxglove_2fSceneEntityDeletion_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n\"foxglove/SceneEntityDeletion.proto\022\010fo"
+  "xglove\032\037google/protobuf/timestamp.proto\""
+  "\244\001\n\023SceneEntityDeletion\022-\n\ttimestamp\030\001 \001"
+  "(\0132\032.google.protobuf.Timestamp\0220\n\004type\030\002"
+  " \001(\0162\".foxglove.SceneEntityDeletion.Type"
+  "\022\n\n\002id\030\003 \001(\t\" \n\004Type\022\017\n\013MATCHING_ID\020\000\022\007\n"
+  "\003ALL\020\001b\006proto3"
+  ;
+static const ::_pbi::DescriptorTable* const descriptor_table_foxglove_2fSceneEntityDeletion_2eproto_deps[1] = {
+  &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
+};
+static ::_pbi::once_flag descriptor_table_foxglove_2fSceneEntityDeletion_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_foxglove_2fSceneEntityDeletion_2eproto = {
+    false, false, 254, descriptor_table_protodef_foxglove_2fSceneEntityDeletion_2eproto,
+    "foxglove/SceneEntityDeletion.proto",
+    &descriptor_table_foxglove_2fSceneEntityDeletion_2eproto_once, descriptor_table_foxglove_2fSceneEntityDeletion_2eproto_deps, 1, 1,
+    schemas, file_default_instances, TableStruct_foxglove_2fSceneEntityDeletion_2eproto::offsets,
+    file_level_metadata_foxglove_2fSceneEntityDeletion_2eproto, file_level_enum_descriptors_foxglove_2fSceneEntityDeletion_2eproto,
+    file_level_service_descriptors_foxglove_2fSceneEntityDeletion_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_foxglove_2fSceneEntityDeletion_2eproto_getter() {
+  return &descriptor_table_foxglove_2fSceneEntityDeletion_2eproto;
 }
 
-void protobuf_AssignDescriptorsOnce() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, protobuf_AssignDescriptors);
-}
-
-void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
-void protobuf_RegisterTypes(const ::std::string&) {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 1);
-}
-
-void AddDescriptorsImpl() {
-  InitDefaults();
-  static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\"foxglove/SceneEntityDeletion.proto\022\010fo"
-      "xglove\032\037google/protobuf/timestamp.proto\""
-      "\244\001\n\023SceneEntityDeletion\022-\n\ttimestamp\030\001 \001"
-      "(\0132\032.google.protobuf.Timestamp\0220\n\004type\030\002"
-      " \001(\0162\".foxglove.SceneEntityDeletion.Type"
-      "\022\n\n\002id\030\003 \001(\t\" \n\004Type\022\017\n\013MATCHING_ID\020\000\022\007\n"
-      "\003ALL\020\001b\006proto3"
-  };
-  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 254);
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
-    "foxglove/SceneEntityDeletion.proto", &protobuf_RegisterTypes);
-  ::protobuf_google_2fprotobuf_2ftimestamp_2eproto::AddDescriptors();
-}
-
-void AddDescriptors() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, AddDescriptorsImpl);
-}
-// Force AddDescriptors() to be called at dynamic initialization time.
-struct StaticDescriptorInitializer {
-  StaticDescriptorInitializer() {
-    AddDescriptors();
-  }
-} static_descriptor_initializer;
-}  // namespace protobuf_foxglove_2fSceneEntityDeletion_2eproto
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_foxglove_2fSceneEntityDeletion_2eproto(&descriptor_table_foxglove_2fSceneEntityDeletion_2eproto);
 namespace foxglove {
-const ::google::protobuf::EnumDescriptor* SceneEntityDeletion_Type_descriptor() {
-  protobuf_foxglove_2fSceneEntityDeletion_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_foxglove_2fSceneEntityDeletion_2eproto::file_level_enum_descriptors[0];
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* SceneEntityDeletion_Type_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_foxglove_2fSceneEntityDeletion_2eproto);
+  return file_level_enum_descriptors_foxglove_2fSceneEntityDeletion_2eproto[0];
 }
 bool SceneEntityDeletion_Type_IsValid(int value) {
   switch (value) {
@@ -132,244 +102,201 @@ bool SceneEntityDeletion_Type_IsValid(int value) {
   }
 }
 
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const SceneEntityDeletion_Type SceneEntityDeletion::MATCHING_ID;
-const SceneEntityDeletion_Type SceneEntityDeletion::ALL;
-const SceneEntityDeletion_Type SceneEntityDeletion::Type_MIN;
-const SceneEntityDeletion_Type SceneEntityDeletion::Type_MAX;
-const int SceneEntityDeletion::Type_ARRAYSIZE;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+#if (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
+constexpr SceneEntityDeletion_Type SceneEntityDeletion::MATCHING_ID;
+constexpr SceneEntityDeletion_Type SceneEntityDeletion::ALL;
+constexpr SceneEntityDeletion_Type SceneEntityDeletion::Type_MIN;
+constexpr SceneEntityDeletion_Type SceneEntityDeletion::Type_MAX;
+constexpr int SceneEntityDeletion::Type_ARRAYSIZE;
+#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 
 // ===================================================================
 
-void SceneEntityDeletion::InitAsDefaultInstance() {
-  ::foxglove::_SceneEntityDeletion_default_instance_._instance.get_mutable()->timestamp_ = const_cast< ::google::protobuf::Timestamp*>(
-      ::google::protobuf::Timestamp::internal_default_instance());
+class SceneEntityDeletion::_Internal {
+ public:
+  static const ::PROTOBUF_NAMESPACE_ID::Timestamp& timestamp(const SceneEntityDeletion* msg);
+};
+
+const ::PROTOBUF_NAMESPACE_ID::Timestamp&
+SceneEntityDeletion::_Internal::timestamp(const SceneEntityDeletion* msg) {
+  return *msg->_impl_.timestamp_;
 }
 void SceneEntityDeletion::clear_timestamp() {
-  if (GetArenaNoVirtual() == NULL && timestamp_ != NULL) {
-    delete timestamp_;
+  if (GetArenaForAllocation() == nullptr && _impl_.timestamp_ != nullptr) {
+    delete _impl_.timestamp_;
   }
-  timestamp_ = NULL;
+  _impl_.timestamp_ = nullptr;
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SceneEntityDeletion::kTimestampFieldNumber;
-const int SceneEntityDeletion::kTypeFieldNumber;
-const int SceneEntityDeletion::kIdFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SceneEntityDeletion::SceneEntityDeletion()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_foxglove_2fSceneEntityDeletion_2eproto::scc_info_SceneEntityDeletion.base);
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:foxglove.SceneEntityDeletion)
+SceneEntityDeletion::SceneEntityDeletion(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:foxglove.SceneEntityDeletion)
 }
 SceneEntityDeletion::SceneEntityDeletion(const SceneEntityDeletion& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.id().size() > 0) {
-    id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.id_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SceneEntityDeletion* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.id_){}
+    , decltype(_impl_.timestamp_){nullptr}
+    , decltype(_impl_.type_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.id_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.id_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_id().empty()) {
+    _this->_impl_.id_.Set(from._internal_id(), 
+      _this->GetArenaForAllocation());
   }
-  if (from.has_timestamp()) {
-    timestamp_ = new ::google::protobuf::Timestamp(*from.timestamp_);
-  } else {
-    timestamp_ = NULL;
+  if (from._internal_has_timestamp()) {
+    _this->_impl_.timestamp_ = new ::PROTOBUF_NAMESPACE_ID::Timestamp(*from._impl_.timestamp_);
   }
-  type_ = from.type_;
+  _this->_impl_.type_ = from._impl_.type_;
   // @@protoc_insertion_point(copy_constructor:foxglove.SceneEntityDeletion)
 }
 
-void SceneEntityDeletion::SharedCtor() {
-  id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&timestamp_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&type_) -
-      reinterpret_cast<char*>(&timestamp_)) + sizeof(type_));
+inline void SceneEntityDeletion::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.id_){}
+    , decltype(_impl_.timestamp_){nullptr}
+    , decltype(_impl_.type_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.id_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.id_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 SceneEntityDeletion::~SceneEntityDeletion() {
   // @@protoc_insertion_point(destructor:foxglove.SceneEntityDeletion)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
 
-void SceneEntityDeletion::SharedDtor() {
-  id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != internal_default_instance()) delete timestamp_;
+inline void SceneEntityDeletion::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.id_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.timestamp_;
 }
 
 void SceneEntityDeletion::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* SceneEntityDeletion::descriptor() {
-  ::protobuf_foxglove_2fSceneEntityDeletion_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_foxglove_2fSceneEntityDeletion_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const SceneEntityDeletion& SceneEntityDeletion::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_foxglove_2fSceneEntityDeletion_2eproto::scc_info_SceneEntityDeletion.base);
-  return *internal_default_instance();
-}
-
 
 void SceneEntityDeletion::Clear() {
 // @@protoc_insertion_point(message_clear_start:foxglove.SceneEntityDeletion)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (GetArenaNoVirtual() == NULL && timestamp_ != NULL) {
-    delete timestamp_;
+  _impl_.id_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.timestamp_ != nullptr) {
+    delete _impl_.timestamp_;
   }
-  timestamp_ = NULL;
-  type_ = 0;
-  _internal_metadata_.Clear();
+  _impl_.timestamp_ = nullptr;
+  _impl_.type_ = 0;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-bool SceneEntityDeletion::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:foxglove.SceneEntityDeletion)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+const char* SceneEntityDeletion::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
       // .google.protobuf.Timestamp timestamp = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_timestamp()));
-        } else {
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_timestamp(), ptr);
+          CHK_(ptr);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // .foxglove.SceneEntityDeletion.Type type = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-          int value;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_type(static_cast< ::foxglove::SceneEntityDeletion_Type >(value));
-        } else {
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_type(static_cast<::foxglove::SceneEntityDeletion_Type>(val));
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // string id = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_id()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->id().data(), static_cast<int>(this->id().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "foxglove.SceneEntityDeletion.id"));
-        } else {
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          auto str = _internal_mutable_id();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "foxglove.SceneEntityDeletion.id"));
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
     }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:foxglove.SceneEntityDeletion)
-  return true;
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:foxglove.SceneEntityDeletion)
-  return false;
-#undef DO_
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-void SceneEntityDeletion::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:foxglove.SceneEntityDeletion)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .google.protobuf.Timestamp timestamp = 1;
-  if (this->has_timestamp()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, this->_internal_timestamp(), output);
-  }
-
-  // .foxglove.SceneEntityDeletion.Type type = 2;
-  if (this->type() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      2, this->type(), output);
-  }
-
-  // string id = 3;
-  if (this->id().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->id().data(), static_cast<int>(this->id().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "foxglove.SceneEntityDeletion.id");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      3, this->id(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:foxglove.SceneEntityDeletion)
-}
-
-::google::protobuf::uint8* SceneEntityDeletion::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+uint8_t* SceneEntityDeletion::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:foxglove.SceneEntityDeletion)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .google.protobuf.Timestamp timestamp = 1;
-  if (this->has_timestamp()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, this->_internal_timestamp(), deterministic, target);
+  if (this->_internal_has_timestamp()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::timestamp(this),
+        _Internal::timestamp(this).GetCachedSize(), target, stream);
   }
 
   // .foxglove.SceneEntityDeletion.Type type = 2;
-  if (this->type() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      2, this->type(), target);
+  if (this->_internal_type() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      2, this->_internal_type(), target);
   }
 
   // string id = 3;
-  if (this->id().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->id().data(), static_cast<int>(this->id().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+  if (!this->_internal_id().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_id().data(), static_cast<int>(this->_internal_id().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "foxglove.SceneEntityDeletion.id");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        3, this->id(), target);
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_id(), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:foxglove.SceneEntityDeletion)
   return target;
@@ -379,75 +306,59 @@ size_t SceneEntityDeletion::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:foxglove.SceneEntityDeletion)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // string id = 3;
-  if (this->id().size() > 0) {
+  if (!this->_internal_id().empty()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->id());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_id());
   }
 
   // .google.protobuf.Timestamp timestamp = 1;
-  if (this->has_timestamp()) {
+  if (this->_internal_has_timestamp()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *timestamp_);
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.timestamp_);
   }
 
   // .foxglove.SceneEntityDeletion.Type type = 2;
-  if (this->type() != 0) {
+  if (this->_internal_type() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->type());
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_type());
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void SceneEntityDeletion::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:foxglove.SceneEntityDeletion)
-  GOOGLE_DCHECK_NE(&from, this);
-  const SceneEntityDeletion* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const SceneEntityDeletion>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:foxglove.SceneEntityDeletion)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:foxglove.SceneEntityDeletion)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SceneEntityDeletion::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SceneEntityDeletion::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SceneEntityDeletion::GetClassData() const { return &_class_data_; }
 
-void SceneEntityDeletion::MergeFrom(const SceneEntityDeletion& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:foxglove.SceneEntityDeletion)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+
+void SceneEntityDeletion::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SceneEntityDeletion*>(&to_msg);
+  auto& from = static_cast<const SceneEntityDeletion&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:foxglove.SceneEntityDeletion)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.id().size() > 0) {
-
-    id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.id_);
+  if (!from._internal_id().empty()) {
+    _this->_internal_set_id(from._internal_id());
   }
-  if (from.has_timestamp()) {
-    mutable_timestamp()->::google::protobuf::Timestamp::MergeFrom(from.timestamp());
+  if (from._internal_has_timestamp()) {
+    _this->_internal_mutable_timestamp()->::PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(
+        from._internal_timestamp());
   }
-  if (from.type() != 0) {
-    set_type(from.type());
+  if (from._internal_type() != 0) {
+    _this->_internal_set_type(from._internal_type());
   }
-}
-
-void SceneEntityDeletion::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:foxglove.SceneEntityDeletion)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void SceneEntityDeletion::CopyFrom(const SceneEntityDeletion& from) {
@@ -461,33 +372,37 @@ bool SceneEntityDeletion::IsInitialized() const {
   return true;
 }
 
-void SceneEntityDeletion::Swap(SceneEntityDeletion* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void SceneEntityDeletion::InternalSwap(SceneEntityDeletion* other) {
   using std::swap;
-  id_.Swap(&other->id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  swap(timestamp_, other->timestamp_);
-  swap(type_, other->type_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.id_, lhs_arena,
+      &other->_impl_.id_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SceneEntityDeletion, _impl_.type_)
+      + sizeof(SceneEntityDeletion::_impl_.type_)
+      - PROTOBUF_FIELD_OFFSET(SceneEntityDeletion, _impl_.timestamp_)>(
+          reinterpret_cast<char*>(&_impl_.timestamp_),
+          reinterpret_cast<char*>(&other->_impl_.timestamp_));
 }
 
-::google::protobuf::Metadata SceneEntityDeletion::GetMetadata() const {
-  protobuf_foxglove_2fSceneEntityDeletion_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_foxglove_2fSceneEntityDeletion_2eproto::file_level_metadata[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata SceneEntityDeletion::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_foxglove_2fSceneEntityDeletion_2eproto_getter, &descriptor_table_foxglove_2fSceneEntityDeletion_2eproto_once,
+      file_level_metadata_foxglove_2fSceneEntityDeletion_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace foxglove
-namespace google {
-namespace protobuf {
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::foxglove::SceneEntityDeletion* Arena::CreateMaybeMessage< ::foxglove::SceneEntityDeletion >(Arena* arena) {
-  return Arena::CreateInternal< ::foxglove::SceneEntityDeletion >(arena);
+PROTOBUF_NAMESPACE_OPEN
+template<> PROTOBUF_NOINLINE ::foxglove::SceneEntityDeletion*
+Arena::CreateMaybeMessage< ::foxglove::SceneEntityDeletion >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::foxglove::SceneEntityDeletion >(arena);
 }
-}  // namespace protobuf
-}  // namespace google
+PROTOBUF_NAMESPACE_CLOSE
 
 // @@protoc_insertion_point(global_scope)
+#include <google/protobuf/port_undef.inc>

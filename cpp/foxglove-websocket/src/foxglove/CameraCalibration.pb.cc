@@ -5,602 +5,423 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
-#include <google/protobuf/stubs/port.h>
 #include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/wire_format_lite_inl.h>
+#include <google/protobuf/extension_set.h>
+#include <google/protobuf/wire_format_lite.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
+#include <google/protobuf/port_def.inc>
 
-namespace protobuf_google_2fprotobuf_2ftimestamp_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_google_2fprotobuf_2ftimestamp_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Timestamp;
-}  // namespace protobuf_google_2fprotobuf_2ftimestamp_2eproto
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace foxglove {
-class CameraCalibrationDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<CameraCalibration>
-      _instance;
-} _CameraCalibration_default_instance_;
+PROTOBUF_CONSTEXPR CameraCalibration::CameraCalibration(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.d_)*/{}
+  , /*decltype(_impl_.k_)*/{}
+  , /*decltype(_impl_.r_)*/{}
+  , /*decltype(_impl_.p_)*/{}
+  , /*decltype(_impl_.distortion_model_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.frame_id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.timestamp_)*/nullptr
+  , /*decltype(_impl_.width_)*/0u
+  , /*decltype(_impl_.height_)*/0u
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct CameraCalibrationDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CameraCalibrationDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CameraCalibrationDefaultTypeInternal() {}
+  union {
+    CameraCalibration _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CameraCalibrationDefaultTypeInternal _CameraCalibration_default_instance_;
 }  // namespace foxglove
-namespace protobuf_foxglove_2fCameraCalibration_2eproto {
-static void InitDefaultsCameraCalibration() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_foxglove_2fCameraCalibration_2eproto[1];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_foxglove_2fCameraCalibration_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_foxglove_2fCameraCalibration_2eproto = nullptr;
 
-  {
-    void* ptr = &::foxglove::_CameraCalibration_default_instance_;
-    new (ptr) ::foxglove::CameraCalibration();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::foxglove::CameraCalibration::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<1> scc_info_CameraCalibration =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsCameraCalibration}, {
-      &protobuf_google_2fprotobuf_2ftimestamp_2eproto::scc_info_Timestamp.base,}};
-
-void InitDefaults() {
-  ::google::protobuf::internal::InitSCC(&scc_info_CameraCalibration.base);
-}
-
-::google::protobuf::Metadata file_level_metadata[1];
-
-const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_foxglove_2fCameraCalibration_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::CameraCalibration, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::CameraCalibration, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::CameraCalibration, timestamp_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::CameraCalibration, frame_id_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::CameraCalibration, width_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::CameraCalibration, height_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::CameraCalibration, distortion_model_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::CameraCalibration, d_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::CameraCalibration, k_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::CameraCalibration, r_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::CameraCalibration, p_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::foxglove::CameraCalibration, _impl_.timestamp_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::CameraCalibration, _impl_.frame_id_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::CameraCalibration, _impl_.width_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::CameraCalibration, _impl_.height_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::CameraCalibration, _impl_.distortion_model_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::CameraCalibration, _impl_.d_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::CameraCalibration, _impl_.k_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::CameraCalibration, _impl_.r_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::CameraCalibration, _impl_.p_),
 };
-static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::foxglove::CameraCalibration)},
-};
-
-static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::foxglove::_CameraCalibration_default_instance_),
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::foxglove::CameraCalibration)},
 };
 
-void protobuf_AssignDescriptors() {
-  AddDescriptors();
-  AssignDescriptors(
-      "foxglove/CameraCalibration.proto", schemas, file_default_instances, TableStruct::offsets,
-      file_level_metadata, NULL, NULL);
+static const ::_pb::Message* const file_default_instances[] = {
+  &::foxglove::_CameraCalibration_default_instance_._instance,
+};
+
+const char descriptor_table_protodef_foxglove_2fCameraCalibration_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n foxglove/CameraCalibration.proto\022\010foxg"
+  "love\032\037google/protobuf/timestamp.proto\"\271\001"
+  "\n\021CameraCalibration\022-\n\ttimestamp\030\001 \001(\0132\032"
+  ".google.protobuf.Timestamp\022\020\n\010frame_id\030\t"
+  " \001(\t\022\r\n\005width\030\002 \001(\007\022\016\n\006height\030\003 \001(\007\022\030\n\020d"
+  "istortion_model\030\004 \001(\t\022\t\n\001D\030\005 \003(\001\022\t\n\001K\030\006 "
+  "\003(\001\022\t\n\001R\030\007 \003(\001\022\t\n\001P\030\010 \003(\001b\006proto3"
+  ;
+static const ::_pbi::DescriptorTable* const descriptor_table_foxglove_2fCameraCalibration_2eproto_deps[1] = {
+  &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
+};
+static ::_pbi::once_flag descriptor_table_foxglove_2fCameraCalibration_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_foxglove_2fCameraCalibration_2eproto = {
+    false, false, 273, descriptor_table_protodef_foxglove_2fCameraCalibration_2eproto,
+    "foxglove/CameraCalibration.proto",
+    &descriptor_table_foxglove_2fCameraCalibration_2eproto_once, descriptor_table_foxglove_2fCameraCalibration_2eproto_deps, 1, 1,
+    schemas, file_default_instances, TableStruct_foxglove_2fCameraCalibration_2eproto::offsets,
+    file_level_metadata_foxglove_2fCameraCalibration_2eproto, file_level_enum_descriptors_foxglove_2fCameraCalibration_2eproto,
+    file_level_service_descriptors_foxglove_2fCameraCalibration_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_foxglove_2fCameraCalibration_2eproto_getter() {
+  return &descriptor_table_foxglove_2fCameraCalibration_2eproto;
 }
 
-void protobuf_AssignDescriptorsOnce() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, protobuf_AssignDescriptors);
-}
-
-void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
-void protobuf_RegisterTypes(const ::std::string&) {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 1);
-}
-
-void AddDescriptorsImpl() {
-  InitDefaults();
-  static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n foxglove/CameraCalibration.proto\022\010foxg"
-      "love\032\037google/protobuf/timestamp.proto\"\271\001"
-      "\n\021CameraCalibration\022-\n\ttimestamp\030\001 \001(\0132\032"
-      ".google.protobuf.Timestamp\022\020\n\010frame_id\030\t"
-      " \001(\t\022\r\n\005width\030\002 \001(\007\022\016\n\006height\030\003 \001(\007\022\030\n\020d"
-      "istortion_model\030\004 \001(\t\022\t\n\001D\030\005 \003(\001\022\t\n\001K\030\006 "
-      "\003(\001\022\t\n\001R\030\007 \003(\001\022\t\n\001P\030\010 \003(\001b\006proto3"
-  };
-  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 273);
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
-    "foxglove/CameraCalibration.proto", &protobuf_RegisterTypes);
-  ::protobuf_google_2fprotobuf_2ftimestamp_2eproto::AddDescriptors();
-}
-
-void AddDescriptors() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, AddDescriptorsImpl);
-}
-// Force AddDescriptors() to be called at dynamic initialization time.
-struct StaticDescriptorInitializer {
-  StaticDescriptorInitializer() {
-    AddDescriptors();
-  }
-} static_descriptor_initializer;
-}  // namespace protobuf_foxglove_2fCameraCalibration_2eproto
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_foxglove_2fCameraCalibration_2eproto(&descriptor_table_foxglove_2fCameraCalibration_2eproto);
 namespace foxglove {
 
 // ===================================================================
 
-void CameraCalibration::InitAsDefaultInstance() {
-  ::foxglove::_CameraCalibration_default_instance_._instance.get_mutable()->timestamp_ = const_cast< ::google::protobuf::Timestamp*>(
-      ::google::protobuf::Timestamp::internal_default_instance());
+class CameraCalibration::_Internal {
+ public:
+  static const ::PROTOBUF_NAMESPACE_ID::Timestamp& timestamp(const CameraCalibration* msg);
+};
+
+const ::PROTOBUF_NAMESPACE_ID::Timestamp&
+CameraCalibration::_Internal::timestamp(const CameraCalibration* msg) {
+  return *msg->_impl_.timestamp_;
 }
 void CameraCalibration::clear_timestamp() {
-  if (GetArenaNoVirtual() == NULL && timestamp_ != NULL) {
-    delete timestamp_;
+  if (GetArenaForAllocation() == nullptr && _impl_.timestamp_ != nullptr) {
+    delete _impl_.timestamp_;
   }
-  timestamp_ = NULL;
+  _impl_.timestamp_ = nullptr;
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int CameraCalibration::kTimestampFieldNumber;
-const int CameraCalibration::kFrameIdFieldNumber;
-const int CameraCalibration::kWidthFieldNumber;
-const int CameraCalibration::kHeightFieldNumber;
-const int CameraCalibration::kDistortionModelFieldNumber;
-const int CameraCalibration::kDFieldNumber;
-const int CameraCalibration::kKFieldNumber;
-const int CameraCalibration::kRFieldNumber;
-const int CameraCalibration::kPFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-CameraCalibration::CameraCalibration()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_foxglove_2fCameraCalibration_2eproto::scc_info_CameraCalibration.base);
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:foxglove.CameraCalibration)
+CameraCalibration::CameraCalibration(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:foxglove.CameraCalibration)
 }
 CameraCalibration::CameraCalibration(const CameraCalibration& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      d_(from.d_),
-      k_(from.k_),
-      r_(from.r_),
-      p_(from.p_) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  distortion_model_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.distortion_model().size() > 0) {
-    distortion_model_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.distortion_model_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CameraCalibration* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.d_){from._impl_.d_}
+    , decltype(_impl_.k_){from._impl_.k_}
+    , decltype(_impl_.r_){from._impl_.r_}
+    , decltype(_impl_.p_){from._impl_.p_}
+    , decltype(_impl_.distortion_model_){}
+    , decltype(_impl_.frame_id_){}
+    , decltype(_impl_.timestamp_){nullptr}
+    , decltype(_impl_.width_){}
+    , decltype(_impl_.height_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.distortion_model_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.distortion_model_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_distortion_model().empty()) {
+    _this->_impl_.distortion_model_.Set(from._internal_distortion_model(), 
+      _this->GetArenaForAllocation());
   }
-  frame_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.frame_id().size() > 0) {
-    frame_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.frame_id_);
+  _impl_.frame_id_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.frame_id_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_frame_id().empty()) {
+    _this->_impl_.frame_id_.Set(from._internal_frame_id(), 
+      _this->GetArenaForAllocation());
   }
-  if (from.has_timestamp()) {
-    timestamp_ = new ::google::protobuf::Timestamp(*from.timestamp_);
-  } else {
-    timestamp_ = NULL;
+  if (from._internal_has_timestamp()) {
+    _this->_impl_.timestamp_ = new ::PROTOBUF_NAMESPACE_ID::Timestamp(*from._impl_.timestamp_);
   }
-  ::memcpy(&width_, &from.width_,
-    static_cast<size_t>(reinterpret_cast<char*>(&height_) -
-    reinterpret_cast<char*>(&width_)) + sizeof(height_));
+  ::memcpy(&_impl_.width_, &from._impl_.width_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.height_) -
+    reinterpret_cast<char*>(&_impl_.width_)) + sizeof(_impl_.height_));
   // @@protoc_insertion_point(copy_constructor:foxglove.CameraCalibration)
 }
 
-void CameraCalibration::SharedCtor() {
-  distortion_model_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  frame_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&timestamp_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&height_) -
-      reinterpret_cast<char*>(&timestamp_)) + sizeof(height_));
+inline void CameraCalibration::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.d_){arena}
+    , decltype(_impl_.k_){arena}
+    , decltype(_impl_.r_){arena}
+    , decltype(_impl_.p_){arena}
+    , decltype(_impl_.distortion_model_){}
+    , decltype(_impl_.frame_id_){}
+    , decltype(_impl_.timestamp_){nullptr}
+    , decltype(_impl_.width_){0u}
+    , decltype(_impl_.height_){0u}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.distortion_model_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.distortion_model_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.frame_id_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.frame_id_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 CameraCalibration::~CameraCalibration() {
   // @@protoc_insertion_point(destructor:foxglove.CameraCalibration)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
 
-void CameraCalibration::SharedDtor() {
-  distortion_model_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  frame_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != internal_default_instance()) delete timestamp_;
+inline void CameraCalibration::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.d_.~RepeatedField();
+  _impl_.k_.~RepeatedField();
+  _impl_.r_.~RepeatedField();
+  _impl_.p_.~RepeatedField();
+  _impl_.distortion_model_.Destroy();
+  _impl_.frame_id_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.timestamp_;
 }
 
 void CameraCalibration::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* CameraCalibration::descriptor() {
-  ::protobuf_foxglove_2fCameraCalibration_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_foxglove_2fCameraCalibration_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const CameraCalibration& CameraCalibration::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_foxglove_2fCameraCalibration_2eproto::scc_info_CameraCalibration.base);
-  return *internal_default_instance();
-}
-
 
 void CameraCalibration::Clear() {
 // @@protoc_insertion_point(message_clear_start:foxglove.CameraCalibration)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  d_.Clear();
-  k_.Clear();
-  r_.Clear();
-  p_.Clear();
-  distortion_model_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  frame_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (GetArenaNoVirtual() == NULL && timestamp_ != NULL) {
-    delete timestamp_;
+  _impl_.d_.Clear();
+  _impl_.k_.Clear();
+  _impl_.r_.Clear();
+  _impl_.p_.Clear();
+  _impl_.distortion_model_.ClearToEmpty();
+  _impl_.frame_id_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.timestamp_ != nullptr) {
+    delete _impl_.timestamp_;
   }
-  timestamp_ = NULL;
-  ::memset(&width_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&height_) -
-      reinterpret_cast<char*>(&width_)) + sizeof(height_));
-  _internal_metadata_.Clear();
+  _impl_.timestamp_ = nullptr;
+  ::memset(&_impl_.width_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.height_) -
+      reinterpret_cast<char*>(&_impl_.width_)) + sizeof(_impl_.height_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-bool CameraCalibration::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:foxglove.CameraCalibration)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+const char* CameraCalibration::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
       // .google.protobuf.Timestamp timestamp = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_timestamp()));
-        } else {
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_timestamp(), ptr);
+          CHK_(ptr);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // fixed32 width = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(21u /* 21 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED32>(
-                 input, &width_)));
-        } else {
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 21)) {
+          _impl_.width_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<uint32_t>(ptr);
+          ptr += sizeof(uint32_t);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // fixed32 height = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(29u /* 29 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED32>(
-                 input, &height_)));
-        } else {
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 29)) {
+          _impl_.height_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<uint32_t>(ptr);
+          ptr += sizeof(uint32_t);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // string distortion_model = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_distortion_model()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->distortion_model().data(), static_cast<int>(this->distortion_model().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "foxglove.CameraCalibration.distortion_model"));
-        } else {
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+          auto str = _internal_mutable_distortion_model();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "foxglove.CameraCalibration.distortion_model"));
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // repeated double D = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, this->mutable_d())));
-        } else if (
-            static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(41u /* 41 & 0xFF */)) {
-          DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 1, 42u, input, this->mutable_d())));
-        } else {
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedDoubleParser(_internal_mutable_d(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 41) {
+          _internal_add_d(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr));
+          ptr += sizeof(double);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // repeated double K = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, this->mutable_k())));
-        } else if (
-            static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(49u /* 49 & 0xFF */)) {
-          DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 1, 50u, input, this->mutable_k())));
-        } else {
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedDoubleParser(_internal_mutable_k(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 49) {
+          _internal_add_k(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr));
+          ptr += sizeof(double);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // repeated double R = 7;
-      case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(58u /* 58 & 0xFF */)) {
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, this->mutable_r())));
-        } else if (
-            static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(57u /* 57 & 0xFF */)) {
-          DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 1, 58u, input, this->mutable_r())));
-        } else {
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedDoubleParser(_internal_mutable_r(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 57) {
+          _internal_add_r(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr));
+          ptr += sizeof(double);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // repeated double P = 8;
-      case 8: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(66u /* 66 & 0xFF */)) {
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, this->mutable_p())));
-        } else if (
-            static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(65u /* 65 & 0xFF */)) {
-          DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 1, 66u, input, this->mutable_p())));
-        } else {
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedDoubleParser(_internal_mutable_p(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 65) {
+          _internal_add_p(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr));
+          ptr += sizeof(double);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // string frame_id = 9;
-      case 9: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(74u /* 74 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_frame_id()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->frame_id().data(), static_cast<int>(this->frame_id().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "foxglove.CameraCalibration.frame_id"));
-        } else {
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
+          auto str = _internal_mutable_frame_id();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "foxglove.CameraCalibration.frame_id"));
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
     }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:foxglove.CameraCalibration)
-  return true;
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:foxglove.CameraCalibration)
-  return false;
-#undef DO_
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-void CameraCalibration::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:foxglove.CameraCalibration)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .google.protobuf.Timestamp timestamp = 1;
-  if (this->has_timestamp()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, this->_internal_timestamp(), output);
-  }
-
-  // fixed32 width = 2;
-  if (this->width() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFixed32(2, this->width(), output);
-  }
-
-  // fixed32 height = 3;
-  if (this->height() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFixed32(3, this->height(), output);
-  }
-
-  // string distortion_model = 4;
-  if (this->distortion_model().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->distortion_model().data(), static_cast<int>(this->distortion_model().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "foxglove.CameraCalibration.distortion_model");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      4, this->distortion_model(), output);
-  }
-
-  // repeated double D = 5;
-  if (this->d_size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteTag(5, ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(static_cast< ::google::protobuf::uint32>(
-        _d_cached_byte_size_));
-    ::google::protobuf::internal::WireFormatLite::WriteDoubleArray(
-      this->d().data(), this->d_size(), output);
-  }
-
-  // repeated double K = 6;
-  if (this->k_size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteTag(6, ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(static_cast< ::google::protobuf::uint32>(
-        _k_cached_byte_size_));
-    ::google::protobuf::internal::WireFormatLite::WriteDoubleArray(
-      this->k().data(), this->k_size(), output);
-  }
-
-  // repeated double R = 7;
-  if (this->r_size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteTag(7, ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(static_cast< ::google::protobuf::uint32>(
-        _r_cached_byte_size_));
-    ::google::protobuf::internal::WireFormatLite::WriteDoubleArray(
-      this->r().data(), this->r_size(), output);
-  }
-
-  // repeated double P = 8;
-  if (this->p_size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteTag(8, ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(static_cast< ::google::protobuf::uint32>(
-        _p_cached_byte_size_));
-    ::google::protobuf::internal::WireFormatLite::WriteDoubleArray(
-      this->p().data(), this->p_size(), output);
-  }
-
-  // string frame_id = 9;
-  if (this->frame_id().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->frame_id().data(), static_cast<int>(this->frame_id().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "foxglove.CameraCalibration.frame_id");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      9, this->frame_id(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:foxglove.CameraCalibration)
-}
-
-::google::protobuf::uint8* CameraCalibration::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+uint8_t* CameraCalibration::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:foxglove.CameraCalibration)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .google.protobuf.Timestamp timestamp = 1;
-  if (this->has_timestamp()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, this->_internal_timestamp(), deterministic, target);
+  if (this->_internal_has_timestamp()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::timestamp(this),
+        _Internal::timestamp(this).GetCachedSize(), target, stream);
   }
 
   // fixed32 width = 2;
-  if (this->width() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFixed32ToArray(2, this->width(), target);
+  if (this->_internal_width() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteFixed32ToArray(2, this->_internal_width(), target);
   }
 
   // fixed32 height = 3;
-  if (this->height() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFixed32ToArray(3, this->height(), target);
+  if (this->_internal_height() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteFixed32ToArray(3, this->_internal_height(), target);
   }
 
   // string distortion_model = 4;
-  if (this->distortion_model().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->distortion_model().data(), static_cast<int>(this->distortion_model().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+  if (!this->_internal_distortion_model().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_distortion_model().data(), static_cast<int>(this->_internal_distortion_model().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "foxglove.CameraCalibration.distortion_model");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        4, this->distortion_model(), target);
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_distortion_model(), target);
   }
 
   // repeated double D = 5;
-  if (this->d_size() > 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteTagToArray(
-      5,
-      ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::google::protobuf::io::CodedOutputStream::WriteVarint32ToArray(
-        static_cast< ::google::protobuf::int32>(
-            _d_cached_byte_size_), target);
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteDoubleNoTagToArray(this->d_, target);
+  if (this->_internal_d_size() > 0) {
+    target = stream->WriteFixedPacked(5, _internal_d(), target);
   }
 
   // repeated double K = 6;
-  if (this->k_size() > 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteTagToArray(
-      6,
-      ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::google::protobuf::io::CodedOutputStream::WriteVarint32ToArray(
-        static_cast< ::google::protobuf::int32>(
-            _k_cached_byte_size_), target);
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteDoubleNoTagToArray(this->k_, target);
+  if (this->_internal_k_size() > 0) {
+    target = stream->WriteFixedPacked(6, _internal_k(), target);
   }
 
   // repeated double R = 7;
-  if (this->r_size() > 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteTagToArray(
-      7,
-      ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::google::protobuf::io::CodedOutputStream::WriteVarint32ToArray(
-        static_cast< ::google::protobuf::int32>(
-            _r_cached_byte_size_), target);
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteDoubleNoTagToArray(this->r_, target);
+  if (this->_internal_r_size() > 0) {
+    target = stream->WriteFixedPacked(7, _internal_r(), target);
   }
 
   // repeated double P = 8;
-  if (this->p_size() > 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteTagToArray(
-      8,
-      ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::google::protobuf::io::CodedOutputStream::WriteVarint32ToArray(
-        static_cast< ::google::protobuf::int32>(
-            _p_cached_byte_size_), target);
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteDoubleNoTagToArray(this->p_, target);
+  if (this->_internal_p_size() > 0) {
+    target = stream->WriteFixedPacked(8, _internal_p(), target);
   }
 
   // string frame_id = 9;
-  if (this->frame_id().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->frame_id().data(), static_cast<int>(this->frame_id().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+  if (!this->_internal_frame_id().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_frame_id().data(), static_cast<int>(this->_internal_frame_id().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "foxglove.CameraCalibration.frame_id");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        9, this->frame_id(), target);
+    target = stream->WriteStringMaybeAliased(
+        9, this->_internal_frame_id(), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:foxglove.CameraCalibration)
   return target;
@@ -610,161 +431,124 @@ size_t CameraCalibration::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:foxglove.CameraCalibration)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // repeated double D = 5;
   {
-    unsigned int count = static_cast<unsigned int>(this->d_size());
+    unsigned int count = static_cast<unsigned int>(this->_internal_d_size());
     size_t data_size = 8UL * count;
     if (data_size > 0) {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-            static_cast< ::google::protobuf::int32>(data_size));
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
     }
-    int cached_size = ::google::protobuf::internal::ToCachedSize(data_size);
-    GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-    _d_cached_byte_size_ = cached_size;
-    GOOGLE_SAFE_CONCURRENT_WRITES_END();
     total_size += data_size;
   }
 
   // repeated double K = 6;
   {
-    unsigned int count = static_cast<unsigned int>(this->k_size());
+    unsigned int count = static_cast<unsigned int>(this->_internal_k_size());
     size_t data_size = 8UL * count;
     if (data_size > 0) {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-            static_cast< ::google::protobuf::int32>(data_size));
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
     }
-    int cached_size = ::google::protobuf::internal::ToCachedSize(data_size);
-    GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-    _k_cached_byte_size_ = cached_size;
-    GOOGLE_SAFE_CONCURRENT_WRITES_END();
     total_size += data_size;
   }
 
   // repeated double R = 7;
   {
-    unsigned int count = static_cast<unsigned int>(this->r_size());
+    unsigned int count = static_cast<unsigned int>(this->_internal_r_size());
     size_t data_size = 8UL * count;
     if (data_size > 0) {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-            static_cast< ::google::protobuf::int32>(data_size));
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
     }
-    int cached_size = ::google::protobuf::internal::ToCachedSize(data_size);
-    GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-    _r_cached_byte_size_ = cached_size;
-    GOOGLE_SAFE_CONCURRENT_WRITES_END();
     total_size += data_size;
   }
 
   // repeated double P = 8;
   {
-    unsigned int count = static_cast<unsigned int>(this->p_size());
+    unsigned int count = static_cast<unsigned int>(this->_internal_p_size());
     size_t data_size = 8UL * count;
     if (data_size > 0) {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-            static_cast< ::google::protobuf::int32>(data_size));
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
     }
-    int cached_size = ::google::protobuf::internal::ToCachedSize(data_size);
-    GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-    _p_cached_byte_size_ = cached_size;
-    GOOGLE_SAFE_CONCURRENT_WRITES_END();
     total_size += data_size;
   }
 
   // string distortion_model = 4;
-  if (this->distortion_model().size() > 0) {
+  if (!this->_internal_distortion_model().empty()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->distortion_model());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_distortion_model());
   }
 
   // string frame_id = 9;
-  if (this->frame_id().size() > 0) {
+  if (!this->_internal_frame_id().empty()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->frame_id());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_frame_id());
   }
 
   // .google.protobuf.Timestamp timestamp = 1;
-  if (this->has_timestamp()) {
+  if (this->_internal_has_timestamp()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *timestamp_);
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.timestamp_);
   }
 
   // fixed32 width = 2;
-  if (this->width() != 0) {
+  if (this->_internal_width() != 0) {
     total_size += 1 + 4;
   }
 
   // fixed32 height = 3;
-  if (this->height() != 0) {
+  if (this->_internal_height() != 0) {
     total_size += 1 + 4;
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CameraCalibration::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:foxglove.CameraCalibration)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CameraCalibration* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const CameraCalibration>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:foxglove.CameraCalibration)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:foxglove.CameraCalibration)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CameraCalibration::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CameraCalibration::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CameraCalibration::GetClassData() const { return &_class_data_; }
 
-void CameraCalibration::MergeFrom(const CameraCalibration& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:foxglove.CameraCalibration)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+
+void CameraCalibration::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CameraCalibration*>(&to_msg);
+  auto& from = static_cast<const CameraCalibration&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:foxglove.CameraCalibration)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  d_.MergeFrom(from.d_);
-  k_.MergeFrom(from.k_);
-  r_.MergeFrom(from.r_);
-  p_.MergeFrom(from.p_);
-  if (from.distortion_model().size() > 0) {
-
-    distortion_model_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.distortion_model_);
+  _this->_impl_.d_.MergeFrom(from._impl_.d_);
+  _this->_impl_.k_.MergeFrom(from._impl_.k_);
+  _this->_impl_.r_.MergeFrom(from._impl_.r_);
+  _this->_impl_.p_.MergeFrom(from._impl_.p_);
+  if (!from._internal_distortion_model().empty()) {
+    _this->_internal_set_distortion_model(from._internal_distortion_model());
   }
-  if (from.frame_id().size() > 0) {
-
-    frame_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.frame_id_);
+  if (!from._internal_frame_id().empty()) {
+    _this->_internal_set_frame_id(from._internal_frame_id());
   }
-  if (from.has_timestamp()) {
-    mutable_timestamp()->::google::protobuf::Timestamp::MergeFrom(from.timestamp());
+  if (from._internal_has_timestamp()) {
+    _this->_internal_mutable_timestamp()->::PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(
+        from._internal_timestamp());
   }
-  if (from.width() != 0) {
-    set_width(from.width());
+  if (from._internal_width() != 0) {
+    _this->_internal_set_width(from._internal_width());
   }
-  if (from.height() != 0) {
-    set_height(from.height());
+  if (from._internal_height() != 0) {
+    _this->_internal_set_height(from._internal_height());
   }
-}
-
-void CameraCalibration::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:foxglove.CameraCalibration)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CameraCalibration::CopyFrom(const CameraCalibration& from) {
@@ -778,40 +562,45 @@ bool CameraCalibration::IsInitialized() const {
   return true;
 }
 
-void CameraCalibration::Swap(CameraCalibration* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void CameraCalibration::InternalSwap(CameraCalibration* other) {
   using std::swap;
-  d_.InternalSwap(&other->d_);
-  k_.InternalSwap(&other->k_);
-  r_.InternalSwap(&other->r_);
-  p_.InternalSwap(&other->p_);
-  distortion_model_.Swap(&other->distortion_model_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  frame_id_.Swap(&other->frame_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  swap(timestamp_, other->timestamp_);
-  swap(width_, other->width_);
-  swap(height_, other->height_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.d_.InternalSwap(&other->_impl_.d_);
+  _impl_.k_.InternalSwap(&other->_impl_.k_);
+  _impl_.r_.InternalSwap(&other->_impl_.r_);
+  _impl_.p_.InternalSwap(&other->_impl_.p_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.distortion_model_, lhs_arena,
+      &other->_impl_.distortion_model_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.frame_id_, lhs_arena,
+      &other->_impl_.frame_id_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(CameraCalibration, _impl_.height_)
+      + sizeof(CameraCalibration::_impl_.height_)
+      - PROTOBUF_FIELD_OFFSET(CameraCalibration, _impl_.timestamp_)>(
+          reinterpret_cast<char*>(&_impl_.timestamp_),
+          reinterpret_cast<char*>(&other->_impl_.timestamp_));
 }
 
-::google::protobuf::Metadata CameraCalibration::GetMetadata() const {
-  protobuf_foxglove_2fCameraCalibration_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_foxglove_2fCameraCalibration_2eproto::file_level_metadata[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata CameraCalibration::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_foxglove_2fCameraCalibration_2eproto_getter, &descriptor_table_foxglove_2fCameraCalibration_2eproto_once,
+      file_level_metadata_foxglove_2fCameraCalibration_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace foxglove
-namespace google {
-namespace protobuf {
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::foxglove::CameraCalibration* Arena::CreateMaybeMessage< ::foxglove::CameraCalibration >(Arena* arena) {
-  return Arena::CreateInternal< ::foxglove::CameraCalibration >(arena);
+PROTOBUF_NAMESPACE_OPEN
+template<> PROTOBUF_NOINLINE ::foxglove::CameraCalibration*
+Arena::CreateMaybeMessage< ::foxglove::CameraCalibration >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::foxglove::CameraCalibration >(arena);
 }
-}  // namespace protobuf
-}  // namespace google
+PROTOBUF_NAMESPACE_CLOSE
 
 // @@protoc_insertion_point(global_scope)
+#include <google/protobuf/port_undef.inc>

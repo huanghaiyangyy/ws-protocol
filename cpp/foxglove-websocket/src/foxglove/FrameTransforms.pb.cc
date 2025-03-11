@@ -5,257 +5,206 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
-#include <google/protobuf/stubs/port.h>
 #include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/wire_format_lite_inl.h>
+#include <google/protobuf/extension_set.h>
+#include <google/protobuf/wire_format_lite.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
+#include <google/protobuf/port_def.inc>
 
-namespace protobuf_foxglove_2fFrameTransform_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_foxglove_2fFrameTransform_2eproto ::google::protobuf::internal::SCCInfo<3> scc_info_FrameTransform;
-}  // namespace protobuf_foxglove_2fFrameTransform_2eproto
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace foxglove {
-class FrameTransformsDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<FrameTransforms>
-      _instance;
-} _FrameTransforms_default_instance_;
+PROTOBUF_CONSTEXPR FrameTransforms::FrameTransforms(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.transforms_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct FrameTransformsDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR FrameTransformsDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~FrameTransformsDefaultTypeInternal() {}
+  union {
+    FrameTransforms _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 FrameTransformsDefaultTypeInternal _FrameTransforms_default_instance_;
 }  // namespace foxglove
-namespace protobuf_foxglove_2fFrameTransforms_2eproto {
-static void InitDefaultsFrameTransforms() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_foxglove_2fFrameTransforms_2eproto[1];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_foxglove_2fFrameTransforms_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_foxglove_2fFrameTransforms_2eproto = nullptr;
 
-  {
-    void* ptr = &::foxglove::_FrameTransforms_default_instance_;
-    new (ptr) ::foxglove::FrameTransforms();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::foxglove::FrameTransforms::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<1> scc_info_FrameTransforms =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsFrameTransforms}, {
-      &protobuf_foxglove_2fFrameTransform_2eproto::scc_info_FrameTransform.base,}};
-
-void InitDefaults() {
-  ::google::protobuf::internal::InitSCC(&scc_info_FrameTransforms.base);
-}
-
-::google::protobuf::Metadata file_level_metadata[1];
-
-const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_foxglove_2fFrameTransforms_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::FrameTransforms, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::FrameTransforms, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::FrameTransforms, transforms_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::foxglove::FrameTransforms, _impl_.transforms_),
 };
-static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::foxglove::FrameTransforms)},
-};
-
-static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::foxglove::_FrameTransforms_default_instance_),
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::foxglove::FrameTransforms)},
 };
 
-void protobuf_AssignDescriptors() {
-  AddDescriptors();
-  AssignDescriptors(
-      "foxglove/FrameTransforms.proto", schemas, file_default_instances, TableStruct::offsets,
-      file_level_metadata, NULL, NULL);
+static const ::_pb::Message* const file_default_instances[] = {
+  &::foxglove::_FrameTransforms_default_instance_._instance,
+};
+
+const char descriptor_table_protodef_foxglove_2fFrameTransforms_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n\036foxglove/FrameTransforms.proto\022\010foxglo"
+  "ve\032\035foxglove/FrameTransform.proto\"\?\n\017Fra"
+  "meTransforms\022,\n\ntransforms\030\001 \003(\0132\030.foxgl"
+  "ove.FrameTransformb\006proto3"
+  ;
+static const ::_pbi::DescriptorTable* const descriptor_table_foxglove_2fFrameTransforms_2eproto_deps[1] = {
+  &::descriptor_table_foxglove_2fFrameTransform_2eproto,
+};
+static ::_pbi::once_flag descriptor_table_foxglove_2fFrameTransforms_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_foxglove_2fFrameTransforms_2eproto = {
+    false, false, 146, descriptor_table_protodef_foxglove_2fFrameTransforms_2eproto,
+    "foxglove/FrameTransforms.proto",
+    &descriptor_table_foxglove_2fFrameTransforms_2eproto_once, descriptor_table_foxglove_2fFrameTransforms_2eproto_deps, 1, 1,
+    schemas, file_default_instances, TableStruct_foxglove_2fFrameTransforms_2eproto::offsets,
+    file_level_metadata_foxglove_2fFrameTransforms_2eproto, file_level_enum_descriptors_foxglove_2fFrameTransforms_2eproto,
+    file_level_service_descriptors_foxglove_2fFrameTransforms_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_foxglove_2fFrameTransforms_2eproto_getter() {
+  return &descriptor_table_foxglove_2fFrameTransforms_2eproto;
 }
 
-void protobuf_AssignDescriptorsOnce() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, protobuf_AssignDescriptors);
-}
-
-void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
-void protobuf_RegisterTypes(const ::std::string&) {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 1);
-}
-
-void AddDescriptorsImpl() {
-  InitDefaults();
-  static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\036foxglove/FrameTransforms.proto\022\010foxglo"
-      "ve\032\035foxglove/FrameTransform.proto\"\?\n\017Fra"
-      "meTransforms\022,\n\ntransforms\030\001 \003(\0132\030.foxgl"
-      "ove.FrameTransformb\006proto3"
-  };
-  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 146);
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
-    "foxglove/FrameTransforms.proto", &protobuf_RegisterTypes);
-  ::protobuf_foxglove_2fFrameTransform_2eproto::AddDescriptors();
-}
-
-void AddDescriptors() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, AddDescriptorsImpl);
-}
-// Force AddDescriptors() to be called at dynamic initialization time.
-struct StaticDescriptorInitializer {
-  StaticDescriptorInitializer() {
-    AddDescriptors();
-  }
-} static_descriptor_initializer;
-}  // namespace protobuf_foxglove_2fFrameTransforms_2eproto
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_foxglove_2fFrameTransforms_2eproto(&descriptor_table_foxglove_2fFrameTransforms_2eproto);
 namespace foxglove {
 
 // ===================================================================
 
-void FrameTransforms::InitAsDefaultInstance() {
-}
-void FrameTransforms::clear_transforms() {
-  transforms_.Clear();
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int FrameTransforms::kTransformsFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+class FrameTransforms::_Internal {
+ public:
+};
 
-FrameTransforms::FrameTransforms()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_foxglove_2fFrameTransforms_2eproto::scc_info_FrameTransforms.base);
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:foxglove.FrameTransforms)
+void FrameTransforms::clear_transforms() {
+  _impl_.transforms_.Clear();
+}
+FrameTransforms::FrameTransforms(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:foxglove.FrameTransforms)
 }
 FrameTransforms::FrameTransforms(const FrameTransforms& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      transforms_(from.transforms_) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  FrameTransforms* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.transforms_){from._impl_.transforms_}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:foxglove.FrameTransforms)
 }
 
-void FrameTransforms::SharedCtor() {
+inline void FrameTransforms::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.transforms_){arena}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 FrameTransforms::~FrameTransforms() {
   // @@protoc_insertion_point(destructor:foxglove.FrameTransforms)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
 
-void FrameTransforms::SharedDtor() {
+inline void FrameTransforms::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.transforms_.~RepeatedPtrField();
 }
 
 void FrameTransforms::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* FrameTransforms::descriptor() {
-  ::protobuf_foxglove_2fFrameTransforms_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_foxglove_2fFrameTransforms_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const FrameTransforms& FrameTransforms::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_foxglove_2fFrameTransforms_2eproto::scc_info_FrameTransforms.base);
-  return *internal_default_instance();
-}
-
 
 void FrameTransforms::Clear() {
 // @@protoc_insertion_point(message_clear_start:foxglove.FrameTransforms)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  transforms_.Clear();
-  _internal_metadata_.Clear();
+  _impl_.transforms_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-bool FrameTransforms::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:foxglove.FrameTransforms)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+const char* FrameTransforms::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
       // repeated .foxglove.FrameTransform transforms = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-                input, add_transforms()));
-        } else {
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_transforms(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
     }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:foxglove.FrameTransforms)
-  return true;
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:foxglove.FrameTransforms)
-  return false;
-#undef DO_
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-void FrameTransforms::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:foxglove.FrameTransforms)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // repeated .foxglove.FrameTransform transforms = 1;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->transforms_size()); i < n; i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1,
-      this->transforms(static_cast<int>(i)),
-      output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:foxglove.FrameTransforms)
-}
-
-::google::protobuf::uint8* FrameTransforms::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+uint8_t* FrameTransforms::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:foxglove.FrameTransforms)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // repeated .foxglove.FrameTransform transforms = 1;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->transforms_size()); i < n; i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, this->transforms(static_cast<int>(i)), deterministic, target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_transforms_size()); i < n; i++) {
+    const auto& repfield = this->_internal_transforms(i);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:foxglove.FrameTransforms)
   return target;
@@ -265,57 +214,37 @@ size_t FrameTransforms::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:foxglove.FrameTransforms)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
-  // repeated .foxglove.FrameTransform transforms = 1;
-  {
-    unsigned int count = static_cast<unsigned int>(this->transforms_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          this->transforms(static_cast<int>(i)));
-    }
-  }
-
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void FrameTransforms::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:foxglove.FrameTransforms)
-  GOOGLE_DCHECK_NE(&from, this);
-  const FrameTransforms* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const FrameTransforms>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:foxglove.FrameTransforms)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:foxglove.FrameTransforms)
-    MergeFrom(*source);
-  }
-}
-
-void FrameTransforms::MergeFrom(const FrameTransforms& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:foxglove.FrameTransforms)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  transforms_.MergeFrom(from.transforms_);
+  // repeated .foxglove.FrameTransform transforms = 1;
+  total_size += 1UL * this->_internal_transforms_size();
+  for (const auto& msg : this->_impl_.transforms_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void FrameTransforms::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:foxglove.FrameTransforms)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FrameTransforms::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    FrameTransforms::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FrameTransforms::GetClassData() const { return &_class_data_; }
+
+
+void FrameTransforms::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<FrameTransforms*>(&to_msg);
+  auto& from = static_cast<const FrameTransforms&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:foxglove.FrameTransforms)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  _this->_impl_.transforms_.MergeFrom(from._impl_.transforms_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void FrameTransforms::CopyFrom(const FrameTransforms& from) {
@@ -329,30 +258,26 @@ bool FrameTransforms::IsInitialized() const {
   return true;
 }
 
-void FrameTransforms::Swap(FrameTransforms* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void FrameTransforms::InternalSwap(FrameTransforms* other) {
   using std::swap;
-  CastToBase(&transforms_)->InternalSwap(CastToBase(&other->transforms_));
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.transforms_.InternalSwap(&other->_impl_.transforms_);
 }
 
-::google::protobuf::Metadata FrameTransforms::GetMetadata() const {
-  protobuf_foxglove_2fFrameTransforms_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_foxglove_2fFrameTransforms_2eproto::file_level_metadata[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata FrameTransforms::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_foxglove_2fFrameTransforms_2eproto_getter, &descriptor_table_foxglove_2fFrameTransforms_2eproto_once,
+      file_level_metadata_foxglove_2fFrameTransforms_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace foxglove
-namespace google {
-namespace protobuf {
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::foxglove::FrameTransforms* Arena::CreateMaybeMessage< ::foxglove::FrameTransforms >(Arena* arena) {
-  return Arena::CreateInternal< ::foxglove::FrameTransforms >(arena);
+PROTOBUF_NAMESPACE_OPEN
+template<> PROTOBUF_NOINLINE ::foxglove::FrameTransforms*
+Arena::CreateMaybeMessage< ::foxglove::FrameTransforms >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::foxglove::FrameTransforms >(arena);
 }
-}  // namespace protobuf
-}  // namespace google
+PROTOBUF_NAMESPACE_CLOSE
 
 // @@protoc_insertion_point(global_scope)
+#include <google/protobuf/port_undef.inc>

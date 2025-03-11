@@ -5,130 +5,104 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
-#include <google/protobuf/stubs/port.h>
 #include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/wire_format_lite_inl.h>
+#include <google/protobuf/extension_set.h>
+#include <google/protobuf/wire_format_lite.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
+#include <google/protobuf/port_def.inc>
 
-namespace protobuf_google_2fprotobuf_2ftimestamp_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_google_2fprotobuf_2ftimestamp_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Timestamp;
-}  // namespace protobuf_google_2fprotobuf_2ftimestamp_2eproto
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace foxglove {
-class LocationFixDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<LocationFix>
-      _instance;
-} _LocationFix_default_instance_;
+PROTOBUF_CONSTEXPR LocationFix::LocationFix(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.position_covariance_)*/{}
+  , /*decltype(_impl_.frame_id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.timestamp_)*/nullptr
+  , /*decltype(_impl_.latitude_)*/0
+  , /*decltype(_impl_.longitude_)*/0
+  , /*decltype(_impl_.altitude_)*/0
+  , /*decltype(_impl_.position_covariance_type_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct LocationFixDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR LocationFixDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~LocationFixDefaultTypeInternal() {}
+  union {
+    LocationFix _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LocationFixDefaultTypeInternal _LocationFix_default_instance_;
 }  // namespace foxglove
-namespace protobuf_foxglove_2fLocationFix_2eproto {
-static void InitDefaultsLocationFix() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_foxglove_2fLocationFix_2eproto[1];
+static const ::_pb::EnumDescriptor* file_level_enum_descriptors_foxglove_2fLocationFix_2eproto[1];
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_foxglove_2fLocationFix_2eproto = nullptr;
 
-  {
-    void* ptr = &::foxglove::_LocationFix_default_instance_;
-    new (ptr) ::foxglove::LocationFix();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::foxglove::LocationFix::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<1> scc_info_LocationFix =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsLocationFix}, {
-      &protobuf_google_2fprotobuf_2ftimestamp_2eproto::scc_info_Timestamp.base,}};
-
-void InitDefaults() {
-  ::google::protobuf::internal::InitSCC(&scc_info_LocationFix.base);
-}
-
-::google::protobuf::Metadata file_level_metadata[1];
-const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[1];
-
-const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_foxglove_2fLocationFix_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::LocationFix, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::LocationFix, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::LocationFix, timestamp_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::LocationFix, frame_id_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::LocationFix, latitude_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::LocationFix, longitude_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::LocationFix, altitude_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::LocationFix, position_covariance_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::LocationFix, position_covariance_type_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::foxglove::LocationFix, _impl_.timestamp_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::LocationFix, _impl_.frame_id_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::LocationFix, _impl_.latitude_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::LocationFix, _impl_.longitude_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::LocationFix, _impl_.altitude_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::LocationFix, _impl_.position_covariance_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::LocationFix, _impl_.position_covariance_type_),
 };
-static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::foxglove::LocationFix)},
-};
-
-static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::foxglove::_LocationFix_default_instance_),
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::foxglove::LocationFix)},
 };
 
-void protobuf_AssignDescriptors() {
-  AddDescriptors();
-  AssignDescriptors(
-      "foxglove/LocationFix.proto", schemas, file_default_instances, TableStruct::offsets,
-      file_level_metadata, file_level_enum_descriptors, NULL);
+static const ::_pb::Message* const file_default_instances[] = {
+  &::foxglove::_LocationFix_default_instance_._instance,
+};
+
+const char descriptor_table_protodef_foxglove_2fLocationFix_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n\032foxglove/LocationFix.proto\022\010foxglove\032\037"
+  "google/protobuf/timestamp.proto\"\312\002\n\013Loca"
+  "tionFix\022-\n\ttimestamp\030\006 \001(\0132\032.google.prot"
+  "obuf.Timestamp\022\020\n\010frame_id\030\007 \001(\t\022\020\n\010lati"
+  "tude\030\001 \001(\001\022\021\n\tlongitude\030\002 \001(\001\022\020\n\010altitud"
+  "e\030\003 \001(\001\022\033\n\023position_covariance\030\004 \003(\001\022N\n\030"
+  "position_covariance_type\030\005 \001(\0162,.foxglov"
+  "e.LocationFix.PositionCovarianceType\"V\n\026"
+  "PositionCovarianceType\022\013\n\007UNKNOWN\020\000\022\020\n\014A"
+  "PPROXIMATED\020\001\022\022\n\016DIAGONAL_KNOWN\020\002\022\t\n\005KNO"
+  "WN\020\003b\006proto3"
+  ;
+static const ::_pbi::DescriptorTable* const descriptor_table_foxglove_2fLocationFix_2eproto_deps[1] = {
+  &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
+};
+static ::_pbi::once_flag descriptor_table_foxglove_2fLocationFix_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_foxglove_2fLocationFix_2eproto = {
+    false, false, 412, descriptor_table_protodef_foxglove_2fLocationFix_2eproto,
+    "foxglove/LocationFix.proto",
+    &descriptor_table_foxglove_2fLocationFix_2eproto_once, descriptor_table_foxglove_2fLocationFix_2eproto_deps, 1, 1,
+    schemas, file_default_instances, TableStruct_foxglove_2fLocationFix_2eproto::offsets,
+    file_level_metadata_foxglove_2fLocationFix_2eproto, file_level_enum_descriptors_foxglove_2fLocationFix_2eproto,
+    file_level_service_descriptors_foxglove_2fLocationFix_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_foxglove_2fLocationFix_2eproto_getter() {
+  return &descriptor_table_foxglove_2fLocationFix_2eproto;
 }
 
-void protobuf_AssignDescriptorsOnce() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, protobuf_AssignDescriptors);
-}
-
-void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
-void protobuf_RegisterTypes(const ::std::string&) {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 1);
-}
-
-void AddDescriptorsImpl() {
-  InitDefaults();
-  static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\032foxglove/LocationFix.proto\022\010foxglove\032\037"
-      "google/protobuf/timestamp.proto\"\312\002\n\013Loca"
-      "tionFix\022-\n\ttimestamp\030\006 \001(\0132\032.google.prot"
-      "obuf.Timestamp\022\020\n\010frame_id\030\007 \001(\t\022\020\n\010lati"
-      "tude\030\001 \001(\001\022\021\n\tlongitude\030\002 \001(\001\022\020\n\010altitud"
-      "e\030\003 \001(\001\022\033\n\023position_covariance\030\004 \003(\001\022N\n\030"
-      "position_covariance_type\030\005 \001(\0162,.foxglov"
-      "e.LocationFix.PositionCovarianceType\"V\n\026"
-      "PositionCovarianceType\022\013\n\007UNKNOWN\020\000\022\020\n\014A"
-      "PPROXIMATED\020\001\022\022\n\016DIAGONAL_KNOWN\020\002\022\t\n\005KNO"
-      "WN\020\003b\006proto3"
-  };
-  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 412);
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
-    "foxglove/LocationFix.proto", &protobuf_RegisterTypes);
-  ::protobuf_google_2fprotobuf_2ftimestamp_2eproto::AddDescriptors();
-}
-
-void AddDescriptors() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, AddDescriptorsImpl);
-}
-// Force AddDescriptors() to be called at dynamic initialization time.
-struct StaticDescriptorInitializer {
-  StaticDescriptorInitializer() {
-    AddDescriptors();
-  }
-} static_descriptor_initializer;
-}  // namespace protobuf_foxglove_2fLocationFix_2eproto
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_foxglove_2fLocationFix_2eproto(&descriptor_table_foxglove_2fLocationFix_2eproto);
 namespace foxglove {
-const ::google::protobuf::EnumDescriptor* LocationFix_PositionCovarianceType_descriptor() {
-  protobuf_foxglove_2fLocationFix_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_foxglove_2fLocationFix_2eproto::file_level_enum_descriptors[0];
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* LocationFix_PositionCovarianceType_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_foxglove_2fLocationFix_2eproto);
+  return file_level_enum_descriptors_foxglove_2fLocationFix_2eproto[0];
 }
 bool LocationFix_PositionCovarianceType_IsValid(int value) {
   switch (value) {
@@ -142,369 +116,287 @@ bool LocationFix_PositionCovarianceType_IsValid(int value) {
   }
 }
 
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const LocationFix_PositionCovarianceType LocationFix::UNKNOWN;
-const LocationFix_PositionCovarianceType LocationFix::APPROXIMATED;
-const LocationFix_PositionCovarianceType LocationFix::DIAGONAL_KNOWN;
-const LocationFix_PositionCovarianceType LocationFix::KNOWN;
-const LocationFix_PositionCovarianceType LocationFix::PositionCovarianceType_MIN;
-const LocationFix_PositionCovarianceType LocationFix::PositionCovarianceType_MAX;
-const int LocationFix::PositionCovarianceType_ARRAYSIZE;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+#if (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
+constexpr LocationFix_PositionCovarianceType LocationFix::UNKNOWN;
+constexpr LocationFix_PositionCovarianceType LocationFix::APPROXIMATED;
+constexpr LocationFix_PositionCovarianceType LocationFix::DIAGONAL_KNOWN;
+constexpr LocationFix_PositionCovarianceType LocationFix::KNOWN;
+constexpr LocationFix_PositionCovarianceType LocationFix::PositionCovarianceType_MIN;
+constexpr LocationFix_PositionCovarianceType LocationFix::PositionCovarianceType_MAX;
+constexpr int LocationFix::PositionCovarianceType_ARRAYSIZE;
+#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 
 // ===================================================================
 
-void LocationFix::InitAsDefaultInstance() {
-  ::foxglove::_LocationFix_default_instance_._instance.get_mutable()->timestamp_ = const_cast< ::google::protobuf::Timestamp*>(
-      ::google::protobuf::Timestamp::internal_default_instance());
+class LocationFix::_Internal {
+ public:
+  static const ::PROTOBUF_NAMESPACE_ID::Timestamp& timestamp(const LocationFix* msg);
+};
+
+const ::PROTOBUF_NAMESPACE_ID::Timestamp&
+LocationFix::_Internal::timestamp(const LocationFix* msg) {
+  return *msg->_impl_.timestamp_;
 }
 void LocationFix::clear_timestamp() {
-  if (GetArenaNoVirtual() == NULL && timestamp_ != NULL) {
-    delete timestamp_;
+  if (GetArenaForAllocation() == nullptr && _impl_.timestamp_ != nullptr) {
+    delete _impl_.timestamp_;
   }
-  timestamp_ = NULL;
+  _impl_.timestamp_ = nullptr;
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int LocationFix::kTimestampFieldNumber;
-const int LocationFix::kFrameIdFieldNumber;
-const int LocationFix::kLatitudeFieldNumber;
-const int LocationFix::kLongitudeFieldNumber;
-const int LocationFix::kAltitudeFieldNumber;
-const int LocationFix::kPositionCovarianceFieldNumber;
-const int LocationFix::kPositionCovarianceTypeFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-LocationFix::LocationFix()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_foxglove_2fLocationFix_2eproto::scc_info_LocationFix.base);
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:foxglove.LocationFix)
+LocationFix::LocationFix(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:foxglove.LocationFix)
 }
 LocationFix::LocationFix(const LocationFix& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      position_covariance_(from.position_covariance_) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  frame_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.frame_id().size() > 0) {
-    frame_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.frame_id_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  LocationFix* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.position_covariance_){from._impl_.position_covariance_}
+    , decltype(_impl_.frame_id_){}
+    , decltype(_impl_.timestamp_){nullptr}
+    , decltype(_impl_.latitude_){}
+    , decltype(_impl_.longitude_){}
+    , decltype(_impl_.altitude_){}
+    , decltype(_impl_.position_covariance_type_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.frame_id_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.frame_id_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_frame_id().empty()) {
+    _this->_impl_.frame_id_.Set(from._internal_frame_id(), 
+      _this->GetArenaForAllocation());
   }
-  if (from.has_timestamp()) {
-    timestamp_ = new ::google::protobuf::Timestamp(*from.timestamp_);
-  } else {
-    timestamp_ = NULL;
+  if (from._internal_has_timestamp()) {
+    _this->_impl_.timestamp_ = new ::PROTOBUF_NAMESPACE_ID::Timestamp(*from._impl_.timestamp_);
   }
-  ::memcpy(&latitude_, &from.latitude_,
-    static_cast<size_t>(reinterpret_cast<char*>(&position_covariance_type_) -
-    reinterpret_cast<char*>(&latitude_)) + sizeof(position_covariance_type_));
+  ::memcpy(&_impl_.latitude_, &from._impl_.latitude_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.position_covariance_type_) -
+    reinterpret_cast<char*>(&_impl_.latitude_)) + sizeof(_impl_.position_covariance_type_));
   // @@protoc_insertion_point(copy_constructor:foxglove.LocationFix)
 }
 
-void LocationFix::SharedCtor() {
-  frame_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&timestamp_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&position_covariance_type_) -
-      reinterpret_cast<char*>(&timestamp_)) + sizeof(position_covariance_type_));
+inline void LocationFix::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.position_covariance_){arena}
+    , decltype(_impl_.frame_id_){}
+    , decltype(_impl_.timestamp_){nullptr}
+    , decltype(_impl_.latitude_){0}
+    , decltype(_impl_.longitude_){0}
+    , decltype(_impl_.altitude_){0}
+    , decltype(_impl_.position_covariance_type_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.frame_id_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.frame_id_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 LocationFix::~LocationFix() {
   // @@protoc_insertion_point(destructor:foxglove.LocationFix)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
 
-void LocationFix::SharedDtor() {
-  frame_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != internal_default_instance()) delete timestamp_;
+inline void LocationFix::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.position_covariance_.~RepeatedField();
+  _impl_.frame_id_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.timestamp_;
 }
 
 void LocationFix::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* LocationFix::descriptor() {
-  ::protobuf_foxglove_2fLocationFix_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_foxglove_2fLocationFix_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const LocationFix& LocationFix::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_foxglove_2fLocationFix_2eproto::scc_info_LocationFix.base);
-  return *internal_default_instance();
-}
-
 
 void LocationFix::Clear() {
 // @@protoc_insertion_point(message_clear_start:foxglove.LocationFix)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  position_covariance_.Clear();
-  frame_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (GetArenaNoVirtual() == NULL && timestamp_ != NULL) {
-    delete timestamp_;
+  _impl_.position_covariance_.Clear();
+  _impl_.frame_id_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.timestamp_ != nullptr) {
+    delete _impl_.timestamp_;
   }
-  timestamp_ = NULL;
-  ::memset(&latitude_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&position_covariance_type_) -
-      reinterpret_cast<char*>(&latitude_)) + sizeof(position_covariance_type_));
-  _internal_metadata_.Clear();
+  _impl_.timestamp_ = nullptr;
+  ::memset(&_impl_.latitude_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.position_covariance_type_) -
+      reinterpret_cast<char*>(&_impl_.latitude_)) + sizeof(_impl_.position_covariance_type_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-bool LocationFix::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:foxglove.LocationFix)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+const char* LocationFix::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
       // double latitude = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(9u /* 9 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &latitude_)));
-        } else {
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 9)) {
+          _impl_.latitude_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // double longitude = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(17u /* 17 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &longitude_)));
-        } else {
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 17)) {
+          _impl_.longitude_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // double altitude = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(25u /* 25 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &altitude_)));
-        } else {
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 25)) {
+          _impl_.altitude_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // repeated double position_covariance = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, this->mutable_position_covariance())));
-        } else if (
-            static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(33u /* 33 & 0xFF */)) {
-          DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 1, 34u, input, this->mutable_position_covariance())));
-        } else {
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedDoubleParser(_internal_mutable_position_covariance(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 33) {
+          _internal_add_position_covariance(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr));
+          ptr += sizeof(double);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // .foxglove.LocationFix.PositionCovarianceType position_covariance_type = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(40u /* 40 & 0xFF */)) {
-          int value;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_position_covariance_type(static_cast< ::foxglove::LocationFix_PositionCovarianceType >(value));
-        } else {
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_position_covariance_type(static_cast<::foxglove::LocationFix_PositionCovarianceType>(val));
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // .google.protobuf.Timestamp timestamp = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_timestamp()));
-        } else {
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
+          ptr = ctx->ParseMessage(_internal_mutable_timestamp(), ptr);
+          CHK_(ptr);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // string frame_id = 7;
-      case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(58u /* 58 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_frame_id()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->frame_id().data(), static_cast<int>(this->frame_id().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "foxglove.LocationFix.frame_id"));
-        } else {
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
+          auto str = _internal_mutable_frame_id();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "foxglove.LocationFix.frame_id"));
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
     }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:foxglove.LocationFix)
-  return true;
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:foxglove.LocationFix)
-  return false;
-#undef DO_
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-void LocationFix::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:foxglove.LocationFix)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // double latitude = 1;
-  if (this->latitude() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(1, this->latitude(), output);
-  }
-
-  // double longitude = 2;
-  if (this->longitude() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(2, this->longitude(), output);
-  }
-
-  // double altitude = 3;
-  if (this->altitude() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(3, this->altitude(), output);
-  }
-
-  // repeated double position_covariance = 4;
-  if (this->position_covariance_size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteTag(4, ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(static_cast< ::google::protobuf::uint32>(
-        _position_covariance_cached_byte_size_));
-    ::google::protobuf::internal::WireFormatLite::WriteDoubleArray(
-      this->position_covariance().data(), this->position_covariance_size(), output);
-  }
-
-  // .foxglove.LocationFix.PositionCovarianceType position_covariance_type = 5;
-  if (this->position_covariance_type() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      5, this->position_covariance_type(), output);
-  }
-
-  // .google.protobuf.Timestamp timestamp = 6;
-  if (this->has_timestamp()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      6, this->_internal_timestamp(), output);
-  }
-
-  // string frame_id = 7;
-  if (this->frame_id().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->frame_id().data(), static_cast<int>(this->frame_id().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "foxglove.LocationFix.frame_id");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      7, this->frame_id(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:foxglove.LocationFix)
-}
-
-::google::protobuf::uint8* LocationFix::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+uint8_t* LocationFix::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:foxglove.LocationFix)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // double latitude = 1;
-  if (this->latitude() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(1, this->latitude(), target);
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_latitude = this->_internal_latitude();
+  uint64_t raw_latitude;
+  memcpy(&raw_latitude, &tmp_latitude, sizeof(tmp_latitude));
+  if (raw_latitude != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(1, this->_internal_latitude(), target);
   }
 
   // double longitude = 2;
-  if (this->longitude() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(2, this->longitude(), target);
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_longitude = this->_internal_longitude();
+  uint64_t raw_longitude;
+  memcpy(&raw_longitude, &tmp_longitude, sizeof(tmp_longitude));
+  if (raw_longitude != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(2, this->_internal_longitude(), target);
   }
 
   // double altitude = 3;
-  if (this->altitude() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(3, this->altitude(), target);
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_altitude = this->_internal_altitude();
+  uint64_t raw_altitude;
+  memcpy(&raw_altitude, &tmp_altitude, sizeof(tmp_altitude));
+  if (raw_altitude != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(3, this->_internal_altitude(), target);
   }
 
   // repeated double position_covariance = 4;
-  if (this->position_covariance_size() > 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteTagToArray(
-      4,
-      ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::google::protobuf::io::CodedOutputStream::WriteVarint32ToArray(
-        static_cast< ::google::protobuf::int32>(
-            _position_covariance_cached_byte_size_), target);
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteDoubleNoTagToArray(this->position_covariance_, target);
+  if (this->_internal_position_covariance_size() > 0) {
+    target = stream->WriteFixedPacked(4, _internal_position_covariance(), target);
   }
 
   // .foxglove.LocationFix.PositionCovarianceType position_covariance_type = 5;
-  if (this->position_covariance_type() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      5, this->position_covariance_type(), target);
+  if (this->_internal_position_covariance_type() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      5, this->_internal_position_covariance_type(), target);
   }
 
   // .google.protobuf.Timestamp timestamp = 6;
-  if (this->has_timestamp()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        6, this->_internal_timestamp(), deterministic, target);
+  if (this->_internal_has_timestamp()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(6, _Internal::timestamp(this),
+        _Internal::timestamp(this).GetCachedSize(), target, stream);
   }
 
   // string frame_id = 7;
-  if (this->frame_id().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->frame_id().data(), static_cast<int>(this->frame_id().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+  if (!this->_internal_frame_id().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_frame_id().data(), static_cast<int>(this->_internal_frame_id().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "foxglove.LocationFix.frame_id");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        7, this->frame_id(), target);
+    target = stream->WriteStringMaybeAliased(
+        7, this->_internal_frame_id(), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:foxglove.LocationFix)
   return target;
@@ -514,116 +406,119 @@ size_t LocationFix::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:foxglove.LocationFix)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // repeated double position_covariance = 4;
   {
-    unsigned int count = static_cast<unsigned int>(this->position_covariance_size());
+    unsigned int count = static_cast<unsigned int>(this->_internal_position_covariance_size());
     size_t data_size = 8UL * count;
     if (data_size > 0) {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-            static_cast< ::google::protobuf::int32>(data_size));
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
     }
-    int cached_size = ::google::protobuf::internal::ToCachedSize(data_size);
-    GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-    _position_covariance_cached_byte_size_ = cached_size;
-    GOOGLE_SAFE_CONCURRENT_WRITES_END();
     total_size += data_size;
   }
 
   // string frame_id = 7;
-  if (this->frame_id().size() > 0) {
+  if (!this->_internal_frame_id().empty()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->frame_id());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_frame_id());
   }
 
   // .google.protobuf.Timestamp timestamp = 6;
-  if (this->has_timestamp()) {
+  if (this->_internal_has_timestamp()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *timestamp_);
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.timestamp_);
   }
 
   // double latitude = 1;
-  if (this->latitude() != 0) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_latitude = this->_internal_latitude();
+  uint64_t raw_latitude;
+  memcpy(&raw_latitude, &tmp_latitude, sizeof(tmp_latitude));
+  if (raw_latitude != 0) {
     total_size += 1 + 8;
   }
 
   // double longitude = 2;
-  if (this->longitude() != 0) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_longitude = this->_internal_longitude();
+  uint64_t raw_longitude;
+  memcpy(&raw_longitude, &tmp_longitude, sizeof(tmp_longitude));
+  if (raw_longitude != 0) {
     total_size += 1 + 8;
   }
 
   // double altitude = 3;
-  if (this->altitude() != 0) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_altitude = this->_internal_altitude();
+  uint64_t raw_altitude;
+  memcpy(&raw_altitude, &tmp_altitude, sizeof(tmp_altitude));
+  if (raw_altitude != 0) {
     total_size += 1 + 8;
   }
 
   // .foxglove.LocationFix.PositionCovarianceType position_covariance_type = 5;
-  if (this->position_covariance_type() != 0) {
+  if (this->_internal_position_covariance_type() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->position_covariance_type());
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_position_covariance_type());
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void LocationFix::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:foxglove.LocationFix)
-  GOOGLE_DCHECK_NE(&from, this);
-  const LocationFix* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const LocationFix>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:foxglove.LocationFix)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:foxglove.LocationFix)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LocationFix::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    LocationFix::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LocationFix::GetClassData() const { return &_class_data_; }
 
-void LocationFix::MergeFrom(const LocationFix& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:foxglove.LocationFix)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+
+void LocationFix::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<LocationFix*>(&to_msg);
+  auto& from = static_cast<const LocationFix&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:foxglove.LocationFix)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  position_covariance_.MergeFrom(from.position_covariance_);
-  if (from.frame_id().size() > 0) {
-
-    frame_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.frame_id_);
+  _this->_impl_.position_covariance_.MergeFrom(from._impl_.position_covariance_);
+  if (!from._internal_frame_id().empty()) {
+    _this->_internal_set_frame_id(from._internal_frame_id());
   }
-  if (from.has_timestamp()) {
-    mutable_timestamp()->::google::protobuf::Timestamp::MergeFrom(from.timestamp());
+  if (from._internal_has_timestamp()) {
+    _this->_internal_mutable_timestamp()->::PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(
+        from._internal_timestamp());
   }
-  if (from.latitude() != 0) {
-    set_latitude(from.latitude());
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_latitude = from._internal_latitude();
+  uint64_t raw_latitude;
+  memcpy(&raw_latitude, &tmp_latitude, sizeof(tmp_latitude));
+  if (raw_latitude != 0) {
+    _this->_internal_set_latitude(from._internal_latitude());
   }
-  if (from.longitude() != 0) {
-    set_longitude(from.longitude());
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_longitude = from._internal_longitude();
+  uint64_t raw_longitude;
+  memcpy(&raw_longitude, &tmp_longitude, sizeof(tmp_longitude));
+  if (raw_longitude != 0) {
+    _this->_internal_set_longitude(from._internal_longitude());
   }
-  if (from.altitude() != 0) {
-    set_altitude(from.altitude());
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_altitude = from._internal_altitude();
+  uint64_t raw_altitude;
+  memcpy(&raw_altitude, &tmp_altitude, sizeof(tmp_altitude));
+  if (raw_altitude != 0) {
+    _this->_internal_set_altitude(from._internal_altitude());
   }
-  if (from.position_covariance_type() != 0) {
-    set_position_covariance_type(from.position_covariance_type());
+  if (from._internal_position_covariance_type() != 0) {
+    _this->_internal_set_position_covariance_type(from._internal_position_covariance_type());
   }
-}
-
-void LocationFix::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:foxglove.LocationFix)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void LocationFix::CopyFrom(const LocationFix& from) {
@@ -637,37 +532,38 @@ bool LocationFix::IsInitialized() const {
   return true;
 }
 
-void LocationFix::Swap(LocationFix* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void LocationFix::InternalSwap(LocationFix* other) {
   using std::swap;
-  position_covariance_.InternalSwap(&other->position_covariance_);
-  frame_id_.Swap(&other->frame_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  swap(timestamp_, other->timestamp_);
-  swap(latitude_, other->latitude_);
-  swap(longitude_, other->longitude_);
-  swap(altitude_, other->altitude_);
-  swap(position_covariance_type_, other->position_covariance_type_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.position_covariance_.InternalSwap(&other->_impl_.position_covariance_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.frame_id_, lhs_arena,
+      &other->_impl_.frame_id_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(LocationFix, _impl_.position_covariance_type_)
+      + sizeof(LocationFix::_impl_.position_covariance_type_)
+      - PROTOBUF_FIELD_OFFSET(LocationFix, _impl_.timestamp_)>(
+          reinterpret_cast<char*>(&_impl_.timestamp_),
+          reinterpret_cast<char*>(&other->_impl_.timestamp_));
 }
 
-::google::protobuf::Metadata LocationFix::GetMetadata() const {
-  protobuf_foxglove_2fLocationFix_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_foxglove_2fLocationFix_2eproto::file_level_metadata[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata LocationFix::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_foxglove_2fLocationFix_2eproto_getter, &descriptor_table_foxglove_2fLocationFix_2eproto_once,
+      file_level_metadata_foxglove_2fLocationFix_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace foxglove
-namespace google {
-namespace protobuf {
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::foxglove::LocationFix* Arena::CreateMaybeMessage< ::foxglove::LocationFix >(Arena* arena) {
-  return Arena::CreateInternal< ::foxglove::LocationFix >(arena);
+PROTOBUF_NAMESPACE_OPEN
+template<> PROTOBUF_NOINLINE ::foxglove::LocationFix*
+Arena::CreateMaybeMessage< ::foxglove::LocationFix >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::foxglove::LocationFix >(arena);
 }
-}  // namespace protobuf
-}  // namespace google
+PROTOBUF_NAMESPACE_CLOSE
 
 // @@protoc_insertion_point(global_scope)
+#include <google/protobuf/port_undef.inc>

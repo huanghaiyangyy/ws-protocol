@@ -5,300 +5,239 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
-#include <google/protobuf/stubs/port.h>
 #include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/wire_format_lite_inl.h>
+#include <google/protobuf/extension_set.h>
+#include <google/protobuf/wire_format_lite.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
+#include <google/protobuf/port_def.inc>
 
-namespace protobuf_foxglove_2fSceneEntityDeletion_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_foxglove_2fSceneEntityDeletion_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_SceneEntityDeletion;
-}  // namespace protobuf_foxglove_2fSceneEntityDeletion_2eproto
-namespace protobuf_foxglove_2fSceneEntity_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_foxglove_2fSceneEntity_2eproto ::google::protobuf::internal::SCCInfo<11> scc_info_SceneEntity;
-}  // namespace protobuf_foxglove_2fSceneEntity_2eproto
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace foxglove {
-class SceneUpdateDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SceneUpdate>
-      _instance;
-} _SceneUpdate_default_instance_;
+PROTOBUF_CONSTEXPR SceneUpdate::SceneUpdate(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.deletions_)*/{}
+  , /*decltype(_impl_.entities_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct SceneUpdateDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SceneUpdateDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SceneUpdateDefaultTypeInternal() {}
+  union {
+    SceneUpdate _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SceneUpdateDefaultTypeInternal _SceneUpdate_default_instance_;
 }  // namespace foxglove
-namespace protobuf_foxglove_2fSceneUpdate_2eproto {
-static void InitDefaultsSceneUpdate() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_foxglove_2fSceneUpdate_2eproto[1];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_foxglove_2fSceneUpdate_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_foxglove_2fSceneUpdate_2eproto = nullptr;
 
-  {
-    void* ptr = &::foxglove::_SceneUpdate_default_instance_;
-    new (ptr) ::foxglove::SceneUpdate();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::foxglove::SceneUpdate::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<2> scc_info_SceneUpdate =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsSceneUpdate}, {
-      &protobuf_foxglove_2fSceneEntityDeletion_2eproto::scc_info_SceneEntityDeletion.base,
-      &protobuf_foxglove_2fSceneEntity_2eproto::scc_info_SceneEntity.base,}};
-
-void InitDefaults() {
-  ::google::protobuf::internal::InitSCC(&scc_info_SceneUpdate.base);
-}
-
-::google::protobuf::Metadata file_level_metadata[1];
-
-const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_foxglove_2fSceneUpdate_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::SceneUpdate, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::SceneUpdate, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::SceneUpdate, deletions_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::SceneUpdate, entities_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::foxglove::SceneUpdate, _impl_.deletions_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::SceneUpdate, _impl_.entities_),
 };
-static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::foxglove::SceneUpdate)},
-};
-
-static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::foxglove::_SceneUpdate_default_instance_),
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::foxglove::SceneUpdate)},
 };
 
-void protobuf_AssignDescriptors() {
-  AddDescriptors();
-  AssignDescriptors(
-      "foxglove/SceneUpdate.proto", schemas, file_default_instances, TableStruct::offsets,
-      file_level_metadata, NULL, NULL);
+static const ::_pb::Message* const file_default_instances[] = {
+  &::foxglove::_SceneUpdate_default_instance_._instance,
+};
+
+const char descriptor_table_protodef_foxglove_2fSceneUpdate_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n\032foxglove/SceneUpdate.proto\022\010foxglove\032\032"
+  "foxglove/SceneEntity.proto\032\"foxglove/Sce"
+  "neEntityDeletion.proto\"h\n\013SceneUpdate\0220\n"
+  "\tdeletions\030\001 \003(\0132\035.foxglove.SceneEntityD"
+  "eletion\022\'\n\010entities\030\002 \003(\0132\025.foxglove.Sce"
+  "neEntityb\006proto3"
+  ;
+static const ::_pbi::DescriptorTable* const descriptor_table_foxglove_2fSceneUpdate_2eproto_deps[2] = {
+  &::descriptor_table_foxglove_2fSceneEntity_2eproto,
+  &::descriptor_table_foxglove_2fSceneEntityDeletion_2eproto,
+};
+static ::_pbi::once_flag descriptor_table_foxglove_2fSceneUpdate_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_foxglove_2fSceneUpdate_2eproto = {
+    false, false, 216, descriptor_table_protodef_foxglove_2fSceneUpdate_2eproto,
+    "foxglove/SceneUpdate.proto",
+    &descriptor_table_foxglove_2fSceneUpdate_2eproto_once, descriptor_table_foxglove_2fSceneUpdate_2eproto_deps, 2, 1,
+    schemas, file_default_instances, TableStruct_foxglove_2fSceneUpdate_2eproto::offsets,
+    file_level_metadata_foxglove_2fSceneUpdate_2eproto, file_level_enum_descriptors_foxglove_2fSceneUpdate_2eproto,
+    file_level_service_descriptors_foxglove_2fSceneUpdate_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_foxglove_2fSceneUpdate_2eproto_getter() {
+  return &descriptor_table_foxglove_2fSceneUpdate_2eproto;
 }
 
-void protobuf_AssignDescriptorsOnce() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, protobuf_AssignDescriptors);
-}
-
-void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
-void protobuf_RegisterTypes(const ::std::string&) {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 1);
-}
-
-void AddDescriptorsImpl() {
-  InitDefaults();
-  static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\032foxglove/SceneUpdate.proto\022\010foxglove\032\032"
-      "foxglove/SceneEntity.proto\032\"foxglove/Sce"
-      "neEntityDeletion.proto\"h\n\013SceneUpdate\0220\n"
-      "\tdeletions\030\001 \003(\0132\035.foxglove.SceneEntityD"
-      "eletion\022\'\n\010entities\030\002 \003(\0132\025.foxglove.Sce"
-      "neEntityb\006proto3"
-  };
-  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 216);
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
-    "foxglove/SceneUpdate.proto", &protobuf_RegisterTypes);
-  ::protobuf_foxglove_2fSceneEntity_2eproto::AddDescriptors();
-  ::protobuf_foxglove_2fSceneEntityDeletion_2eproto::AddDescriptors();
-}
-
-void AddDescriptors() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, AddDescriptorsImpl);
-}
-// Force AddDescriptors() to be called at dynamic initialization time.
-struct StaticDescriptorInitializer {
-  StaticDescriptorInitializer() {
-    AddDescriptors();
-  }
-} static_descriptor_initializer;
-}  // namespace protobuf_foxglove_2fSceneUpdate_2eproto
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_foxglove_2fSceneUpdate_2eproto(&descriptor_table_foxglove_2fSceneUpdate_2eproto);
 namespace foxglove {
 
 // ===================================================================
 
-void SceneUpdate::InitAsDefaultInstance() {
-}
+class SceneUpdate::_Internal {
+ public:
+};
+
 void SceneUpdate::clear_deletions() {
-  deletions_.Clear();
+  _impl_.deletions_.Clear();
 }
 void SceneUpdate::clear_entities() {
-  entities_.Clear();
+  _impl_.entities_.Clear();
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SceneUpdate::kDeletionsFieldNumber;
-const int SceneUpdate::kEntitiesFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-SceneUpdate::SceneUpdate()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_foxglove_2fSceneUpdate_2eproto::scc_info_SceneUpdate.base);
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:foxglove.SceneUpdate)
+SceneUpdate::SceneUpdate(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:foxglove.SceneUpdate)
 }
 SceneUpdate::SceneUpdate(const SceneUpdate& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      deletions_(from.deletions_),
-      entities_(from.entities_) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SceneUpdate* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.deletions_){from._impl_.deletions_}
+    , decltype(_impl_.entities_){from._impl_.entities_}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:foxglove.SceneUpdate)
 }
 
-void SceneUpdate::SharedCtor() {
+inline void SceneUpdate::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.deletions_){arena}
+    , decltype(_impl_.entities_){arena}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 SceneUpdate::~SceneUpdate() {
   // @@protoc_insertion_point(destructor:foxglove.SceneUpdate)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
 
-void SceneUpdate::SharedDtor() {
+inline void SceneUpdate::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.deletions_.~RepeatedPtrField();
+  _impl_.entities_.~RepeatedPtrField();
 }
 
 void SceneUpdate::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* SceneUpdate::descriptor() {
-  ::protobuf_foxglove_2fSceneUpdate_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_foxglove_2fSceneUpdate_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const SceneUpdate& SceneUpdate::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_foxglove_2fSceneUpdate_2eproto::scc_info_SceneUpdate.base);
-  return *internal_default_instance();
-}
-
 
 void SceneUpdate::Clear() {
 // @@protoc_insertion_point(message_clear_start:foxglove.SceneUpdate)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  deletions_.Clear();
-  entities_.Clear();
-  _internal_metadata_.Clear();
+  _impl_.deletions_.Clear();
+  _impl_.entities_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-bool SceneUpdate::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:foxglove.SceneUpdate)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+const char* SceneUpdate::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
       // repeated .foxglove.SceneEntityDeletion deletions = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-                input, add_deletions()));
-        } else {
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_deletions(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // repeated .foxglove.SceneEntity entities = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-                input, add_entities()));
-        } else {
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_entities(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
     }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:foxglove.SceneUpdate)
-  return true;
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:foxglove.SceneUpdate)
-  return false;
-#undef DO_
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-void SceneUpdate::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:foxglove.SceneUpdate)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // repeated .foxglove.SceneEntityDeletion deletions = 1;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->deletions_size()); i < n; i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1,
-      this->deletions(static_cast<int>(i)),
-      output);
-  }
-
-  // repeated .foxglove.SceneEntity entities = 2;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->entities_size()); i < n; i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2,
-      this->entities(static_cast<int>(i)),
-      output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:foxglove.SceneUpdate)
-}
-
-::google::protobuf::uint8* SceneUpdate::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+uint8_t* SceneUpdate::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:foxglove.SceneUpdate)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // repeated .foxglove.SceneEntityDeletion deletions = 1;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->deletions_size()); i < n; i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, this->deletions(static_cast<int>(i)), deterministic, target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_deletions_size()); i < n; i++) {
+    const auto& repfield = this->_internal_deletions(i);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   // repeated .foxglove.SceneEntity entities = 2;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->entities_size()); i < n; i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, this->entities(static_cast<int>(i)), deterministic, target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_entities_size()); i < n; i++) {
+    const auto& repfield = this->_internal_entities(i);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(2, repfield, repfield.GetCachedSize(), target, stream);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:foxglove.SceneUpdate)
   return target;
@@ -308,69 +247,45 @@ size_t SceneUpdate::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:foxglove.SceneUpdate)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // repeated .foxglove.SceneEntityDeletion deletions = 1;
-  {
-    unsigned int count = static_cast<unsigned int>(this->deletions_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          this->deletions(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_deletions_size();
+  for (const auto& msg : this->_impl_.deletions_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .foxglove.SceneEntity entities = 2;
-  {
-    unsigned int count = static_cast<unsigned int>(this->entities_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          this->entities(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_entities_size();
+  for (const auto& msg : this->_impl_.entities_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void SceneUpdate::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:foxglove.SceneUpdate)
-  GOOGLE_DCHECK_NE(&from, this);
-  const SceneUpdate* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const SceneUpdate>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:foxglove.SceneUpdate)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:foxglove.SceneUpdate)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SceneUpdate::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SceneUpdate::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SceneUpdate::GetClassData() const { return &_class_data_; }
 
-void SceneUpdate::MergeFrom(const SceneUpdate& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:foxglove.SceneUpdate)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+
+void SceneUpdate::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SceneUpdate*>(&to_msg);
+  auto& from = static_cast<const SceneUpdate&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:foxglove.SceneUpdate)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  deletions_.MergeFrom(from.deletions_);
-  entities_.MergeFrom(from.entities_);
-}
-
-void SceneUpdate::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:foxglove.SceneUpdate)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_impl_.deletions_.MergeFrom(from._impl_.deletions_);
+  _this->_impl_.entities_.MergeFrom(from._impl_.entities_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void SceneUpdate::CopyFrom(const SceneUpdate& from) {
@@ -384,31 +299,27 @@ bool SceneUpdate::IsInitialized() const {
   return true;
 }
 
-void SceneUpdate::Swap(SceneUpdate* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void SceneUpdate::InternalSwap(SceneUpdate* other) {
   using std::swap;
-  CastToBase(&deletions_)->InternalSwap(CastToBase(&other->deletions_));
-  CastToBase(&entities_)->InternalSwap(CastToBase(&other->entities_));
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.deletions_.InternalSwap(&other->_impl_.deletions_);
+  _impl_.entities_.InternalSwap(&other->_impl_.entities_);
 }
 
-::google::protobuf::Metadata SceneUpdate::GetMetadata() const {
-  protobuf_foxglove_2fSceneUpdate_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_foxglove_2fSceneUpdate_2eproto::file_level_metadata[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata SceneUpdate::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_foxglove_2fSceneUpdate_2eproto_getter, &descriptor_table_foxglove_2fSceneUpdate_2eproto_once,
+      file_level_metadata_foxglove_2fSceneUpdate_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace foxglove
-namespace google {
-namespace protobuf {
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::foxglove::SceneUpdate* Arena::CreateMaybeMessage< ::foxglove::SceneUpdate >(Arena* arena) {
-  return Arena::CreateInternal< ::foxglove::SceneUpdate >(arena);
+PROTOBUF_NAMESPACE_OPEN
+template<> PROTOBUF_NOINLINE ::foxglove::SceneUpdate*
+Arena::CreateMaybeMessage< ::foxglove::SceneUpdate >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::foxglove::SceneUpdate >(arena);
 }
-}  // namespace protobuf
-}  // namespace google
+PROTOBUF_NAMESPACE_CLOSE
 
 // @@protoc_insertion_point(global_scope)
+#include <google/protobuf/port_undef.inc>

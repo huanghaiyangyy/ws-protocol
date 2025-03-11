@@ -5,527 +5,425 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
-#include <google/protobuf/stubs/port.h>
 #include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/wire_format_lite_inl.h>
+#include <google/protobuf/extension_set.h>
+#include <google/protobuf/wire_format_lite.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
+#include <google/protobuf/port_def.inc>
 
-namespace protobuf_foxglove_2fColor_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_foxglove_2fColor_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Color;
-}  // namespace protobuf_foxglove_2fColor_2eproto
-namespace protobuf_foxglove_2fPose_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_foxglove_2fPose_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_Pose;
-}  // namespace protobuf_foxglove_2fPose_2eproto
-namespace protobuf_foxglove_2fVector3_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_foxglove_2fVector3_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Vector3;
-}  // namespace protobuf_foxglove_2fVector3_2eproto
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace foxglove {
-class ModelPrimitiveDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<ModelPrimitive>
-      _instance;
-} _ModelPrimitive_default_instance_;
+PROTOBUF_CONSTEXPR ModelPrimitive::ModelPrimitive(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.url_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.media_type_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.data_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.pose_)*/nullptr
+  , /*decltype(_impl_.scale_)*/nullptr
+  , /*decltype(_impl_.color_)*/nullptr
+  , /*decltype(_impl_.override_color_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ModelPrimitiveDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ModelPrimitiveDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ModelPrimitiveDefaultTypeInternal() {}
+  union {
+    ModelPrimitive _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ModelPrimitiveDefaultTypeInternal _ModelPrimitive_default_instance_;
 }  // namespace foxglove
-namespace protobuf_foxglove_2fModelPrimitive_2eproto {
-static void InitDefaultsModelPrimitive() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_foxglove_2fModelPrimitive_2eproto[1];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_foxglove_2fModelPrimitive_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_foxglove_2fModelPrimitive_2eproto = nullptr;
 
-  {
-    void* ptr = &::foxglove::_ModelPrimitive_default_instance_;
-    new (ptr) ::foxglove::ModelPrimitive();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::foxglove::ModelPrimitive::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<3> scc_info_ModelPrimitive =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 3, InitDefaultsModelPrimitive}, {
-      &protobuf_foxglove_2fPose_2eproto::scc_info_Pose.base,
-      &protobuf_foxglove_2fVector3_2eproto::scc_info_Vector3.base,
-      &protobuf_foxglove_2fColor_2eproto::scc_info_Color.base,}};
-
-void InitDefaults() {
-  ::google::protobuf::internal::InitSCC(&scc_info_ModelPrimitive.base);
-}
-
-::google::protobuf::Metadata file_level_metadata[1];
-
-const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_foxglove_2fModelPrimitive_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::ModelPrimitive, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::ModelPrimitive, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::ModelPrimitive, pose_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::ModelPrimitive, scale_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::ModelPrimitive, color_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::ModelPrimitive, override_color_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::ModelPrimitive, url_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::ModelPrimitive, media_type_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::ModelPrimitive, data_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::foxglove::ModelPrimitive, _impl_.pose_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::ModelPrimitive, _impl_.scale_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::ModelPrimitive, _impl_.color_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::ModelPrimitive, _impl_.override_color_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::ModelPrimitive, _impl_.url_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::ModelPrimitive, _impl_.media_type_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::ModelPrimitive, _impl_.data_),
 };
-static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::foxglove::ModelPrimitive)},
-};
-
-static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::foxglove::_ModelPrimitive_default_instance_),
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::foxglove::ModelPrimitive)},
 };
 
-void protobuf_AssignDescriptors() {
-  AddDescriptors();
-  AssignDescriptors(
-      "foxglove/ModelPrimitive.proto", schemas, file_default_instances, TableStruct::offsets,
-      file_level_metadata, NULL, NULL);
+static const ::_pb::Message* const file_default_instances[] = {
+  &::foxglove::_ModelPrimitive_default_instance_._instance,
+};
+
+const char descriptor_table_protodef_foxglove_2fModelPrimitive_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n\035foxglove/ModelPrimitive.proto\022\010foxglov"
+  "e\032\024foxglove/Color.proto\032\023foxglove/Pose.p"
+  "roto\032\026foxglove/Vector3.proto\"\267\001\n\016ModelPr"
+  "imitive\022\034\n\004pose\030\001 \001(\0132\016.foxglove.Pose\022 \n"
+  "\005scale\030\002 \001(\0132\021.foxglove.Vector3\022\036\n\005color"
+  "\030\003 \001(\0132\017.foxglove.Color\022\026\n\016override_colo"
+  "r\030\004 \001(\010\022\013\n\003url\030\005 \001(\t\022\022\n\nmedia_type\030\006 \001(\t"
+  "\022\014\n\004data\030\007 \001(\014b\006proto3"
+  ;
+static const ::_pbi::DescriptorTable* const descriptor_table_foxglove_2fModelPrimitive_2eproto_deps[3] = {
+  &::descriptor_table_foxglove_2fColor_2eproto,
+  &::descriptor_table_foxglove_2fPose_2eproto,
+  &::descriptor_table_foxglove_2fVector3_2eproto,
+};
+static ::_pbi::once_flag descriptor_table_foxglove_2fModelPrimitive_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_foxglove_2fModelPrimitive_2eproto = {
+    false, false, 302, descriptor_table_protodef_foxglove_2fModelPrimitive_2eproto,
+    "foxglove/ModelPrimitive.proto",
+    &descriptor_table_foxglove_2fModelPrimitive_2eproto_once, descriptor_table_foxglove_2fModelPrimitive_2eproto_deps, 3, 1,
+    schemas, file_default_instances, TableStruct_foxglove_2fModelPrimitive_2eproto::offsets,
+    file_level_metadata_foxglove_2fModelPrimitive_2eproto, file_level_enum_descriptors_foxglove_2fModelPrimitive_2eproto,
+    file_level_service_descriptors_foxglove_2fModelPrimitive_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_foxglove_2fModelPrimitive_2eproto_getter() {
+  return &descriptor_table_foxglove_2fModelPrimitive_2eproto;
 }
 
-void protobuf_AssignDescriptorsOnce() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, protobuf_AssignDescriptors);
-}
-
-void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
-void protobuf_RegisterTypes(const ::std::string&) {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 1);
-}
-
-void AddDescriptorsImpl() {
-  InitDefaults();
-  static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\035foxglove/ModelPrimitive.proto\022\010foxglov"
-      "e\032\024foxglove/Color.proto\032\023foxglove/Pose.p"
-      "roto\032\026foxglove/Vector3.proto\"\267\001\n\016ModelPr"
-      "imitive\022\034\n\004pose\030\001 \001(\0132\016.foxglove.Pose\022 \n"
-      "\005scale\030\002 \001(\0132\021.foxglove.Vector3\022\036\n\005color"
-      "\030\003 \001(\0132\017.foxglove.Color\022\026\n\016override_colo"
-      "r\030\004 \001(\010\022\013\n\003url\030\005 \001(\t\022\022\n\nmedia_type\030\006 \001(\t"
-      "\022\014\n\004data\030\007 \001(\014b\006proto3"
-  };
-  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 302);
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
-    "foxglove/ModelPrimitive.proto", &protobuf_RegisterTypes);
-  ::protobuf_foxglove_2fColor_2eproto::AddDescriptors();
-  ::protobuf_foxglove_2fPose_2eproto::AddDescriptors();
-  ::protobuf_foxglove_2fVector3_2eproto::AddDescriptors();
-}
-
-void AddDescriptors() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, AddDescriptorsImpl);
-}
-// Force AddDescriptors() to be called at dynamic initialization time.
-struct StaticDescriptorInitializer {
-  StaticDescriptorInitializer() {
-    AddDescriptors();
-  }
-} static_descriptor_initializer;
-}  // namespace protobuf_foxglove_2fModelPrimitive_2eproto
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_foxglove_2fModelPrimitive_2eproto(&descriptor_table_foxglove_2fModelPrimitive_2eproto);
 namespace foxglove {
 
 // ===================================================================
 
-void ModelPrimitive::InitAsDefaultInstance() {
-  ::foxglove::_ModelPrimitive_default_instance_._instance.get_mutable()->pose_ = const_cast< ::foxglove::Pose*>(
-      ::foxglove::Pose::internal_default_instance());
-  ::foxglove::_ModelPrimitive_default_instance_._instance.get_mutable()->scale_ = const_cast< ::foxglove::Vector3*>(
-      ::foxglove::Vector3::internal_default_instance());
-  ::foxglove::_ModelPrimitive_default_instance_._instance.get_mutable()->color_ = const_cast< ::foxglove::Color*>(
-      ::foxglove::Color::internal_default_instance());
+class ModelPrimitive::_Internal {
+ public:
+  static const ::foxglove::Pose& pose(const ModelPrimitive* msg);
+  static const ::foxglove::Vector3& scale(const ModelPrimitive* msg);
+  static const ::foxglove::Color& color(const ModelPrimitive* msg);
+};
+
+const ::foxglove::Pose&
+ModelPrimitive::_Internal::pose(const ModelPrimitive* msg) {
+  return *msg->_impl_.pose_;
+}
+const ::foxglove::Vector3&
+ModelPrimitive::_Internal::scale(const ModelPrimitive* msg) {
+  return *msg->_impl_.scale_;
+}
+const ::foxglove::Color&
+ModelPrimitive::_Internal::color(const ModelPrimitive* msg) {
+  return *msg->_impl_.color_;
 }
 void ModelPrimitive::clear_pose() {
-  if (GetArenaNoVirtual() == NULL && pose_ != NULL) {
-    delete pose_;
+  if (GetArenaForAllocation() == nullptr && _impl_.pose_ != nullptr) {
+    delete _impl_.pose_;
   }
-  pose_ = NULL;
+  _impl_.pose_ = nullptr;
 }
 void ModelPrimitive::clear_scale() {
-  if (GetArenaNoVirtual() == NULL && scale_ != NULL) {
-    delete scale_;
+  if (GetArenaForAllocation() == nullptr && _impl_.scale_ != nullptr) {
+    delete _impl_.scale_;
   }
-  scale_ = NULL;
+  _impl_.scale_ = nullptr;
 }
 void ModelPrimitive::clear_color() {
-  if (GetArenaNoVirtual() == NULL && color_ != NULL) {
-    delete color_;
+  if (GetArenaForAllocation() == nullptr && _impl_.color_ != nullptr) {
+    delete _impl_.color_;
   }
-  color_ = NULL;
+  _impl_.color_ = nullptr;
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int ModelPrimitive::kPoseFieldNumber;
-const int ModelPrimitive::kScaleFieldNumber;
-const int ModelPrimitive::kColorFieldNumber;
-const int ModelPrimitive::kOverrideColorFieldNumber;
-const int ModelPrimitive::kUrlFieldNumber;
-const int ModelPrimitive::kMediaTypeFieldNumber;
-const int ModelPrimitive::kDataFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-ModelPrimitive::ModelPrimitive()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_foxglove_2fModelPrimitive_2eproto::scc_info_ModelPrimitive.base);
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:foxglove.ModelPrimitive)
+ModelPrimitive::ModelPrimitive(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:foxglove.ModelPrimitive)
 }
 ModelPrimitive::ModelPrimitive(const ModelPrimitive& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  url_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.url().size() > 0) {
-    url_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.url_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ModelPrimitive* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.url_){}
+    , decltype(_impl_.media_type_){}
+    , decltype(_impl_.data_){}
+    , decltype(_impl_.pose_){nullptr}
+    , decltype(_impl_.scale_){nullptr}
+    , decltype(_impl_.color_){nullptr}
+    , decltype(_impl_.override_color_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.url_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.url_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_url().empty()) {
+    _this->_impl_.url_.Set(from._internal_url(), 
+      _this->GetArenaForAllocation());
   }
-  media_type_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.media_type().size() > 0) {
-    media_type_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.media_type_);
+  _impl_.media_type_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.media_type_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_media_type().empty()) {
+    _this->_impl_.media_type_.Set(from._internal_media_type(), 
+      _this->GetArenaForAllocation());
   }
-  data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.data().size() > 0) {
-    data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.data_);
+  _impl_.data_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.data_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_data().empty()) {
+    _this->_impl_.data_.Set(from._internal_data(), 
+      _this->GetArenaForAllocation());
   }
-  if (from.has_pose()) {
-    pose_ = new ::foxglove::Pose(*from.pose_);
-  } else {
-    pose_ = NULL;
+  if (from._internal_has_pose()) {
+    _this->_impl_.pose_ = new ::foxglove::Pose(*from._impl_.pose_);
   }
-  if (from.has_scale()) {
-    scale_ = new ::foxglove::Vector3(*from.scale_);
-  } else {
-    scale_ = NULL;
+  if (from._internal_has_scale()) {
+    _this->_impl_.scale_ = new ::foxglove::Vector3(*from._impl_.scale_);
   }
-  if (from.has_color()) {
-    color_ = new ::foxglove::Color(*from.color_);
-  } else {
-    color_ = NULL;
+  if (from._internal_has_color()) {
+    _this->_impl_.color_ = new ::foxglove::Color(*from._impl_.color_);
   }
-  override_color_ = from.override_color_;
+  _this->_impl_.override_color_ = from._impl_.override_color_;
   // @@protoc_insertion_point(copy_constructor:foxglove.ModelPrimitive)
 }
 
-void ModelPrimitive::SharedCtor() {
-  url_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  media_type_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&pose_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&override_color_) -
-      reinterpret_cast<char*>(&pose_)) + sizeof(override_color_));
+inline void ModelPrimitive::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.url_){}
+    , decltype(_impl_.media_type_){}
+    , decltype(_impl_.data_){}
+    , decltype(_impl_.pose_){nullptr}
+    , decltype(_impl_.scale_){nullptr}
+    , decltype(_impl_.color_){nullptr}
+    , decltype(_impl_.override_color_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.url_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.url_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.media_type_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.media_type_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.data_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.data_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 ModelPrimitive::~ModelPrimitive() {
   // @@protoc_insertion_point(destructor:foxglove.ModelPrimitive)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
 
-void ModelPrimitive::SharedDtor() {
-  url_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  media_type_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  data_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != internal_default_instance()) delete pose_;
-  if (this != internal_default_instance()) delete scale_;
-  if (this != internal_default_instance()) delete color_;
+inline void ModelPrimitive::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.url_.Destroy();
+  _impl_.media_type_.Destroy();
+  _impl_.data_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.pose_;
+  if (this != internal_default_instance()) delete _impl_.scale_;
+  if (this != internal_default_instance()) delete _impl_.color_;
 }
 
 void ModelPrimitive::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* ModelPrimitive::descriptor() {
-  ::protobuf_foxglove_2fModelPrimitive_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_foxglove_2fModelPrimitive_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const ModelPrimitive& ModelPrimitive::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_foxglove_2fModelPrimitive_2eproto::scc_info_ModelPrimitive.base);
-  return *internal_default_instance();
-}
-
 
 void ModelPrimitive::Clear() {
 // @@protoc_insertion_point(message_clear_start:foxglove.ModelPrimitive)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  url_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  media_type_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (GetArenaNoVirtual() == NULL && pose_ != NULL) {
-    delete pose_;
+  _impl_.url_.ClearToEmpty();
+  _impl_.media_type_.ClearToEmpty();
+  _impl_.data_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.pose_ != nullptr) {
+    delete _impl_.pose_;
   }
-  pose_ = NULL;
-  if (GetArenaNoVirtual() == NULL && scale_ != NULL) {
-    delete scale_;
+  _impl_.pose_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.scale_ != nullptr) {
+    delete _impl_.scale_;
   }
-  scale_ = NULL;
-  if (GetArenaNoVirtual() == NULL && color_ != NULL) {
-    delete color_;
+  _impl_.scale_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.color_ != nullptr) {
+    delete _impl_.color_;
   }
-  color_ = NULL;
-  override_color_ = false;
-  _internal_metadata_.Clear();
+  _impl_.color_ = nullptr;
+  _impl_.override_color_ = false;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-bool ModelPrimitive::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:foxglove.ModelPrimitive)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+const char* ModelPrimitive::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
       // .foxglove.Pose pose = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_pose()));
-        } else {
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_pose(), ptr);
+          CHK_(ptr);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // .foxglove.Vector3 scale = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_scale()));
-        } else {
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_scale(), ptr);
+          CHK_(ptr);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // .foxglove.Color color = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_color()));
-        } else {
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_color(), ptr);
+          CHK_(ptr);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // bool override_color = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &override_color_)));
-        } else {
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _impl_.override_color_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // string url = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_url()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->url().data(), static_cast<int>(this->url().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "foxglove.ModelPrimitive.url"));
-        } else {
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
+          auto str = _internal_mutable_url();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "foxglove.ModelPrimitive.url"));
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // string media_type = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_media_type()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->media_type().data(), static_cast<int>(this->media_type().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "foxglove.ModelPrimitive.media_type"));
-        } else {
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
+          auto str = _internal_mutable_media_type();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "foxglove.ModelPrimitive.media_type"));
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // bytes data = 7;
-      case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(58u /* 58 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
-                input, this->mutable_data()));
-        } else {
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
+          auto str = _internal_mutable_data();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
     }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:foxglove.ModelPrimitive)
-  return true;
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:foxglove.ModelPrimitive)
-  return false;
-#undef DO_
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-void ModelPrimitive::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:foxglove.ModelPrimitive)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .foxglove.Pose pose = 1;
-  if (this->has_pose()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, this->_internal_pose(), output);
-  }
-
-  // .foxglove.Vector3 scale = 2;
-  if (this->has_scale()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, this->_internal_scale(), output);
-  }
-
-  // .foxglove.Color color = 3;
-  if (this->has_color()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, this->_internal_color(), output);
-  }
-
-  // bool override_color = 4;
-  if (this->override_color() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(4, this->override_color(), output);
-  }
-
-  // string url = 5;
-  if (this->url().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->url().data(), static_cast<int>(this->url().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "foxglove.ModelPrimitive.url");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      5, this->url(), output);
-  }
-
-  // string media_type = 6;
-  if (this->media_type().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->media_type().data(), static_cast<int>(this->media_type().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "foxglove.ModelPrimitive.media_type");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      6, this->media_type(), output);
-  }
-
-  // bytes data = 7;
-  if (this->data().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
-      7, this->data(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:foxglove.ModelPrimitive)
-}
-
-::google::protobuf::uint8* ModelPrimitive::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+uint8_t* ModelPrimitive::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:foxglove.ModelPrimitive)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .foxglove.Pose pose = 1;
-  if (this->has_pose()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, this->_internal_pose(), deterministic, target);
+  if (this->_internal_has_pose()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::pose(this),
+        _Internal::pose(this).GetCachedSize(), target, stream);
   }
 
   // .foxglove.Vector3 scale = 2;
-  if (this->has_scale()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, this->_internal_scale(), deterministic, target);
+  if (this->_internal_has_scale()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::scale(this),
+        _Internal::scale(this).GetCachedSize(), target, stream);
   }
 
   // .foxglove.Color color = 3;
-  if (this->has_color()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, this->_internal_color(), deterministic, target);
+  if (this->_internal_has_color()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::color(this),
+        _Internal::color(this).GetCachedSize(), target, stream);
   }
 
   // bool override_color = 4;
-  if (this->override_color() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(4, this->override_color(), target);
+  if (this->_internal_override_color() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_override_color(), target);
   }
 
   // string url = 5;
-  if (this->url().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->url().data(), static_cast<int>(this->url().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+  if (!this->_internal_url().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_url().data(), static_cast<int>(this->_internal_url().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "foxglove.ModelPrimitive.url");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        5, this->url(), target);
+    target = stream->WriteStringMaybeAliased(
+        5, this->_internal_url(), target);
   }
 
   // string media_type = 6;
-  if (this->media_type().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->media_type().data(), static_cast<int>(this->media_type().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+  if (!this->_internal_media_type().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_media_type().data(), static_cast<int>(this->_internal_media_type().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "foxglove.ModelPrimitive.media_type");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        6, this->media_type(), target);
+    target = stream->WriteStringMaybeAliased(
+        6, this->_internal_media_type(), target);
   }
 
   // bytes data = 7;
-  if (this->data().size() > 0) {
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
-        7, this->data(), target);
+  if (!this->_internal_data().empty()) {
+    target = stream->WriteBytesMaybeAliased(
+        7, this->_internal_data(), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:foxglove.ModelPrimitive)
   return target;
@@ -535,116 +433,100 @@ size_t ModelPrimitive::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:foxglove.ModelPrimitive)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // string url = 5;
-  if (this->url().size() > 0) {
+  if (!this->_internal_url().empty()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->url());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_url());
   }
 
   // string media_type = 6;
-  if (this->media_type().size() > 0) {
+  if (!this->_internal_media_type().empty()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->media_type());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_media_type());
   }
 
   // bytes data = 7;
-  if (this->data().size() > 0) {
+  if (!this->_internal_data().empty()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::BytesSize(
-        this->data());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_data());
   }
 
   // .foxglove.Pose pose = 1;
-  if (this->has_pose()) {
+  if (this->_internal_has_pose()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *pose_);
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.pose_);
   }
 
   // .foxglove.Vector3 scale = 2;
-  if (this->has_scale()) {
+  if (this->_internal_has_scale()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *scale_);
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.scale_);
   }
 
   // .foxglove.Color color = 3;
-  if (this->has_color()) {
+  if (this->_internal_has_color()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *color_);
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.color_);
   }
 
   // bool override_color = 4;
-  if (this->override_color() != 0) {
+  if (this->_internal_override_color() != 0) {
     total_size += 1 + 1;
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ModelPrimitive::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:foxglove.ModelPrimitive)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ModelPrimitive* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const ModelPrimitive>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:foxglove.ModelPrimitive)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:foxglove.ModelPrimitive)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ModelPrimitive::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ModelPrimitive::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ModelPrimitive::GetClassData() const { return &_class_data_; }
 
-void ModelPrimitive::MergeFrom(const ModelPrimitive& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:foxglove.ModelPrimitive)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+
+void ModelPrimitive::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ModelPrimitive*>(&to_msg);
+  auto& from = static_cast<const ModelPrimitive&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:foxglove.ModelPrimitive)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.url().size() > 0) {
-
-    url_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.url_);
+  if (!from._internal_url().empty()) {
+    _this->_internal_set_url(from._internal_url());
   }
-  if (from.media_type().size() > 0) {
-
-    media_type_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.media_type_);
+  if (!from._internal_media_type().empty()) {
+    _this->_internal_set_media_type(from._internal_media_type());
   }
-  if (from.data().size() > 0) {
-
-    data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.data_);
+  if (!from._internal_data().empty()) {
+    _this->_internal_set_data(from._internal_data());
   }
-  if (from.has_pose()) {
-    mutable_pose()->::foxglove::Pose::MergeFrom(from.pose());
+  if (from._internal_has_pose()) {
+    _this->_internal_mutable_pose()->::foxglove::Pose::MergeFrom(
+        from._internal_pose());
   }
-  if (from.has_scale()) {
-    mutable_scale()->::foxglove::Vector3::MergeFrom(from.scale());
+  if (from._internal_has_scale()) {
+    _this->_internal_mutable_scale()->::foxglove::Vector3::MergeFrom(
+        from._internal_scale());
   }
-  if (from.has_color()) {
-    mutable_color()->::foxglove::Color::MergeFrom(from.color());
+  if (from._internal_has_color()) {
+    _this->_internal_mutable_color()->::foxglove::Color::MergeFrom(
+        from._internal_color());
   }
-  if (from.override_color() != 0) {
-    set_override_color(from.override_color());
+  if (from._internal_override_color() != 0) {
+    _this->_internal_set_override_color(from._internal_override_color());
   }
-}
-
-void ModelPrimitive::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:foxglove.ModelPrimitive)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ModelPrimitive::CopyFrom(const ModelPrimitive& from) {
@@ -658,39 +540,45 @@ bool ModelPrimitive::IsInitialized() const {
   return true;
 }
 
-void ModelPrimitive::Swap(ModelPrimitive* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void ModelPrimitive::InternalSwap(ModelPrimitive* other) {
   using std::swap;
-  url_.Swap(&other->url_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  media_type_.Swap(&other->media_type_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  data_.Swap(&other->data_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  swap(pose_, other->pose_);
-  swap(scale_, other->scale_);
-  swap(color_, other->color_);
-  swap(override_color_, other->override_color_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.url_, lhs_arena,
+      &other->_impl_.url_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.media_type_, lhs_arena,
+      &other->_impl_.media_type_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.data_, lhs_arena,
+      &other->_impl_.data_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ModelPrimitive, _impl_.override_color_)
+      + sizeof(ModelPrimitive::_impl_.override_color_)
+      - PROTOBUF_FIELD_OFFSET(ModelPrimitive, _impl_.pose_)>(
+          reinterpret_cast<char*>(&_impl_.pose_),
+          reinterpret_cast<char*>(&other->_impl_.pose_));
 }
 
-::google::protobuf::Metadata ModelPrimitive::GetMetadata() const {
-  protobuf_foxglove_2fModelPrimitive_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_foxglove_2fModelPrimitive_2eproto::file_level_metadata[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata ModelPrimitive::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_foxglove_2fModelPrimitive_2eproto_getter, &descriptor_table_foxglove_2fModelPrimitive_2eproto_once,
+      file_level_metadata_foxglove_2fModelPrimitive_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace foxglove
-namespace google {
-namespace protobuf {
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::foxglove::ModelPrimitive* Arena::CreateMaybeMessage< ::foxglove::ModelPrimitive >(Arena* arena) {
-  return Arena::CreateInternal< ::foxglove::ModelPrimitive >(arena);
+PROTOBUF_NAMESPACE_OPEN
+template<> PROTOBUF_NOINLINE ::foxglove::ModelPrimitive*
+Arena::CreateMaybeMessage< ::foxglove::ModelPrimitive >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::foxglove::ModelPrimitive >(arena);
 }
-}  // namespace protobuf
-}  // namespace google
+PROTOBUF_NAMESPACE_CLOSE
 
 // @@protoc_insertion_point(global_scope)
+#include <google/protobuf/port_undef.inc>

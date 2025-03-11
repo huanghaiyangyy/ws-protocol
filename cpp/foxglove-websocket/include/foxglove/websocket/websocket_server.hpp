@@ -206,7 +206,7 @@ private:
   } _connectionGraph;
   std::shared_mutex _connectionGraphMutex;
 
-  void setupTlsHandler();
+  // void setupTlsHandler();
   void socketInit(ConnHandle hdl);
   bool validateConnection(ConnHandle hdl);
   void handleConnectionOpened(ConnHandle hdl);
@@ -255,7 +255,7 @@ inline Server<ServerConfiguration>::Server(std::string name, LogCallback logger,
   _server.clear_access_channels(websocketpp::log::alevel::all);
   _server.set_access_channels(APP);
   _server.set_tcp_pre_init_handler(std::bind(&Server::socketInit, this, std::placeholders::_1));
-  this->setupTlsHandler();
+  // this->setupTlsHandler();
   _server.set_validate_handler(std::bind(&Server::validateConnection, this, std::placeholders::_1));
   _server.set_open_handler(std::bind(&Server::handleConnectionOpened, this, std::placeholders::_1));
   _server.set_close_handler(
@@ -550,7 +550,7 @@ inline void Server<ServerConfiguration>::start(const std::string& host, uint16_t
     throw std::runtime_error("Failed to resolve the local endpoint: " + ec.message());
   }
 
-  const std::string protocol = _options.useTls ? "wss" : "ws";
+  const std::string protocol = "ws";
   auto address = endpoint.address();
   _server.get_alog().write(APP, "WebSocket server listening at " + protocol + "://" +
                                   IPAddressToString(address) + ":" +

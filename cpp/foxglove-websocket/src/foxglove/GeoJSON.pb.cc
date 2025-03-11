@@ -5,260 +5,209 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
-#include <google/protobuf/stubs/port.h>
 #include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/wire_format_lite_inl.h>
+#include <google/protobuf/extension_set.h>
+#include <google/protobuf/wire_format_lite.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
+#include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
 
 namespace foxglove {
-class GeoJSONDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<GeoJSON>
-      _instance;
-} _GeoJSON_default_instance_;
+PROTOBUF_CONSTEXPR GeoJSON::GeoJSON(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.geojson_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct GeoJSONDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GeoJSONDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GeoJSONDefaultTypeInternal() {}
+  union {
+    GeoJSON _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GeoJSONDefaultTypeInternal _GeoJSON_default_instance_;
 }  // namespace foxglove
-namespace protobuf_foxglove_2fGeoJSON_2eproto {
-static void InitDefaultsGeoJSON() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_foxglove_2fGeoJSON_2eproto[1];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_foxglove_2fGeoJSON_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_foxglove_2fGeoJSON_2eproto = nullptr;
 
-  {
-    void* ptr = &::foxglove::_GeoJSON_default_instance_;
-    new (ptr) ::foxglove::GeoJSON();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::foxglove::GeoJSON::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<0> scc_info_GeoJSON =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsGeoJSON}, {}};
-
-void InitDefaults() {
-  ::google::protobuf::internal::InitSCC(&scc_info_GeoJSON.base);
-}
-
-::google::protobuf::Metadata file_level_metadata[1];
-
-const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_foxglove_2fGeoJSON_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::GeoJSON, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::GeoJSON, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::GeoJSON, geojson_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::foxglove::GeoJSON, _impl_.geojson_),
 };
-static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::foxglove::GeoJSON)},
-};
-
-static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::foxglove::_GeoJSON_default_instance_),
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::foxglove::GeoJSON)},
 };
 
-void protobuf_AssignDescriptors() {
-  AddDescriptors();
-  AssignDescriptors(
-      "foxglove/GeoJSON.proto", schemas, file_default_instances, TableStruct::offsets,
-      file_level_metadata, NULL, NULL);
+static const ::_pb::Message* const file_default_instances[] = {
+  &::foxglove::_GeoJSON_default_instance_._instance,
+};
+
+const char descriptor_table_protodef_foxglove_2fGeoJSON_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n\026foxglove/GeoJSON.proto\022\010foxglove\"\032\n\007Ge"
+  "oJSON\022\017\n\007geojson\030\001 \001(\tb\006proto3"
+  ;
+static ::_pbi::once_flag descriptor_table_foxglove_2fGeoJSON_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_foxglove_2fGeoJSON_2eproto = {
+    false, false, 70, descriptor_table_protodef_foxglove_2fGeoJSON_2eproto,
+    "foxglove/GeoJSON.proto",
+    &descriptor_table_foxglove_2fGeoJSON_2eproto_once, nullptr, 0, 1,
+    schemas, file_default_instances, TableStruct_foxglove_2fGeoJSON_2eproto::offsets,
+    file_level_metadata_foxglove_2fGeoJSON_2eproto, file_level_enum_descriptors_foxglove_2fGeoJSON_2eproto,
+    file_level_service_descriptors_foxglove_2fGeoJSON_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_foxglove_2fGeoJSON_2eproto_getter() {
+  return &descriptor_table_foxglove_2fGeoJSON_2eproto;
 }
 
-void protobuf_AssignDescriptorsOnce() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, protobuf_AssignDescriptors);
-}
-
-void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
-void protobuf_RegisterTypes(const ::std::string&) {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 1);
-}
-
-void AddDescriptorsImpl() {
-  InitDefaults();
-  static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\026foxglove/GeoJSON.proto\022\010foxglove\"\032\n\007Ge"
-      "oJSON\022\017\n\007geojson\030\001 \001(\tb\006proto3"
-  };
-  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 70);
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
-    "foxglove/GeoJSON.proto", &protobuf_RegisterTypes);
-}
-
-void AddDescriptors() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, AddDescriptorsImpl);
-}
-// Force AddDescriptors() to be called at dynamic initialization time.
-struct StaticDescriptorInitializer {
-  StaticDescriptorInitializer() {
-    AddDescriptors();
-  }
-} static_descriptor_initializer;
-}  // namespace protobuf_foxglove_2fGeoJSON_2eproto
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_foxglove_2fGeoJSON_2eproto(&descriptor_table_foxglove_2fGeoJSON_2eproto);
 namespace foxglove {
 
 // ===================================================================
 
-void GeoJSON::InitAsDefaultInstance() {
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int GeoJSON::kGeojsonFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+class GeoJSON::_Internal {
+ public:
+};
 
-GeoJSON::GeoJSON()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_foxglove_2fGeoJSON_2eproto::scc_info_GeoJSON.base);
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:foxglove.GeoJSON)
+GeoJSON::GeoJSON(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:foxglove.GeoJSON)
 }
 GeoJSON::GeoJSON(const GeoJSON& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  geojson_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.geojson().size() > 0) {
-    geojson_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.geojson_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  GeoJSON* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.geojson_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.geojson_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.geojson_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_geojson().empty()) {
+    _this->_impl_.geojson_.Set(from._internal_geojson(), 
+      _this->GetArenaForAllocation());
   }
   // @@protoc_insertion_point(copy_constructor:foxglove.GeoJSON)
 }
 
-void GeoJSON::SharedCtor() {
-  geojson_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline void GeoJSON::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.geojson_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.geojson_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.geojson_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 GeoJSON::~GeoJSON() {
   // @@protoc_insertion_point(destructor:foxglove.GeoJSON)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
 
-void GeoJSON::SharedDtor() {
-  geojson_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline void GeoJSON::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.geojson_.Destroy();
 }
 
 void GeoJSON::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* GeoJSON::descriptor() {
-  ::protobuf_foxglove_2fGeoJSON_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_foxglove_2fGeoJSON_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const GeoJSON& GeoJSON::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_foxglove_2fGeoJSON_2eproto::scc_info_GeoJSON.base);
-  return *internal_default_instance();
-}
-
 
 void GeoJSON::Clear() {
 // @@protoc_insertion_point(message_clear_start:foxglove.GeoJSON)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  geojson_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _internal_metadata_.Clear();
+  _impl_.geojson_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-bool GeoJSON::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:foxglove.GeoJSON)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+const char* GeoJSON::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
       // string geojson = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_geojson()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->geojson().data(), static_cast<int>(this->geojson().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "foxglove.GeoJSON.geojson"));
-        } else {
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_geojson();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "foxglove.GeoJSON.geojson"));
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
     }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:foxglove.GeoJSON)
-  return true;
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:foxglove.GeoJSON)
-  return false;
-#undef DO_
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-void GeoJSON::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:foxglove.GeoJSON)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string geojson = 1;
-  if (this->geojson().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->geojson().data(), static_cast<int>(this->geojson().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "foxglove.GeoJSON.geojson");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->geojson(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:foxglove.GeoJSON)
-}
-
-::google::protobuf::uint8* GeoJSON::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+uint8_t* GeoJSON::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:foxglove.GeoJSON)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // string geojson = 1;
-  if (this->geojson().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->geojson().data(), static_cast<int>(this->geojson().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+  if (!this->_internal_geojson().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_geojson().data(), static_cast<int>(this->_internal_geojson().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "foxglove.GeoJSON.geojson");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->geojson(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_geojson(), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:foxglove.GeoJSON)
   return target;
@@ -268,56 +217,39 @@ size_t GeoJSON::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:foxglove.GeoJSON)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
-  // string geojson = 1;
-  if (this->geojson().size() > 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->geojson());
-  }
-
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void GeoJSON::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:foxglove.GeoJSON)
-  GOOGLE_DCHECK_NE(&from, this);
-  const GeoJSON* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const GeoJSON>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:foxglove.GeoJSON)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:foxglove.GeoJSON)
-    MergeFrom(*source);
-  }
-}
-
-void GeoJSON::MergeFrom(const GeoJSON& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:foxglove.GeoJSON)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (from.geojson().size() > 0) {
-
-    geojson_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.geojson_);
+  // string geojson = 1;
+  if (!this->_internal_geojson().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_geojson());
   }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void GeoJSON::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:foxglove.GeoJSON)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GeoJSON::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    GeoJSON::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GeoJSON::GetClassData() const { return &_class_data_; }
+
+
+void GeoJSON::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<GeoJSON*>(&to_msg);
+  auto& from = static_cast<const GeoJSON&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:foxglove.GeoJSON)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!from._internal_geojson().empty()) {
+    _this->_internal_set_geojson(from._internal_geojson());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void GeoJSON::CopyFrom(const GeoJSON& from) {
@@ -331,31 +263,31 @@ bool GeoJSON::IsInitialized() const {
   return true;
 }
 
-void GeoJSON::Swap(GeoJSON* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void GeoJSON::InternalSwap(GeoJSON* other) {
   using std::swap;
-  geojson_.Swap(&other->geojson_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.geojson_, lhs_arena,
+      &other->_impl_.geojson_, rhs_arena
+  );
 }
 
-::google::protobuf::Metadata GeoJSON::GetMetadata() const {
-  protobuf_foxglove_2fGeoJSON_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_foxglove_2fGeoJSON_2eproto::file_level_metadata[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata GeoJSON::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_foxglove_2fGeoJSON_2eproto_getter, &descriptor_table_foxglove_2fGeoJSON_2eproto_once,
+      file_level_metadata_foxglove_2fGeoJSON_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace foxglove
-namespace google {
-namespace protobuf {
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::foxglove::GeoJSON* Arena::CreateMaybeMessage< ::foxglove::GeoJSON >(Arena* arena) {
-  return Arena::CreateInternal< ::foxglove::GeoJSON >(arena);
+PROTOBUF_NAMESPACE_OPEN
+template<> PROTOBUF_NOINLINE ::foxglove::GeoJSON*
+Arena::CreateMaybeMessage< ::foxglove::GeoJSON >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::foxglove::GeoJSON >(arena);
 }
-}  // namespace protobuf
-}  // namespace google
+PROTOBUF_NAMESPACE_CLOSE
 
 // @@protoc_insertion_point(global_scope)
+#include <google/protobuf/port_undef.inc>

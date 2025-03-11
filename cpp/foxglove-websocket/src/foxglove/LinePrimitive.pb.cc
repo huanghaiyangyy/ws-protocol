@@ -5,141 +5,108 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
-#include <google/protobuf/stubs/port.h>
 #include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/wire_format_lite_inl.h>
+#include <google/protobuf/extension_set.h>
+#include <google/protobuf/wire_format_lite.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
+#include <google/protobuf/port_def.inc>
 
-namespace protobuf_foxglove_2fColor_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_foxglove_2fColor_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Color;
-}  // namespace protobuf_foxglove_2fColor_2eproto
-namespace protobuf_foxglove_2fPoint3_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_foxglove_2fPoint3_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Point3;
-}  // namespace protobuf_foxglove_2fPoint3_2eproto
-namespace protobuf_foxglove_2fPose_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_foxglove_2fPose_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_Pose;
-}  // namespace protobuf_foxglove_2fPose_2eproto
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace foxglove {
-class LinePrimitiveDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<LinePrimitive>
-      _instance;
-} _LinePrimitive_default_instance_;
+PROTOBUF_CONSTEXPR LinePrimitive::LinePrimitive(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.points_)*/{}
+  , /*decltype(_impl_.colors_)*/{}
+  , /*decltype(_impl_.indices_)*/{}
+  , /*decltype(_impl_.pose_)*/nullptr
+  , /*decltype(_impl_.color_)*/nullptr
+  , /*decltype(_impl_.type_)*/0
+  , /*decltype(_impl_.scale_invariant_)*/false
+  , /*decltype(_impl_.thickness_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct LinePrimitiveDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR LinePrimitiveDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~LinePrimitiveDefaultTypeInternal() {}
+  union {
+    LinePrimitive _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LinePrimitiveDefaultTypeInternal _LinePrimitive_default_instance_;
 }  // namespace foxglove
-namespace protobuf_foxglove_2fLinePrimitive_2eproto {
-static void InitDefaultsLinePrimitive() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_foxglove_2fLinePrimitive_2eproto[1];
+static const ::_pb::EnumDescriptor* file_level_enum_descriptors_foxglove_2fLinePrimitive_2eproto[1];
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_foxglove_2fLinePrimitive_2eproto = nullptr;
 
-  {
-    void* ptr = &::foxglove::_LinePrimitive_default_instance_;
-    new (ptr) ::foxglove::LinePrimitive();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::foxglove::LinePrimitive::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<3> scc_info_LinePrimitive =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 3, InitDefaultsLinePrimitive}, {
-      &protobuf_foxglove_2fPose_2eproto::scc_info_Pose.base,
-      &protobuf_foxglove_2fPoint3_2eproto::scc_info_Point3.base,
-      &protobuf_foxglove_2fColor_2eproto::scc_info_Color.base,}};
-
-void InitDefaults() {
-  ::google::protobuf::internal::InitSCC(&scc_info_LinePrimitive.base);
-}
-
-::google::protobuf::Metadata file_level_metadata[1];
-const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[1];
-
-const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_foxglove_2fLinePrimitive_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::LinePrimitive, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::LinePrimitive, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::LinePrimitive, type_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::LinePrimitive, pose_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::LinePrimitive, thickness_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::LinePrimitive, scale_invariant_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::LinePrimitive, points_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::LinePrimitive, color_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::LinePrimitive, colors_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::LinePrimitive, indices_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::foxglove::LinePrimitive, _impl_.type_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::LinePrimitive, _impl_.pose_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::LinePrimitive, _impl_.thickness_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::LinePrimitive, _impl_.scale_invariant_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::LinePrimitive, _impl_.points_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::LinePrimitive, _impl_.color_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::LinePrimitive, _impl_.colors_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::LinePrimitive, _impl_.indices_),
 };
-static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::foxglove::LinePrimitive)},
-};
-
-static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::foxglove::_LinePrimitive_default_instance_),
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::foxglove::LinePrimitive)},
 };
 
-void protobuf_AssignDescriptors() {
-  AddDescriptors();
-  AssignDescriptors(
-      "foxglove/LinePrimitive.proto", schemas, file_default_instances, TableStruct::offsets,
-      file_level_metadata, file_level_enum_descriptors, NULL);
+static const ::_pb::Message* const file_default_instances[] = {
+  &::foxglove::_LinePrimitive_default_instance_._instance,
+};
+
+const char descriptor_table_protodef_foxglove_2fLinePrimitive_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n\034foxglove/LinePrimitive.proto\022\010foxglove"
+  "\032\024foxglove/Color.proto\032\025foxglove/Point3."
+  "proto\032\023foxglove/Pose.proto\"\257\002\n\rLinePrimi"
+  "tive\022*\n\004type\030\001 \001(\0162\034.foxglove.LinePrimit"
+  "ive.Type\022\034\n\004pose\030\002 \001(\0132\016.foxglove.Pose\022\021"
+  "\n\tthickness\030\003 \001(\001\022\027\n\017scale_invariant\030\004 \001"
+  "(\010\022 \n\006points\030\005 \003(\0132\020.foxglove.Point3\022\036\n\005"
+  "color\030\006 \001(\0132\017.foxglove.Color\022\037\n\006colors\030\007"
+  " \003(\0132\017.foxglove.Color\022\017\n\007indices\030\010 \003(\007\"4"
+  "\n\004Type\022\016\n\nLINE_STRIP\020\000\022\r\n\tLINE_LOOP\020\001\022\r\n"
+  "\tLINE_LIST\020\002b\006proto3"
+  ;
+static const ::_pbi::DescriptorTable* const descriptor_table_foxglove_2fLinePrimitive_2eproto_deps[3] = {
+  &::descriptor_table_foxglove_2fColor_2eproto,
+  &::descriptor_table_foxglove_2fPoint3_2eproto,
+  &::descriptor_table_foxglove_2fPose_2eproto,
+};
+static ::_pbi::once_flag descriptor_table_foxglove_2fLinePrimitive_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_foxglove_2fLinePrimitive_2eproto = {
+    false, false, 420, descriptor_table_protodef_foxglove_2fLinePrimitive_2eproto,
+    "foxglove/LinePrimitive.proto",
+    &descriptor_table_foxglove_2fLinePrimitive_2eproto_once, descriptor_table_foxglove_2fLinePrimitive_2eproto_deps, 3, 1,
+    schemas, file_default_instances, TableStruct_foxglove_2fLinePrimitive_2eproto::offsets,
+    file_level_metadata_foxglove_2fLinePrimitive_2eproto, file_level_enum_descriptors_foxglove_2fLinePrimitive_2eproto,
+    file_level_service_descriptors_foxglove_2fLinePrimitive_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_foxglove_2fLinePrimitive_2eproto_getter() {
+  return &descriptor_table_foxglove_2fLinePrimitive_2eproto;
 }
 
-void protobuf_AssignDescriptorsOnce() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, protobuf_AssignDescriptors);
-}
-
-void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
-void protobuf_RegisterTypes(const ::std::string&) {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 1);
-}
-
-void AddDescriptorsImpl() {
-  InitDefaults();
-  static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\034foxglove/LinePrimitive.proto\022\010foxglove"
-      "\032\024foxglove/Color.proto\032\025foxglove/Point3."
-      "proto\032\023foxglove/Pose.proto\"\257\002\n\rLinePrimi"
-      "tive\022*\n\004type\030\001 \001(\0162\034.foxglove.LinePrimit"
-      "ive.Type\022\034\n\004pose\030\002 \001(\0132\016.foxglove.Pose\022\021"
-      "\n\tthickness\030\003 \001(\001\022\027\n\017scale_invariant\030\004 \001"
-      "(\010\022 \n\006points\030\005 \003(\0132\020.foxglove.Point3\022\036\n\005"
-      "color\030\006 \001(\0132\017.foxglove.Color\022\037\n\006colors\030\007"
-      " \003(\0132\017.foxglove.Color\022\017\n\007indices\030\010 \003(\007\"4"
-      "\n\004Type\022\016\n\nLINE_STRIP\020\000\022\r\n\tLINE_LOOP\020\001\022\r\n"
-      "\tLINE_LIST\020\002b\006proto3"
-  };
-  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 420);
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
-    "foxglove/LinePrimitive.proto", &protobuf_RegisterTypes);
-  ::protobuf_foxglove_2fColor_2eproto::AddDescriptors();
-  ::protobuf_foxglove_2fPoint3_2eproto::AddDescriptors();
-  ::protobuf_foxglove_2fPose_2eproto::AddDescriptors();
-}
-
-void AddDescriptors() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, AddDescriptorsImpl);
-}
-// Force AddDescriptors() to be called at dynamic initialization time.
-struct StaticDescriptorInitializer {
-  StaticDescriptorInitializer() {
-    AddDescriptors();
-  }
-} static_descriptor_initializer;
-}  // namespace protobuf_foxglove_2fLinePrimitive_2eproto
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_foxglove_2fLinePrimitive_2eproto(&descriptor_table_foxglove_2fLinePrimitive_2eproto);
 namespace foxglove {
-const ::google::protobuf::EnumDescriptor* LinePrimitive_Type_descriptor() {
-  protobuf_foxglove_2fLinePrimitive_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_foxglove_2fLinePrimitive_2eproto::file_level_enum_descriptors[0];
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* LinePrimitive_Type_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_foxglove_2fLinePrimitive_2eproto);
+  return file_level_enum_descriptors_foxglove_2fLinePrimitive_2eproto[0];
 }
 bool LinePrimitive_Type_IsValid(int value) {
   switch (value) {
@@ -152,412 +119,318 @@ bool LinePrimitive_Type_IsValid(int value) {
   }
 }
 
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const LinePrimitive_Type LinePrimitive::LINE_STRIP;
-const LinePrimitive_Type LinePrimitive::LINE_LOOP;
-const LinePrimitive_Type LinePrimitive::LINE_LIST;
-const LinePrimitive_Type LinePrimitive::Type_MIN;
-const LinePrimitive_Type LinePrimitive::Type_MAX;
-const int LinePrimitive::Type_ARRAYSIZE;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+#if (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
+constexpr LinePrimitive_Type LinePrimitive::LINE_STRIP;
+constexpr LinePrimitive_Type LinePrimitive::LINE_LOOP;
+constexpr LinePrimitive_Type LinePrimitive::LINE_LIST;
+constexpr LinePrimitive_Type LinePrimitive::Type_MIN;
+constexpr LinePrimitive_Type LinePrimitive::Type_MAX;
+constexpr int LinePrimitive::Type_ARRAYSIZE;
+#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 
 // ===================================================================
 
-void LinePrimitive::InitAsDefaultInstance() {
-  ::foxglove::_LinePrimitive_default_instance_._instance.get_mutable()->pose_ = const_cast< ::foxglove::Pose*>(
-      ::foxglove::Pose::internal_default_instance());
-  ::foxglove::_LinePrimitive_default_instance_._instance.get_mutable()->color_ = const_cast< ::foxglove::Color*>(
-      ::foxglove::Color::internal_default_instance());
+class LinePrimitive::_Internal {
+ public:
+  static const ::foxglove::Pose& pose(const LinePrimitive* msg);
+  static const ::foxglove::Color& color(const LinePrimitive* msg);
+};
+
+const ::foxglove::Pose&
+LinePrimitive::_Internal::pose(const LinePrimitive* msg) {
+  return *msg->_impl_.pose_;
+}
+const ::foxglove::Color&
+LinePrimitive::_Internal::color(const LinePrimitive* msg) {
+  return *msg->_impl_.color_;
 }
 void LinePrimitive::clear_pose() {
-  if (GetArenaNoVirtual() == NULL && pose_ != NULL) {
-    delete pose_;
+  if (GetArenaForAllocation() == nullptr && _impl_.pose_ != nullptr) {
+    delete _impl_.pose_;
   }
-  pose_ = NULL;
+  _impl_.pose_ = nullptr;
 }
 void LinePrimitive::clear_points() {
-  points_.Clear();
+  _impl_.points_.Clear();
 }
 void LinePrimitive::clear_color() {
-  if (GetArenaNoVirtual() == NULL && color_ != NULL) {
-    delete color_;
+  if (GetArenaForAllocation() == nullptr && _impl_.color_ != nullptr) {
+    delete _impl_.color_;
   }
-  color_ = NULL;
+  _impl_.color_ = nullptr;
 }
 void LinePrimitive::clear_colors() {
-  colors_.Clear();
+  _impl_.colors_.Clear();
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int LinePrimitive::kTypeFieldNumber;
-const int LinePrimitive::kPoseFieldNumber;
-const int LinePrimitive::kThicknessFieldNumber;
-const int LinePrimitive::kScaleInvariantFieldNumber;
-const int LinePrimitive::kPointsFieldNumber;
-const int LinePrimitive::kColorFieldNumber;
-const int LinePrimitive::kColorsFieldNumber;
-const int LinePrimitive::kIndicesFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-LinePrimitive::LinePrimitive()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_foxglove_2fLinePrimitive_2eproto::scc_info_LinePrimitive.base);
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:foxglove.LinePrimitive)
+LinePrimitive::LinePrimitive(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:foxglove.LinePrimitive)
 }
 LinePrimitive::LinePrimitive(const LinePrimitive& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      points_(from.points_),
-      colors_(from.colors_),
-      indices_(from.indices_) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_pose()) {
-    pose_ = new ::foxglove::Pose(*from.pose_);
-  } else {
-    pose_ = NULL;
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  LinePrimitive* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.points_){from._impl_.points_}
+    , decltype(_impl_.colors_){from._impl_.colors_}
+    , decltype(_impl_.indices_){from._impl_.indices_}
+    , decltype(_impl_.pose_){nullptr}
+    , decltype(_impl_.color_){nullptr}
+    , decltype(_impl_.type_){}
+    , decltype(_impl_.scale_invariant_){}
+    , decltype(_impl_.thickness_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_pose()) {
+    _this->_impl_.pose_ = new ::foxglove::Pose(*from._impl_.pose_);
   }
-  if (from.has_color()) {
-    color_ = new ::foxglove::Color(*from.color_);
-  } else {
-    color_ = NULL;
+  if (from._internal_has_color()) {
+    _this->_impl_.color_ = new ::foxglove::Color(*from._impl_.color_);
   }
-  ::memcpy(&type_, &from.type_,
-    static_cast<size_t>(reinterpret_cast<char*>(&thickness_) -
-    reinterpret_cast<char*>(&type_)) + sizeof(thickness_));
+  ::memcpy(&_impl_.type_, &from._impl_.type_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.thickness_) -
+    reinterpret_cast<char*>(&_impl_.type_)) + sizeof(_impl_.thickness_));
   // @@protoc_insertion_point(copy_constructor:foxglove.LinePrimitive)
 }
 
-void LinePrimitive::SharedCtor() {
-  ::memset(&pose_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&thickness_) -
-      reinterpret_cast<char*>(&pose_)) + sizeof(thickness_));
+inline void LinePrimitive::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.points_){arena}
+    , decltype(_impl_.colors_){arena}
+    , decltype(_impl_.indices_){arena}
+    , decltype(_impl_.pose_){nullptr}
+    , decltype(_impl_.color_){nullptr}
+    , decltype(_impl_.type_){0}
+    , decltype(_impl_.scale_invariant_){false}
+    , decltype(_impl_.thickness_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 LinePrimitive::~LinePrimitive() {
   // @@protoc_insertion_point(destructor:foxglove.LinePrimitive)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
 
-void LinePrimitive::SharedDtor() {
-  if (this != internal_default_instance()) delete pose_;
-  if (this != internal_default_instance()) delete color_;
+inline void LinePrimitive::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.points_.~RepeatedPtrField();
+  _impl_.colors_.~RepeatedPtrField();
+  _impl_.indices_.~RepeatedField();
+  if (this != internal_default_instance()) delete _impl_.pose_;
+  if (this != internal_default_instance()) delete _impl_.color_;
 }
 
 void LinePrimitive::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* LinePrimitive::descriptor() {
-  ::protobuf_foxglove_2fLinePrimitive_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_foxglove_2fLinePrimitive_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const LinePrimitive& LinePrimitive::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_foxglove_2fLinePrimitive_2eproto::scc_info_LinePrimitive.base);
-  return *internal_default_instance();
-}
-
 
 void LinePrimitive::Clear() {
 // @@protoc_insertion_point(message_clear_start:foxglove.LinePrimitive)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  points_.Clear();
-  colors_.Clear();
-  indices_.Clear();
-  if (GetArenaNoVirtual() == NULL && pose_ != NULL) {
-    delete pose_;
+  _impl_.points_.Clear();
+  _impl_.colors_.Clear();
+  _impl_.indices_.Clear();
+  if (GetArenaForAllocation() == nullptr && _impl_.pose_ != nullptr) {
+    delete _impl_.pose_;
   }
-  pose_ = NULL;
-  if (GetArenaNoVirtual() == NULL && color_ != NULL) {
-    delete color_;
+  _impl_.pose_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.color_ != nullptr) {
+    delete _impl_.color_;
   }
-  color_ = NULL;
-  ::memset(&type_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&thickness_) -
-      reinterpret_cast<char*>(&type_)) + sizeof(thickness_));
-  _internal_metadata_.Clear();
+  _impl_.color_ = nullptr;
+  ::memset(&_impl_.type_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.thickness_) -
+      reinterpret_cast<char*>(&_impl_.type_)) + sizeof(_impl_.thickness_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-bool LinePrimitive::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:foxglove.LinePrimitive)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+const char* LinePrimitive::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
       // .foxglove.LinePrimitive.Type type = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
-          int value;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_type(static_cast< ::foxglove::LinePrimitive_Type >(value));
-        } else {
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_type(static_cast<::foxglove::LinePrimitive_Type>(val));
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // .foxglove.Pose pose = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_pose()));
-        } else {
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_pose(), ptr);
+          CHK_(ptr);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // double thickness = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(25u /* 25 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &thickness_)));
-        } else {
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 25)) {
+          _impl_.thickness_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // bool scale_invariant = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &scale_invariant_)));
-        } else {
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _impl_.scale_invariant_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // repeated .foxglove.Point3 points = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-                input, add_points()));
-        } else {
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_points(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<42>(ptr));
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // .foxglove.Color color = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_color()));
-        } else {
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
+          ptr = ctx->ParseMessage(_internal_mutable_color(), ptr);
+          CHK_(ptr);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // repeated .foxglove.Color colors = 7;
-      case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(58u /* 58 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-                input, add_colors()));
-        } else {
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 58)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_colors(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<58>(ptr));
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // repeated fixed32 indices = 8;
-      case 8: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(66u /* 66 & 0xFF */)) {
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED32>(
-                 input, this->mutable_indices())));
-        } else if (
-            static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(69u /* 69 & 0xFF */)) {
-          DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED32>(
-                 1, 66u, input, this->mutable_indices())));
-        } else {
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedFixed32Parser(_internal_mutable_indices(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<uint8_t>(tag) == 69) {
+          _internal_add_indices(::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<uint32_t>(ptr));
+          ptr += sizeof(uint32_t);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
     }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:foxglove.LinePrimitive)
-  return true;
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:foxglove.LinePrimitive)
-  return false;
-#undef DO_
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-void LinePrimitive::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:foxglove.LinePrimitive)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .foxglove.LinePrimitive.Type type = 1;
-  if (this->type() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      1, this->type(), output);
-  }
-
-  // .foxglove.Pose pose = 2;
-  if (this->has_pose()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, this->_internal_pose(), output);
-  }
-
-  // double thickness = 3;
-  if (this->thickness() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(3, this->thickness(), output);
-  }
-
-  // bool scale_invariant = 4;
-  if (this->scale_invariant() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(4, this->scale_invariant(), output);
-  }
-
-  // repeated .foxglove.Point3 points = 5;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->points_size()); i < n; i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      5,
-      this->points(static_cast<int>(i)),
-      output);
-  }
-
-  // .foxglove.Color color = 6;
-  if (this->has_color()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      6, this->_internal_color(), output);
-  }
-
-  // repeated .foxglove.Color colors = 7;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->colors_size()); i < n; i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      7,
-      this->colors(static_cast<int>(i)),
-      output);
-  }
-
-  // repeated fixed32 indices = 8;
-  if (this->indices_size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteTag(8, ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(static_cast< ::google::protobuf::uint32>(
-        _indices_cached_byte_size_));
-    ::google::protobuf::internal::WireFormatLite::WriteFixed32Array(
-      this->indices().data(), this->indices_size(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:foxglove.LinePrimitive)
-}
-
-::google::protobuf::uint8* LinePrimitive::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+uint8_t* LinePrimitive::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:foxglove.LinePrimitive)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .foxglove.LinePrimitive.Type type = 1;
-  if (this->type() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      1, this->type(), target);
+  if (this->_internal_type() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_type(), target);
   }
 
   // .foxglove.Pose pose = 2;
-  if (this->has_pose()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, this->_internal_pose(), deterministic, target);
+  if (this->_internal_has_pose()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::pose(this),
+        _Internal::pose(this).GetCachedSize(), target, stream);
   }
 
   // double thickness = 3;
-  if (this->thickness() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(3, this->thickness(), target);
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_thickness = this->_internal_thickness();
+  uint64_t raw_thickness;
+  memcpy(&raw_thickness, &tmp_thickness, sizeof(tmp_thickness));
+  if (raw_thickness != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(3, this->_internal_thickness(), target);
   }
 
   // bool scale_invariant = 4;
-  if (this->scale_invariant() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(4, this->scale_invariant(), target);
+  if (this->_internal_scale_invariant() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_scale_invariant(), target);
   }
 
   // repeated .foxglove.Point3 points = 5;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->points_size()); i < n; i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        5, this->points(static_cast<int>(i)), deterministic, target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_points_size()); i < n; i++) {
+    const auto& repfield = this->_internal_points(i);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(5, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   // .foxglove.Color color = 6;
-  if (this->has_color()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        6, this->_internal_color(), deterministic, target);
+  if (this->_internal_has_color()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(6, _Internal::color(this),
+        _Internal::color(this).GetCachedSize(), target, stream);
   }
 
   // repeated .foxglove.Color colors = 7;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->colors_size()); i < n; i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        7, this->colors(static_cast<int>(i)), deterministic, target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_colors_size()); i < n; i++) {
+    const auto& repfield = this->_internal_colors(i);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(7, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   // repeated fixed32 indices = 8;
-  if (this->indices_size() > 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteTagToArray(
-      8,
-      ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
-      target);
-    target = ::google::protobuf::io::CodedOutputStream::WriteVarint32ToArray(
-        static_cast< ::google::protobuf::int32>(
-            _indices_cached_byte_size_), target);
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteFixed32NoTagToArray(this->indices_, target);
+  if (this->_internal_indices_size() > 0) {
+    target = stream->WriteFixedPacked(8, _internal_indices(), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:foxglove.LinePrimitive)
   return target;
@@ -567,131 +440,112 @@ size_t LinePrimitive::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:foxglove.LinePrimitive)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // repeated .foxglove.Point3 points = 5;
-  {
-    unsigned int count = static_cast<unsigned int>(this->points_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          this->points(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_points_size();
+  for (const auto& msg : this->_impl_.points_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .foxglove.Color colors = 7;
-  {
-    unsigned int count = static_cast<unsigned int>(this->colors_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          this->colors(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_colors_size();
+  for (const auto& msg : this->_impl_.colors_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated fixed32 indices = 8;
   {
-    unsigned int count = static_cast<unsigned int>(this->indices_size());
+    unsigned int count = static_cast<unsigned int>(this->_internal_indices_size());
     size_t data_size = 4UL * count;
     if (data_size > 0) {
       total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(
-            static_cast< ::google::protobuf::int32>(data_size));
+        ::_pbi::WireFormatLite::Int32Size(static_cast<int32_t>(data_size));
     }
-    int cached_size = ::google::protobuf::internal::ToCachedSize(data_size);
-    GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-    _indices_cached_byte_size_ = cached_size;
-    GOOGLE_SAFE_CONCURRENT_WRITES_END();
     total_size += data_size;
   }
 
   // .foxglove.Pose pose = 2;
-  if (this->has_pose()) {
+  if (this->_internal_has_pose()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *pose_);
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.pose_);
   }
 
   // .foxglove.Color color = 6;
-  if (this->has_color()) {
+  if (this->_internal_has_color()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *color_);
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.color_);
   }
 
   // .foxglove.LinePrimitive.Type type = 1;
-  if (this->type() != 0) {
+  if (this->_internal_type() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->type());
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_type());
   }
 
   // bool scale_invariant = 4;
-  if (this->scale_invariant() != 0) {
+  if (this->_internal_scale_invariant() != 0) {
     total_size += 1 + 1;
   }
 
   // double thickness = 3;
-  if (this->thickness() != 0) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_thickness = this->_internal_thickness();
+  uint64_t raw_thickness;
+  memcpy(&raw_thickness, &tmp_thickness, sizeof(tmp_thickness));
+  if (raw_thickness != 0) {
     total_size += 1 + 8;
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void LinePrimitive::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:foxglove.LinePrimitive)
-  GOOGLE_DCHECK_NE(&from, this);
-  const LinePrimitive* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const LinePrimitive>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:foxglove.LinePrimitive)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:foxglove.LinePrimitive)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LinePrimitive::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    LinePrimitive::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LinePrimitive::GetClassData() const { return &_class_data_; }
 
-void LinePrimitive::MergeFrom(const LinePrimitive& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:foxglove.LinePrimitive)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+
+void LinePrimitive::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<LinePrimitive*>(&to_msg);
+  auto& from = static_cast<const LinePrimitive&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:foxglove.LinePrimitive)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  points_.MergeFrom(from.points_);
-  colors_.MergeFrom(from.colors_);
-  indices_.MergeFrom(from.indices_);
-  if (from.has_pose()) {
-    mutable_pose()->::foxglove::Pose::MergeFrom(from.pose());
+  _this->_impl_.points_.MergeFrom(from._impl_.points_);
+  _this->_impl_.colors_.MergeFrom(from._impl_.colors_);
+  _this->_impl_.indices_.MergeFrom(from._impl_.indices_);
+  if (from._internal_has_pose()) {
+    _this->_internal_mutable_pose()->::foxglove::Pose::MergeFrom(
+        from._internal_pose());
   }
-  if (from.has_color()) {
-    mutable_color()->::foxglove::Color::MergeFrom(from.color());
+  if (from._internal_has_color()) {
+    _this->_internal_mutable_color()->::foxglove::Color::MergeFrom(
+        from._internal_color());
   }
-  if (from.type() != 0) {
-    set_type(from.type());
+  if (from._internal_type() != 0) {
+    _this->_internal_set_type(from._internal_type());
   }
-  if (from.scale_invariant() != 0) {
-    set_scale_invariant(from.scale_invariant());
+  if (from._internal_scale_invariant() != 0) {
+    _this->_internal_set_scale_invariant(from._internal_scale_invariant());
   }
-  if (from.thickness() != 0) {
-    set_thickness(from.thickness());
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_thickness = from._internal_thickness();
+  uint64_t raw_thickness;
+  memcpy(&raw_thickness, &tmp_thickness, sizeof(tmp_thickness));
+  if (raw_thickness != 0) {
+    _this->_internal_set_thickness(from._internal_thickness());
   }
-}
-
-void LinePrimitive::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:foxglove.LinePrimitive)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void LinePrimitive::CopyFrom(const LinePrimitive& from) {
@@ -705,37 +559,34 @@ bool LinePrimitive::IsInitialized() const {
   return true;
 }
 
-void LinePrimitive::Swap(LinePrimitive* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void LinePrimitive::InternalSwap(LinePrimitive* other) {
   using std::swap;
-  CastToBase(&points_)->InternalSwap(CastToBase(&other->points_));
-  CastToBase(&colors_)->InternalSwap(CastToBase(&other->colors_));
-  indices_.InternalSwap(&other->indices_);
-  swap(pose_, other->pose_);
-  swap(color_, other->color_);
-  swap(type_, other->type_);
-  swap(scale_invariant_, other->scale_invariant_);
-  swap(thickness_, other->thickness_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.points_.InternalSwap(&other->_impl_.points_);
+  _impl_.colors_.InternalSwap(&other->_impl_.colors_);
+  _impl_.indices_.InternalSwap(&other->_impl_.indices_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(LinePrimitive, _impl_.thickness_)
+      + sizeof(LinePrimitive::_impl_.thickness_)
+      - PROTOBUF_FIELD_OFFSET(LinePrimitive, _impl_.pose_)>(
+          reinterpret_cast<char*>(&_impl_.pose_),
+          reinterpret_cast<char*>(&other->_impl_.pose_));
 }
 
-::google::protobuf::Metadata LinePrimitive::GetMetadata() const {
-  protobuf_foxglove_2fLinePrimitive_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_foxglove_2fLinePrimitive_2eproto::file_level_metadata[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata LinePrimitive::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_foxglove_2fLinePrimitive_2eproto_getter, &descriptor_table_foxglove_2fLinePrimitive_2eproto_once,
+      file_level_metadata_foxglove_2fLinePrimitive_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace foxglove
-namespace google {
-namespace protobuf {
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::foxglove::LinePrimitive* Arena::CreateMaybeMessage< ::foxglove::LinePrimitive >(Arena* arena) {
-  return Arena::CreateInternal< ::foxglove::LinePrimitive >(arena);
+PROTOBUF_NAMESPACE_OPEN
+template<> PROTOBUF_NOINLINE ::foxglove::LinePrimitive*
+Arena::CreateMaybeMessage< ::foxglove::LinePrimitive >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::foxglove::LinePrimitive >(arena);
 }
-}  // namespace protobuf
-}  // namespace google
+PROTOBUF_NAMESPACE_CLOSE
 
 // @@protoc_insertion_point(global_scope)
+#include <google/protobuf/port_undef.inc>

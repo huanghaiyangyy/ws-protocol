@@ -5,118 +5,90 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
-#include <google/protobuf/stubs/port.h>
 #include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/wire_format_lite_inl.h>
+#include <google/protobuf/extension_set.h>
+#include <google/protobuf/wire_format_lite.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
+#include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
 
 namespace foxglove {
-class PackedElementFieldDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<PackedElementField>
-      _instance;
-} _PackedElementField_default_instance_;
+PROTOBUF_CONSTEXPR PackedElementField::PackedElementField(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.offset_)*/0u
+  , /*decltype(_impl_.type_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct PackedElementFieldDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR PackedElementFieldDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~PackedElementFieldDefaultTypeInternal() {}
+  union {
+    PackedElementField _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PackedElementFieldDefaultTypeInternal _PackedElementField_default_instance_;
 }  // namespace foxglove
-namespace protobuf_foxglove_2fPackedElementField_2eproto {
-static void InitDefaultsPackedElementField() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_foxglove_2fPackedElementField_2eproto[1];
+static const ::_pb::EnumDescriptor* file_level_enum_descriptors_foxglove_2fPackedElementField_2eproto[1];
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_foxglove_2fPackedElementField_2eproto = nullptr;
 
-  {
-    void* ptr = &::foxglove::_PackedElementField_default_instance_;
-    new (ptr) ::foxglove::PackedElementField();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::foxglove::PackedElementField::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<0> scc_info_PackedElementField =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsPackedElementField}, {}};
-
-void InitDefaults() {
-  ::google::protobuf::internal::InitSCC(&scc_info_PackedElementField.base);
-}
-
-::google::protobuf::Metadata file_level_metadata[1];
-const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[1];
-
-const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_foxglove_2fPackedElementField_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::PackedElementField, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::PackedElementField, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::PackedElementField, name_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::PackedElementField, offset_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::PackedElementField, type_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::foxglove::PackedElementField, _impl_.name_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::PackedElementField, _impl_.offset_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::PackedElementField, _impl_.type_),
 };
-static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::foxglove::PackedElementField)},
-};
-
-static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::foxglove::_PackedElementField_default_instance_),
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::foxglove::PackedElementField)},
 };
 
-void protobuf_AssignDescriptors() {
-  AddDescriptors();
-  AssignDescriptors(
-      "foxglove/PackedElementField.proto", schemas, file_default_instances, TableStruct::offsets,
-      file_level_metadata, file_level_enum_descriptors, NULL);
+static const ::_pb::Message* const file_default_instances[] = {
+  &::foxglove::_PackedElementField_default_instance_._instance,
+};
+
+const char descriptor_table_protodef_foxglove_2fPackedElementField_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n!foxglove/PackedElementField.proto\022\010fox"
+  "glove\"\343\001\n\022PackedElementField\022\014\n\004name\030\001 \001"
+  "(\t\022\016\n\006offset\030\002 \001(\007\0226\n\004type\030\003 \001(\0162(.foxgl"
+  "ove.PackedElementField.NumericType\"w\n\013Nu"
+  "mericType\022\013\n\007UNKNOWN\020\000\022\t\n\005UINT8\020\001\022\010\n\004INT"
+  "8\020\002\022\n\n\006UINT16\020\003\022\t\n\005INT16\020\004\022\n\n\006UINT32\020\005\022\t"
+  "\n\005INT32\020\006\022\013\n\007FLOAT32\020\007\022\013\n\007FLOAT64\020\010b\006pro"
+  "to3"
+  ;
+static ::_pbi::once_flag descriptor_table_foxglove_2fPackedElementField_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_foxglove_2fPackedElementField_2eproto = {
+    false, false, 283, descriptor_table_protodef_foxglove_2fPackedElementField_2eproto,
+    "foxglove/PackedElementField.proto",
+    &descriptor_table_foxglove_2fPackedElementField_2eproto_once, nullptr, 0, 1,
+    schemas, file_default_instances, TableStruct_foxglove_2fPackedElementField_2eproto::offsets,
+    file_level_metadata_foxglove_2fPackedElementField_2eproto, file_level_enum_descriptors_foxglove_2fPackedElementField_2eproto,
+    file_level_service_descriptors_foxglove_2fPackedElementField_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_foxglove_2fPackedElementField_2eproto_getter() {
+  return &descriptor_table_foxglove_2fPackedElementField_2eproto;
 }
 
-void protobuf_AssignDescriptorsOnce() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, protobuf_AssignDescriptors);
-}
-
-void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
-void protobuf_RegisterTypes(const ::std::string&) {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 1);
-}
-
-void AddDescriptorsImpl() {
-  InitDefaults();
-  static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n!foxglove/PackedElementField.proto\022\010fox"
-      "glove\"\343\001\n\022PackedElementField\022\014\n\004name\030\001 \001"
-      "(\t\022\016\n\006offset\030\002 \001(\007\0226\n\004type\030\003 \001(\0162(.foxgl"
-      "ove.PackedElementField.NumericType\"w\n\013Nu"
-      "mericType\022\013\n\007UNKNOWN\020\000\022\t\n\005UINT8\020\001\022\010\n\004INT"
-      "8\020\002\022\n\n\006UINT16\020\003\022\t\n\005INT16\020\004\022\n\n\006UINT32\020\005\022\t"
-      "\n\005INT32\020\006\022\013\n\007FLOAT32\020\007\022\013\n\007FLOAT64\020\010b\006pro"
-      "to3"
-  };
-  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 283);
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
-    "foxglove/PackedElementField.proto", &protobuf_RegisterTypes);
-}
-
-void AddDescriptors() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, AddDescriptorsImpl);
-}
-// Force AddDescriptors() to be called at dynamic initialization time.
-struct StaticDescriptorInitializer {
-  StaticDescriptorInitializer() {
-    AddDescriptors();
-  }
-} static_descriptor_initializer;
-}  // namespace protobuf_foxglove_2fPackedElementField_2eproto
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_foxglove_2fPackedElementField_2eproto(&descriptor_table_foxglove_2fPackedElementField_2eproto);
 namespace foxglove {
-const ::google::protobuf::EnumDescriptor* PackedElementField_NumericType_descriptor() {
-  protobuf_foxglove_2fPackedElementField_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_foxglove_2fPackedElementField_2eproto::file_level_enum_descriptors[0];
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* PackedElementField_NumericType_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_foxglove_2fPackedElementField_2eproto);
+  return file_level_enum_descriptors_foxglove_2fPackedElementField_2eproto[0];
 }
 bool PackedElementField_NumericType_IsValid(int value) {
   switch (value) {
@@ -135,236 +107,192 @@ bool PackedElementField_NumericType_IsValid(int value) {
   }
 }
 
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const PackedElementField_NumericType PackedElementField::UNKNOWN;
-const PackedElementField_NumericType PackedElementField::UINT8;
-const PackedElementField_NumericType PackedElementField::INT8;
-const PackedElementField_NumericType PackedElementField::UINT16;
-const PackedElementField_NumericType PackedElementField::INT16;
-const PackedElementField_NumericType PackedElementField::UINT32;
-const PackedElementField_NumericType PackedElementField::INT32;
-const PackedElementField_NumericType PackedElementField::FLOAT32;
-const PackedElementField_NumericType PackedElementField::FLOAT64;
-const PackedElementField_NumericType PackedElementField::NumericType_MIN;
-const PackedElementField_NumericType PackedElementField::NumericType_MAX;
-const int PackedElementField::NumericType_ARRAYSIZE;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+#if (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
+constexpr PackedElementField_NumericType PackedElementField::UNKNOWN;
+constexpr PackedElementField_NumericType PackedElementField::UINT8;
+constexpr PackedElementField_NumericType PackedElementField::INT8;
+constexpr PackedElementField_NumericType PackedElementField::UINT16;
+constexpr PackedElementField_NumericType PackedElementField::INT16;
+constexpr PackedElementField_NumericType PackedElementField::UINT32;
+constexpr PackedElementField_NumericType PackedElementField::INT32;
+constexpr PackedElementField_NumericType PackedElementField::FLOAT32;
+constexpr PackedElementField_NumericType PackedElementField::FLOAT64;
+constexpr PackedElementField_NumericType PackedElementField::NumericType_MIN;
+constexpr PackedElementField_NumericType PackedElementField::NumericType_MAX;
+constexpr int PackedElementField::NumericType_ARRAYSIZE;
+#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 
 // ===================================================================
 
-void PackedElementField::InitAsDefaultInstance() {
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int PackedElementField::kNameFieldNumber;
-const int PackedElementField::kOffsetFieldNumber;
-const int PackedElementField::kTypeFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+class PackedElementField::_Internal {
+ public:
+};
 
-PackedElementField::PackedElementField()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_foxglove_2fPackedElementField_2eproto::scc_info_PackedElementField.base);
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:foxglove.PackedElementField)
+PackedElementField::PackedElementField(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:foxglove.PackedElementField)
 }
 PackedElementField::PackedElementField(const PackedElementField& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.name().size() > 0) {
-    name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  PackedElementField* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.name_){}
+    , decltype(_impl_.offset_){}
+    , decltype(_impl_.type_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.name_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_name().empty()) {
+    _this->_impl_.name_.Set(from._internal_name(), 
+      _this->GetArenaForAllocation());
   }
-  ::memcpy(&offset_, &from.offset_,
-    static_cast<size_t>(reinterpret_cast<char*>(&type_) -
-    reinterpret_cast<char*>(&offset_)) + sizeof(type_));
+  ::memcpy(&_impl_.offset_, &from._impl_.offset_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.type_) -
+    reinterpret_cast<char*>(&_impl_.offset_)) + sizeof(_impl_.type_));
   // @@protoc_insertion_point(copy_constructor:foxglove.PackedElementField)
 }
 
-void PackedElementField::SharedCtor() {
-  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&offset_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&type_) -
-      reinterpret_cast<char*>(&offset_)) + sizeof(type_));
+inline void PackedElementField::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.name_){}
+    , decltype(_impl_.offset_){0u}
+    , decltype(_impl_.type_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.name_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 PackedElementField::~PackedElementField() {
   // @@protoc_insertion_point(destructor:foxglove.PackedElementField)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
 
-void PackedElementField::SharedDtor() {
-  name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline void PackedElementField::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.name_.Destroy();
 }
 
 void PackedElementField::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* PackedElementField::descriptor() {
-  ::protobuf_foxglove_2fPackedElementField_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_foxglove_2fPackedElementField_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const PackedElementField& PackedElementField::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_foxglove_2fPackedElementField_2eproto::scc_info_PackedElementField.base);
-  return *internal_default_instance();
-}
-
 
 void PackedElementField::Clear() {
 // @@protoc_insertion_point(message_clear_start:foxglove.PackedElementField)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&offset_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&type_) -
-      reinterpret_cast<char*>(&offset_)) + sizeof(type_));
-  _internal_metadata_.Clear();
+  _impl_.name_.ClearToEmpty();
+  ::memset(&_impl_.offset_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.type_) -
+      reinterpret_cast<char*>(&_impl_.offset_)) + sizeof(_impl_.type_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-bool PackedElementField::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:foxglove.PackedElementField)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+const char* PackedElementField::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
       // string name = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_name()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->name().data(), static_cast<int>(this->name().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "foxglove.PackedElementField.name"));
-        } else {
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          auto str = _internal_mutable_name();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "foxglove.PackedElementField.name"));
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // fixed32 offset = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(21u /* 21 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED32>(
-                 input, &offset_)));
-        } else {
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 21)) {
+          _impl_.offset_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<uint32_t>(ptr);
+          ptr += sizeof(uint32_t);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // .foxglove.PackedElementField.NumericType type = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
-          int value;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_type(static_cast< ::foxglove::PackedElementField_NumericType >(value));
-        } else {
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_type(static_cast<::foxglove::PackedElementField_NumericType>(val));
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
     }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:foxglove.PackedElementField)
-  return true;
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:foxglove.PackedElementField)
-  return false;
-#undef DO_
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-void PackedElementField::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:foxglove.PackedElementField)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string name = 1;
-  if (this->name().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->name().data(), static_cast<int>(this->name().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "foxglove.PackedElementField.name");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->name(), output);
-  }
-
-  // fixed32 offset = 2;
-  if (this->offset() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFixed32(2, this->offset(), output);
-  }
-
-  // .foxglove.PackedElementField.NumericType type = 3;
-  if (this->type() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      3, this->type(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:foxglove.PackedElementField)
-}
-
-::google::protobuf::uint8* PackedElementField::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+uint8_t* PackedElementField::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:foxglove.PackedElementField)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // string name = 1;
-  if (this->name().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->name().data(), static_cast<int>(this->name().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+  if (!this->_internal_name().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "foxglove.PackedElementField.name");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->name(), target);
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_name(), target);
   }
 
   // fixed32 offset = 2;
-  if (this->offset() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFixed32ToArray(2, this->offset(), target);
+  if (this->_internal_offset() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteFixed32ToArray(2, this->_internal_offset(), target);
   }
 
   // .foxglove.PackedElementField.NumericType type = 3;
-  if (this->type() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      3, this->type(), target);
+  if (this->_internal_type() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      3, this->_internal_type(), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:foxglove.PackedElementField)
   return target;
@@ -374,73 +302,56 @@ size_t PackedElementField::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:foxglove.PackedElementField)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // string name = 1;
-  if (this->name().size() > 0) {
+  if (!this->_internal_name().empty()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->name());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_name());
   }
 
   // fixed32 offset = 2;
-  if (this->offset() != 0) {
+  if (this->_internal_offset() != 0) {
     total_size += 1 + 4;
   }
 
   // .foxglove.PackedElementField.NumericType type = 3;
-  if (this->type() != 0) {
+  if (this->_internal_type() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->type());
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_type());
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void PackedElementField::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:foxglove.PackedElementField)
-  GOOGLE_DCHECK_NE(&from, this);
-  const PackedElementField* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const PackedElementField>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:foxglove.PackedElementField)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:foxglove.PackedElementField)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData PackedElementField::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    PackedElementField::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*PackedElementField::GetClassData() const { return &_class_data_; }
 
-void PackedElementField::MergeFrom(const PackedElementField& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:foxglove.PackedElementField)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+
+void PackedElementField::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<PackedElementField*>(&to_msg);
+  auto& from = static_cast<const PackedElementField&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:foxglove.PackedElementField)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.name().size() > 0) {
-
-    name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
+  if (!from._internal_name().empty()) {
+    _this->_internal_set_name(from._internal_name());
   }
-  if (from.offset() != 0) {
-    set_offset(from.offset());
+  if (from._internal_offset() != 0) {
+    _this->_internal_set_offset(from._internal_offset());
   }
-  if (from.type() != 0) {
-    set_type(from.type());
+  if (from._internal_type() != 0) {
+    _this->_internal_set_type(from._internal_type());
   }
-}
-
-void PackedElementField::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:foxglove.PackedElementField)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void PackedElementField::CopyFrom(const PackedElementField& from) {
@@ -454,33 +365,37 @@ bool PackedElementField::IsInitialized() const {
   return true;
 }
 
-void PackedElementField::Swap(PackedElementField* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void PackedElementField::InternalSwap(PackedElementField* other) {
   using std::swap;
-  name_.Swap(&other->name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  swap(offset_, other->offset_);
-  swap(type_, other->type_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.name_, lhs_arena,
+      &other->_impl_.name_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(PackedElementField, _impl_.type_)
+      + sizeof(PackedElementField::_impl_.type_)
+      - PROTOBUF_FIELD_OFFSET(PackedElementField, _impl_.offset_)>(
+          reinterpret_cast<char*>(&_impl_.offset_),
+          reinterpret_cast<char*>(&other->_impl_.offset_));
 }
 
-::google::protobuf::Metadata PackedElementField::GetMetadata() const {
-  protobuf_foxglove_2fPackedElementField_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_foxglove_2fPackedElementField_2eproto::file_level_metadata[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata PackedElementField::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_foxglove_2fPackedElementField_2eproto_getter, &descriptor_table_foxglove_2fPackedElementField_2eproto_once,
+      file_level_metadata_foxglove_2fPackedElementField_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace foxglove
-namespace google {
-namespace protobuf {
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::foxglove::PackedElementField* Arena::CreateMaybeMessage< ::foxglove::PackedElementField >(Arena* arena) {
-  return Arena::CreateInternal< ::foxglove::PackedElementField >(arena);
+PROTOBUF_NAMESPACE_OPEN
+template<> PROTOBUF_NOINLINE ::foxglove::PackedElementField*
+Arena::CreateMaybeMessage< ::foxglove::PackedElementField >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::foxglove::PackedElementField >(arena);
 }
-}  // namespace protobuf
-}  // namespace google
+PROTOBUF_NAMESPACE_CLOSE
 
 // @@protoc_insertion_point(global_scope)
+#include <google/protobuf/port_undef.inc>

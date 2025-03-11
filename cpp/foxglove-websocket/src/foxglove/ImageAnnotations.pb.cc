@@ -5,343 +5,272 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
-#include <google/protobuf/stubs/port.h>
 #include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/wire_format_lite_inl.h>
+#include <google/protobuf/extension_set.h>
+#include <google/protobuf/wire_format_lite.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
+#include <google/protobuf/port_def.inc>
 
-namespace protobuf_foxglove_2fCircleAnnotation_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_foxglove_2fCircleAnnotation_2eproto ::google::protobuf::internal::SCCInfo<3> scc_info_CircleAnnotation;
-}  // namespace protobuf_foxglove_2fCircleAnnotation_2eproto
-namespace protobuf_foxglove_2fPointsAnnotation_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_foxglove_2fPointsAnnotation_2eproto ::google::protobuf::internal::SCCInfo<3> scc_info_PointsAnnotation;
-}  // namespace protobuf_foxglove_2fPointsAnnotation_2eproto
-namespace protobuf_foxglove_2fTextAnnotation_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_foxglove_2fTextAnnotation_2eproto ::google::protobuf::internal::SCCInfo<3> scc_info_TextAnnotation;
-}  // namespace protobuf_foxglove_2fTextAnnotation_2eproto
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace foxglove {
-class ImageAnnotationsDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<ImageAnnotations>
-      _instance;
-} _ImageAnnotations_default_instance_;
+PROTOBUF_CONSTEXPR ImageAnnotations::ImageAnnotations(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.circles_)*/{}
+  , /*decltype(_impl_.points_)*/{}
+  , /*decltype(_impl_.texts_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct ImageAnnotationsDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ImageAnnotationsDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ImageAnnotationsDefaultTypeInternal() {}
+  union {
+    ImageAnnotations _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ImageAnnotationsDefaultTypeInternal _ImageAnnotations_default_instance_;
 }  // namespace foxglove
-namespace protobuf_foxglove_2fImageAnnotations_2eproto {
-static void InitDefaultsImageAnnotations() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_foxglove_2fImageAnnotations_2eproto[1];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_foxglove_2fImageAnnotations_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_foxglove_2fImageAnnotations_2eproto = nullptr;
 
-  {
-    void* ptr = &::foxglove::_ImageAnnotations_default_instance_;
-    new (ptr) ::foxglove::ImageAnnotations();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::foxglove::ImageAnnotations::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<3> scc_info_ImageAnnotations =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 3, InitDefaultsImageAnnotations}, {
-      &protobuf_foxglove_2fCircleAnnotation_2eproto::scc_info_CircleAnnotation.base,
-      &protobuf_foxglove_2fPointsAnnotation_2eproto::scc_info_PointsAnnotation.base,
-      &protobuf_foxglove_2fTextAnnotation_2eproto::scc_info_TextAnnotation.base,}};
-
-void InitDefaults() {
-  ::google::protobuf::internal::InitSCC(&scc_info_ImageAnnotations.base);
-}
-
-::google::protobuf::Metadata file_level_metadata[1];
-
-const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_foxglove_2fImageAnnotations_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::ImageAnnotations, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::ImageAnnotations, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::ImageAnnotations, circles_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::ImageAnnotations, points_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::ImageAnnotations, texts_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::foxglove::ImageAnnotations, _impl_.circles_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::ImageAnnotations, _impl_.points_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::ImageAnnotations, _impl_.texts_),
 };
-static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::foxglove::ImageAnnotations)},
-};
-
-static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::foxglove::_ImageAnnotations_default_instance_),
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::foxglove::ImageAnnotations)},
 };
 
-void protobuf_AssignDescriptors() {
-  AddDescriptors();
-  AssignDescriptors(
-      "foxglove/ImageAnnotations.proto", schemas, file_default_instances, TableStruct::offsets,
-      file_level_metadata, NULL, NULL);
+static const ::_pb::Message* const file_default_instances[] = {
+  &::foxglove::_ImageAnnotations_default_instance_._instance,
+};
+
+const char descriptor_table_protodef_foxglove_2fImageAnnotations_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n\037foxglove/ImageAnnotations.proto\022\010foxgl"
+  "ove\032\037foxglove/CircleAnnotation.proto\032\037fo"
+  "xglove/PointsAnnotation.proto\032\035foxglove/"
+  "TextAnnotation.proto\"\224\001\n\020ImageAnnotation"
+  "s\022+\n\007circles\030\001 \003(\0132\032.foxglove.CircleAnno"
+  "tation\022*\n\006points\030\002 \003(\0132\032.foxglove.Points"
+  "Annotation\022\'\n\005texts\030\003 \003(\0132\030.foxglove.Tex"
+  "tAnnotationb\006proto3"
+  ;
+static const ::_pbi::DescriptorTable* const descriptor_table_foxglove_2fImageAnnotations_2eproto_deps[3] = {
+  &::descriptor_table_foxglove_2fCircleAnnotation_2eproto,
+  &::descriptor_table_foxglove_2fPointsAnnotation_2eproto,
+  &::descriptor_table_foxglove_2fTextAnnotation_2eproto,
+};
+static ::_pbi::once_flag descriptor_table_foxglove_2fImageAnnotations_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_foxglove_2fImageAnnotations_2eproto = {
+    false, false, 299, descriptor_table_protodef_foxglove_2fImageAnnotations_2eproto,
+    "foxglove/ImageAnnotations.proto",
+    &descriptor_table_foxglove_2fImageAnnotations_2eproto_once, descriptor_table_foxglove_2fImageAnnotations_2eproto_deps, 3, 1,
+    schemas, file_default_instances, TableStruct_foxglove_2fImageAnnotations_2eproto::offsets,
+    file_level_metadata_foxglove_2fImageAnnotations_2eproto, file_level_enum_descriptors_foxglove_2fImageAnnotations_2eproto,
+    file_level_service_descriptors_foxglove_2fImageAnnotations_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_foxglove_2fImageAnnotations_2eproto_getter() {
+  return &descriptor_table_foxglove_2fImageAnnotations_2eproto;
 }
 
-void protobuf_AssignDescriptorsOnce() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, protobuf_AssignDescriptors);
-}
-
-void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
-void protobuf_RegisterTypes(const ::std::string&) {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 1);
-}
-
-void AddDescriptorsImpl() {
-  InitDefaults();
-  static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\037foxglove/ImageAnnotations.proto\022\010foxgl"
-      "ove\032\037foxglove/CircleAnnotation.proto\032\037fo"
-      "xglove/PointsAnnotation.proto\032\035foxglove/"
-      "TextAnnotation.proto\"\224\001\n\020ImageAnnotation"
-      "s\022+\n\007circles\030\001 \003(\0132\032.foxglove.CircleAnno"
-      "tation\022*\n\006points\030\002 \003(\0132\032.foxglove.Points"
-      "Annotation\022\'\n\005texts\030\003 \003(\0132\030.foxglove.Tex"
-      "tAnnotationb\006proto3"
-  };
-  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 299);
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
-    "foxglove/ImageAnnotations.proto", &protobuf_RegisterTypes);
-  ::protobuf_foxglove_2fCircleAnnotation_2eproto::AddDescriptors();
-  ::protobuf_foxglove_2fPointsAnnotation_2eproto::AddDescriptors();
-  ::protobuf_foxglove_2fTextAnnotation_2eproto::AddDescriptors();
-}
-
-void AddDescriptors() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, AddDescriptorsImpl);
-}
-// Force AddDescriptors() to be called at dynamic initialization time.
-struct StaticDescriptorInitializer {
-  StaticDescriptorInitializer() {
-    AddDescriptors();
-  }
-} static_descriptor_initializer;
-}  // namespace protobuf_foxglove_2fImageAnnotations_2eproto
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_foxglove_2fImageAnnotations_2eproto(&descriptor_table_foxglove_2fImageAnnotations_2eproto);
 namespace foxglove {
 
 // ===================================================================
 
-void ImageAnnotations::InitAsDefaultInstance() {
-}
+class ImageAnnotations::_Internal {
+ public:
+};
+
 void ImageAnnotations::clear_circles() {
-  circles_.Clear();
+  _impl_.circles_.Clear();
 }
 void ImageAnnotations::clear_points() {
-  points_.Clear();
+  _impl_.points_.Clear();
 }
 void ImageAnnotations::clear_texts() {
-  texts_.Clear();
+  _impl_.texts_.Clear();
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int ImageAnnotations::kCirclesFieldNumber;
-const int ImageAnnotations::kPointsFieldNumber;
-const int ImageAnnotations::kTextsFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-ImageAnnotations::ImageAnnotations()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_foxglove_2fImageAnnotations_2eproto::scc_info_ImageAnnotations.base);
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:foxglove.ImageAnnotations)
+ImageAnnotations::ImageAnnotations(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:foxglove.ImageAnnotations)
 }
 ImageAnnotations::ImageAnnotations(const ImageAnnotations& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      circles_(from.circles_),
-      points_(from.points_),
-      texts_(from.texts_) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ImageAnnotations* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.circles_){from._impl_.circles_}
+    , decltype(_impl_.points_){from._impl_.points_}
+    , decltype(_impl_.texts_){from._impl_.texts_}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:foxglove.ImageAnnotations)
 }
 
-void ImageAnnotations::SharedCtor() {
+inline void ImageAnnotations::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.circles_){arena}
+    , decltype(_impl_.points_){arena}
+    , decltype(_impl_.texts_){arena}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 ImageAnnotations::~ImageAnnotations() {
   // @@protoc_insertion_point(destructor:foxglove.ImageAnnotations)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
 
-void ImageAnnotations::SharedDtor() {
+inline void ImageAnnotations::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.circles_.~RepeatedPtrField();
+  _impl_.points_.~RepeatedPtrField();
+  _impl_.texts_.~RepeatedPtrField();
 }
 
 void ImageAnnotations::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* ImageAnnotations::descriptor() {
-  ::protobuf_foxglove_2fImageAnnotations_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_foxglove_2fImageAnnotations_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const ImageAnnotations& ImageAnnotations::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_foxglove_2fImageAnnotations_2eproto::scc_info_ImageAnnotations.base);
-  return *internal_default_instance();
-}
-
 
 void ImageAnnotations::Clear() {
 // @@protoc_insertion_point(message_clear_start:foxglove.ImageAnnotations)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  circles_.Clear();
-  points_.Clear();
-  texts_.Clear();
-  _internal_metadata_.Clear();
+  _impl_.circles_.Clear();
+  _impl_.points_.Clear();
+  _impl_.texts_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-bool ImageAnnotations::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:foxglove.ImageAnnotations)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+const char* ImageAnnotations::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
       // repeated .foxglove.CircleAnnotation circles = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-                input, add_circles()));
-        } else {
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_circles(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // repeated .foxglove.PointsAnnotation points = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-                input, add_points()));
-        } else {
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_points(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // repeated .foxglove.TextAnnotation texts = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-                input, add_texts()));
-        } else {
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_texts(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
     }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:foxglove.ImageAnnotations)
-  return true;
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:foxglove.ImageAnnotations)
-  return false;
-#undef DO_
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-void ImageAnnotations::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:foxglove.ImageAnnotations)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // repeated .foxglove.CircleAnnotation circles = 1;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->circles_size()); i < n; i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1,
-      this->circles(static_cast<int>(i)),
-      output);
-  }
-
-  // repeated .foxglove.PointsAnnotation points = 2;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->points_size()); i < n; i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2,
-      this->points(static_cast<int>(i)),
-      output);
-  }
-
-  // repeated .foxglove.TextAnnotation texts = 3;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->texts_size()); i < n; i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3,
-      this->texts(static_cast<int>(i)),
-      output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:foxglove.ImageAnnotations)
-}
-
-::google::protobuf::uint8* ImageAnnotations::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+uint8_t* ImageAnnotations::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:foxglove.ImageAnnotations)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // repeated .foxglove.CircleAnnotation circles = 1;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->circles_size()); i < n; i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, this->circles(static_cast<int>(i)), deterministic, target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_circles_size()); i < n; i++) {
+    const auto& repfield = this->_internal_circles(i);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   // repeated .foxglove.PointsAnnotation points = 2;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->points_size()); i < n; i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, this->points(static_cast<int>(i)), deterministic, target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_points_size()); i < n; i++) {
+    const auto& repfield = this->_internal_points(i);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(2, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   // repeated .foxglove.TextAnnotation texts = 3;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->texts_size()); i < n; i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, this->texts(static_cast<int>(i)), deterministic, target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_texts_size()); i < n; i++) {
+    const auto& repfield = this->_internal_texts(i);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(3, repfield, repfield.GetCachedSize(), target, stream);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:foxglove.ImageAnnotations)
   return target;
@@ -351,81 +280,53 @@ size_t ImageAnnotations::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:foxglove.ImageAnnotations)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // repeated .foxglove.CircleAnnotation circles = 1;
-  {
-    unsigned int count = static_cast<unsigned int>(this->circles_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          this->circles(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_circles_size();
+  for (const auto& msg : this->_impl_.circles_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .foxglove.PointsAnnotation points = 2;
-  {
-    unsigned int count = static_cast<unsigned int>(this->points_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          this->points(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_points_size();
+  for (const auto& msg : this->_impl_.points_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .foxglove.TextAnnotation texts = 3;
-  {
-    unsigned int count = static_cast<unsigned int>(this->texts_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          this->texts(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_texts_size();
+  for (const auto& msg : this->_impl_.texts_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ImageAnnotations::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:foxglove.ImageAnnotations)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ImageAnnotations* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const ImageAnnotations>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:foxglove.ImageAnnotations)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:foxglove.ImageAnnotations)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ImageAnnotations::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ImageAnnotations::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ImageAnnotations::GetClassData() const { return &_class_data_; }
 
-void ImageAnnotations::MergeFrom(const ImageAnnotations& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:foxglove.ImageAnnotations)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+
+void ImageAnnotations::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ImageAnnotations*>(&to_msg);
+  auto& from = static_cast<const ImageAnnotations&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:foxglove.ImageAnnotations)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  circles_.MergeFrom(from.circles_);
-  points_.MergeFrom(from.points_);
-  texts_.MergeFrom(from.texts_);
-}
-
-void ImageAnnotations::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:foxglove.ImageAnnotations)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_impl_.circles_.MergeFrom(from._impl_.circles_);
+  _this->_impl_.points_.MergeFrom(from._impl_.points_);
+  _this->_impl_.texts_.MergeFrom(from._impl_.texts_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ImageAnnotations::CopyFrom(const ImageAnnotations& from) {
@@ -439,32 +340,28 @@ bool ImageAnnotations::IsInitialized() const {
   return true;
 }
 
-void ImageAnnotations::Swap(ImageAnnotations* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void ImageAnnotations::InternalSwap(ImageAnnotations* other) {
   using std::swap;
-  CastToBase(&circles_)->InternalSwap(CastToBase(&other->circles_));
-  CastToBase(&points_)->InternalSwap(CastToBase(&other->points_));
-  CastToBase(&texts_)->InternalSwap(CastToBase(&other->texts_));
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.circles_.InternalSwap(&other->_impl_.circles_);
+  _impl_.points_.InternalSwap(&other->_impl_.points_);
+  _impl_.texts_.InternalSwap(&other->_impl_.texts_);
 }
 
-::google::protobuf::Metadata ImageAnnotations::GetMetadata() const {
-  protobuf_foxglove_2fImageAnnotations_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_foxglove_2fImageAnnotations_2eproto::file_level_metadata[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata ImageAnnotations::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_foxglove_2fImageAnnotations_2eproto_getter, &descriptor_table_foxglove_2fImageAnnotations_2eproto_once,
+      file_level_metadata_foxglove_2fImageAnnotations_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace foxglove
-namespace google {
-namespace protobuf {
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::foxglove::ImageAnnotations* Arena::CreateMaybeMessage< ::foxglove::ImageAnnotations >(Arena* arena) {
-  return Arena::CreateInternal< ::foxglove::ImageAnnotations >(arena);
+PROTOBUF_NAMESPACE_OPEN
+template<> PROTOBUF_NOINLINE ::foxglove::ImageAnnotations*
+Arena::CreateMaybeMessage< ::foxglove::ImageAnnotations >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::foxglove::ImageAnnotations >(arena);
 }
-}  // namespace protobuf
-}  // namespace google
+PROTOBUF_NAMESPACE_CLOSE
 
 // @@protoc_insertion_point(global_scope)
+#include <google/protobuf/port_undef.inc>

@@ -5,581 +5,461 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
-#include <google/protobuf/stubs/port.h>
 #include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/wire_format_lite_inl.h>
+#include <google/protobuf/extension_set.h>
+#include <google/protobuf/wire_format_lite.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
+#include <google/protobuf/port_def.inc>
 
-namespace protobuf_foxglove_2fPackedElementField_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_foxglove_2fPackedElementField_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_PackedElementField;
-}  // namespace protobuf_foxglove_2fPackedElementField_2eproto
-namespace protobuf_foxglove_2fPose_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_foxglove_2fPose_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_Pose;
-}  // namespace protobuf_foxglove_2fPose_2eproto
-namespace protobuf_foxglove_2fVector2_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_foxglove_2fVector2_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Vector2;
-}  // namespace protobuf_foxglove_2fVector2_2eproto
-namespace protobuf_google_2fprotobuf_2ftimestamp_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_google_2fprotobuf_2ftimestamp_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Timestamp;
-}  // namespace protobuf_google_2fprotobuf_2ftimestamp_2eproto
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace foxglove {
-class GridDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<Grid>
-      _instance;
-} _Grid_default_instance_;
+PROTOBUF_CONSTEXPR Grid::Grid(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.fields_)*/{}
+  , /*decltype(_impl_.frame_id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.data_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.timestamp_)*/nullptr
+  , /*decltype(_impl_.pose_)*/nullptr
+  , /*decltype(_impl_.cell_size_)*/nullptr
+  , /*decltype(_impl_.column_count_)*/0u
+  , /*decltype(_impl_.row_stride_)*/0u
+  , /*decltype(_impl_.cell_stride_)*/0u
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct GridDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GridDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GridDefaultTypeInternal() {}
+  union {
+    Grid _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GridDefaultTypeInternal _Grid_default_instance_;
 }  // namespace foxglove
-namespace protobuf_foxglove_2fGrid_2eproto {
-static void InitDefaultsGrid() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_foxglove_2fGrid_2eproto[1];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_foxglove_2fGrid_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_foxglove_2fGrid_2eproto = nullptr;
 
-  {
-    void* ptr = &::foxglove::_Grid_default_instance_;
-    new (ptr) ::foxglove::Grid();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::foxglove::Grid::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<4> scc_info_Grid =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsGrid}, {
-      &protobuf_google_2fprotobuf_2ftimestamp_2eproto::scc_info_Timestamp.base,
-      &protobuf_foxglove_2fPose_2eproto::scc_info_Pose.base,
-      &protobuf_foxglove_2fVector2_2eproto::scc_info_Vector2.base,
-      &protobuf_foxglove_2fPackedElementField_2eproto::scc_info_PackedElementField.base,}};
-
-void InitDefaults() {
-  ::google::protobuf::internal::InitSCC(&scc_info_Grid.base);
-}
-
-::google::protobuf::Metadata file_level_metadata[1];
-
-const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_foxglove_2fGrid_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::Grid, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::Grid, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::Grid, timestamp_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::Grid, frame_id_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::Grid, pose_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::Grid, column_count_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::Grid, cell_size_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::Grid, row_stride_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::Grid, cell_stride_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::Grid, fields_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::Grid, data_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::foxglove::Grid, _impl_.timestamp_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::Grid, _impl_.frame_id_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::Grid, _impl_.pose_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::Grid, _impl_.column_count_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::Grid, _impl_.cell_size_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::Grid, _impl_.row_stride_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::Grid, _impl_.cell_stride_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::Grid, _impl_.fields_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::Grid, _impl_.data_),
 };
-static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::foxglove::Grid)},
-};
-
-static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::foxglove::_Grid_default_instance_),
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::foxglove::Grid)},
 };
 
-void protobuf_AssignDescriptors() {
-  AddDescriptors();
-  AssignDescriptors(
-      "foxglove/Grid.proto", schemas, file_default_instances, TableStruct::offsets,
-      file_level_metadata, NULL, NULL);
+static const ::_pb::Message* const file_default_instances[] = {
+  &::foxglove::_Grid_default_instance_._instance,
+};
+
+const char descriptor_table_protodef_foxglove_2fGrid_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n\023foxglove/Grid.proto\022\010foxglove\032!foxglov"
+  "e/PackedElementField.proto\032\023foxglove/Pos"
+  "e.proto\032\026foxglove/Vector2.proto\032\037google/"
+  "protobuf/timestamp.proto\"\206\002\n\004Grid\022-\n\ttim"
+  "estamp\030\001 \001(\0132\032.google.protobuf.Timestamp"
+  "\022\020\n\010frame_id\030\002 \001(\t\022\034\n\004pose\030\003 \001(\0132\016.foxgl"
+  "ove.Pose\022\024\n\014column_count\030\004 \001(\007\022$\n\tcell_s"
+  "ize\030\005 \001(\0132\021.foxglove.Vector2\022\022\n\nrow_stri"
+  "de\030\006 \001(\007\022\023\n\013cell_stride\030\007 \001(\007\022,\n\006fields\030"
+  "\010 \003(\0132\034.foxglove.PackedElementField\022\014\n\004d"
+  "ata\030\t \001(\014b\006proto3"
+  ;
+static const ::_pbi::DescriptorTable* const descriptor_table_foxglove_2fGrid_2eproto_deps[4] = {
+  &::descriptor_table_foxglove_2fPackedElementField_2eproto,
+  &::descriptor_table_foxglove_2fPose_2eproto,
+  &::descriptor_table_foxglove_2fVector2_2eproto,
+  &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
+};
+static ::_pbi::once_flag descriptor_table_foxglove_2fGrid_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_foxglove_2fGrid_2eproto = {
+    false, false, 417, descriptor_table_protodef_foxglove_2fGrid_2eproto,
+    "foxglove/Grid.proto",
+    &descriptor_table_foxglove_2fGrid_2eproto_once, descriptor_table_foxglove_2fGrid_2eproto_deps, 4, 1,
+    schemas, file_default_instances, TableStruct_foxglove_2fGrid_2eproto::offsets,
+    file_level_metadata_foxglove_2fGrid_2eproto, file_level_enum_descriptors_foxglove_2fGrid_2eproto,
+    file_level_service_descriptors_foxglove_2fGrid_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_foxglove_2fGrid_2eproto_getter() {
+  return &descriptor_table_foxglove_2fGrid_2eproto;
 }
 
-void protobuf_AssignDescriptorsOnce() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, protobuf_AssignDescriptors);
-}
-
-void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
-void protobuf_RegisterTypes(const ::std::string&) {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 1);
-}
-
-void AddDescriptorsImpl() {
-  InitDefaults();
-  static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\023foxglove/Grid.proto\022\010foxglove\032!foxglov"
-      "e/PackedElementField.proto\032\023foxglove/Pos"
-      "e.proto\032\026foxglove/Vector2.proto\032\037google/"
-      "protobuf/timestamp.proto\"\206\002\n\004Grid\022-\n\ttim"
-      "estamp\030\001 \001(\0132\032.google.protobuf.Timestamp"
-      "\022\020\n\010frame_id\030\002 \001(\t\022\034\n\004pose\030\003 \001(\0132\016.foxgl"
-      "ove.Pose\022\024\n\014column_count\030\004 \001(\007\022$\n\tcell_s"
-      "ize\030\005 \001(\0132\021.foxglove.Vector2\022\022\n\nrow_stri"
-      "de\030\006 \001(\007\022\023\n\013cell_stride\030\007 \001(\007\022,\n\006fields\030"
-      "\010 \003(\0132\034.foxglove.PackedElementField\022\014\n\004d"
-      "ata\030\t \001(\014b\006proto3"
-  };
-  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 417);
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
-    "foxglove/Grid.proto", &protobuf_RegisterTypes);
-  ::protobuf_foxglove_2fPackedElementField_2eproto::AddDescriptors();
-  ::protobuf_foxglove_2fPose_2eproto::AddDescriptors();
-  ::protobuf_foxglove_2fVector2_2eproto::AddDescriptors();
-  ::protobuf_google_2fprotobuf_2ftimestamp_2eproto::AddDescriptors();
-}
-
-void AddDescriptors() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, AddDescriptorsImpl);
-}
-// Force AddDescriptors() to be called at dynamic initialization time.
-struct StaticDescriptorInitializer {
-  StaticDescriptorInitializer() {
-    AddDescriptors();
-  }
-} static_descriptor_initializer;
-}  // namespace protobuf_foxglove_2fGrid_2eproto
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_foxglove_2fGrid_2eproto(&descriptor_table_foxglove_2fGrid_2eproto);
 namespace foxglove {
 
 // ===================================================================
 
-void Grid::InitAsDefaultInstance() {
-  ::foxglove::_Grid_default_instance_._instance.get_mutable()->timestamp_ = const_cast< ::google::protobuf::Timestamp*>(
-      ::google::protobuf::Timestamp::internal_default_instance());
-  ::foxglove::_Grid_default_instance_._instance.get_mutable()->pose_ = const_cast< ::foxglove::Pose*>(
-      ::foxglove::Pose::internal_default_instance());
-  ::foxglove::_Grid_default_instance_._instance.get_mutable()->cell_size_ = const_cast< ::foxglove::Vector2*>(
-      ::foxglove::Vector2::internal_default_instance());
+class Grid::_Internal {
+ public:
+  static const ::PROTOBUF_NAMESPACE_ID::Timestamp& timestamp(const Grid* msg);
+  static const ::foxglove::Pose& pose(const Grid* msg);
+  static const ::foxglove::Vector2& cell_size(const Grid* msg);
+};
+
+const ::PROTOBUF_NAMESPACE_ID::Timestamp&
+Grid::_Internal::timestamp(const Grid* msg) {
+  return *msg->_impl_.timestamp_;
+}
+const ::foxglove::Pose&
+Grid::_Internal::pose(const Grid* msg) {
+  return *msg->_impl_.pose_;
+}
+const ::foxglove::Vector2&
+Grid::_Internal::cell_size(const Grid* msg) {
+  return *msg->_impl_.cell_size_;
 }
 void Grid::clear_timestamp() {
-  if (GetArenaNoVirtual() == NULL && timestamp_ != NULL) {
-    delete timestamp_;
+  if (GetArenaForAllocation() == nullptr && _impl_.timestamp_ != nullptr) {
+    delete _impl_.timestamp_;
   }
-  timestamp_ = NULL;
+  _impl_.timestamp_ = nullptr;
 }
 void Grid::clear_pose() {
-  if (GetArenaNoVirtual() == NULL && pose_ != NULL) {
-    delete pose_;
+  if (GetArenaForAllocation() == nullptr && _impl_.pose_ != nullptr) {
+    delete _impl_.pose_;
   }
-  pose_ = NULL;
+  _impl_.pose_ = nullptr;
 }
 void Grid::clear_cell_size() {
-  if (GetArenaNoVirtual() == NULL && cell_size_ != NULL) {
-    delete cell_size_;
+  if (GetArenaForAllocation() == nullptr && _impl_.cell_size_ != nullptr) {
+    delete _impl_.cell_size_;
   }
-  cell_size_ = NULL;
+  _impl_.cell_size_ = nullptr;
 }
 void Grid::clear_fields() {
-  fields_.Clear();
+  _impl_.fields_.Clear();
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int Grid::kTimestampFieldNumber;
-const int Grid::kFrameIdFieldNumber;
-const int Grid::kPoseFieldNumber;
-const int Grid::kColumnCountFieldNumber;
-const int Grid::kCellSizeFieldNumber;
-const int Grid::kRowStrideFieldNumber;
-const int Grid::kCellStrideFieldNumber;
-const int Grid::kFieldsFieldNumber;
-const int Grid::kDataFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-Grid::Grid()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_foxglove_2fGrid_2eproto::scc_info_Grid.base);
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:foxglove.Grid)
+Grid::Grid(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:foxglove.Grid)
 }
 Grid::Grid(const Grid& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      fields_(from.fields_) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  frame_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.frame_id().size() > 0) {
-    frame_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.frame_id_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  Grid* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.fields_){from._impl_.fields_}
+    , decltype(_impl_.frame_id_){}
+    , decltype(_impl_.data_){}
+    , decltype(_impl_.timestamp_){nullptr}
+    , decltype(_impl_.pose_){nullptr}
+    , decltype(_impl_.cell_size_){nullptr}
+    , decltype(_impl_.column_count_){}
+    , decltype(_impl_.row_stride_){}
+    , decltype(_impl_.cell_stride_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.frame_id_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.frame_id_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_frame_id().empty()) {
+    _this->_impl_.frame_id_.Set(from._internal_frame_id(), 
+      _this->GetArenaForAllocation());
   }
-  data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.data().size() > 0) {
-    data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.data_);
+  _impl_.data_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.data_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_data().empty()) {
+    _this->_impl_.data_.Set(from._internal_data(), 
+      _this->GetArenaForAllocation());
   }
-  if (from.has_timestamp()) {
-    timestamp_ = new ::google::protobuf::Timestamp(*from.timestamp_);
-  } else {
-    timestamp_ = NULL;
+  if (from._internal_has_timestamp()) {
+    _this->_impl_.timestamp_ = new ::PROTOBUF_NAMESPACE_ID::Timestamp(*from._impl_.timestamp_);
   }
-  if (from.has_pose()) {
-    pose_ = new ::foxglove::Pose(*from.pose_);
-  } else {
-    pose_ = NULL;
+  if (from._internal_has_pose()) {
+    _this->_impl_.pose_ = new ::foxglove::Pose(*from._impl_.pose_);
   }
-  if (from.has_cell_size()) {
-    cell_size_ = new ::foxglove::Vector2(*from.cell_size_);
-  } else {
-    cell_size_ = NULL;
+  if (from._internal_has_cell_size()) {
+    _this->_impl_.cell_size_ = new ::foxglove::Vector2(*from._impl_.cell_size_);
   }
-  ::memcpy(&column_count_, &from.column_count_,
-    static_cast<size_t>(reinterpret_cast<char*>(&cell_stride_) -
-    reinterpret_cast<char*>(&column_count_)) + sizeof(cell_stride_));
+  ::memcpy(&_impl_.column_count_, &from._impl_.column_count_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.cell_stride_) -
+    reinterpret_cast<char*>(&_impl_.column_count_)) + sizeof(_impl_.cell_stride_));
   // @@protoc_insertion_point(copy_constructor:foxglove.Grid)
 }
 
-void Grid::SharedCtor() {
-  frame_id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&timestamp_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&cell_stride_) -
-      reinterpret_cast<char*>(&timestamp_)) + sizeof(cell_stride_));
+inline void Grid::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.fields_){arena}
+    , decltype(_impl_.frame_id_){}
+    , decltype(_impl_.data_){}
+    , decltype(_impl_.timestamp_){nullptr}
+    , decltype(_impl_.pose_){nullptr}
+    , decltype(_impl_.cell_size_){nullptr}
+    , decltype(_impl_.column_count_){0u}
+    , decltype(_impl_.row_stride_){0u}
+    , decltype(_impl_.cell_stride_){0u}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.frame_id_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.frame_id_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.data_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.data_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 Grid::~Grid() {
   // @@protoc_insertion_point(destructor:foxglove.Grid)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
 
-void Grid::SharedDtor() {
-  frame_id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  data_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != internal_default_instance()) delete timestamp_;
-  if (this != internal_default_instance()) delete pose_;
-  if (this != internal_default_instance()) delete cell_size_;
+inline void Grid::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.fields_.~RepeatedPtrField();
+  _impl_.frame_id_.Destroy();
+  _impl_.data_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.timestamp_;
+  if (this != internal_default_instance()) delete _impl_.pose_;
+  if (this != internal_default_instance()) delete _impl_.cell_size_;
 }
 
 void Grid::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* Grid::descriptor() {
-  ::protobuf_foxglove_2fGrid_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_foxglove_2fGrid_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const Grid& Grid::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_foxglove_2fGrid_2eproto::scc_info_Grid.base);
-  return *internal_default_instance();
-}
-
 
 void Grid::Clear() {
 // @@protoc_insertion_point(message_clear_start:foxglove.Grid)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  fields_.Clear();
-  frame_id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (GetArenaNoVirtual() == NULL && timestamp_ != NULL) {
-    delete timestamp_;
+  _impl_.fields_.Clear();
+  _impl_.frame_id_.ClearToEmpty();
+  _impl_.data_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.timestamp_ != nullptr) {
+    delete _impl_.timestamp_;
   }
-  timestamp_ = NULL;
-  if (GetArenaNoVirtual() == NULL && pose_ != NULL) {
-    delete pose_;
+  _impl_.timestamp_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.pose_ != nullptr) {
+    delete _impl_.pose_;
   }
-  pose_ = NULL;
-  if (GetArenaNoVirtual() == NULL && cell_size_ != NULL) {
-    delete cell_size_;
+  _impl_.pose_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.cell_size_ != nullptr) {
+    delete _impl_.cell_size_;
   }
-  cell_size_ = NULL;
-  ::memset(&column_count_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&cell_stride_) -
-      reinterpret_cast<char*>(&column_count_)) + sizeof(cell_stride_));
-  _internal_metadata_.Clear();
+  _impl_.cell_size_ = nullptr;
+  ::memset(&_impl_.column_count_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.cell_stride_) -
+      reinterpret_cast<char*>(&_impl_.column_count_)) + sizeof(_impl_.cell_stride_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-bool Grid::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:foxglove.Grid)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+const char* Grid::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
       // .google.protobuf.Timestamp timestamp = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_timestamp()));
-        } else {
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_timestamp(), ptr);
+          CHK_(ptr);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // string frame_id = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_frame_id()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->frame_id().data(), static_cast<int>(this->frame_id().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "foxglove.Grid.frame_id"));
-        } else {
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          auto str = _internal_mutable_frame_id();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "foxglove.Grid.frame_id"));
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // .foxglove.Pose pose = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_pose()));
-        } else {
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_pose(), ptr);
+          CHK_(ptr);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // fixed32 column_count = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(37u /* 37 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED32>(
-                 input, &column_count_)));
-        } else {
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 37)) {
+          _impl_.column_count_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<uint32_t>(ptr);
+          ptr += sizeof(uint32_t);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // .foxglove.Vector2 cell_size = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_cell_size()));
-        } else {
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
+          ptr = ctx->ParseMessage(_internal_mutable_cell_size(), ptr);
+          CHK_(ptr);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // fixed32 row_stride = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(53u /* 53 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED32>(
-                 input, &row_stride_)));
-        } else {
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 53)) {
+          _impl_.row_stride_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<uint32_t>(ptr);
+          ptr += sizeof(uint32_t);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // fixed32 cell_stride = 7;
-      case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(61u /* 61 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_FIXED32>(
-                 input, &cell_stride_)));
-        } else {
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 61)) {
+          _impl_.cell_stride_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<uint32_t>(ptr);
+          ptr += sizeof(uint32_t);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // repeated .foxglove.PackedElementField fields = 8;
-      case 8: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(66u /* 66 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-                input, add_fields()));
-        } else {
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 66)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_fields(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<66>(ptr));
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // bytes data = 9;
-      case 9: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(74u /* 74 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
-                input, this->mutable_data()));
-        } else {
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 74)) {
+          auto str = _internal_mutable_data();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
     }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:foxglove.Grid)
-  return true;
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:foxglove.Grid)
-  return false;
-#undef DO_
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-void Grid::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:foxglove.Grid)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .google.protobuf.Timestamp timestamp = 1;
-  if (this->has_timestamp()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, this->_internal_timestamp(), output);
-  }
-
-  // string frame_id = 2;
-  if (this->frame_id().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->frame_id().data(), static_cast<int>(this->frame_id().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "foxglove.Grid.frame_id");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->frame_id(), output);
-  }
-
-  // .foxglove.Pose pose = 3;
-  if (this->has_pose()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, this->_internal_pose(), output);
-  }
-
-  // fixed32 column_count = 4;
-  if (this->column_count() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFixed32(4, this->column_count(), output);
-  }
-
-  // .foxglove.Vector2 cell_size = 5;
-  if (this->has_cell_size()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      5, this->_internal_cell_size(), output);
-  }
-
-  // fixed32 row_stride = 6;
-  if (this->row_stride() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFixed32(6, this->row_stride(), output);
-  }
-
-  // fixed32 cell_stride = 7;
-  if (this->cell_stride() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteFixed32(7, this->cell_stride(), output);
-  }
-
-  // repeated .foxglove.PackedElementField fields = 8;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->fields_size()); i < n; i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      8,
-      this->fields(static_cast<int>(i)),
-      output);
-  }
-
-  // bytes data = 9;
-  if (this->data().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
-      9, this->data(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:foxglove.Grid)
-}
-
-::google::protobuf::uint8* Grid::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+uint8_t* Grid::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:foxglove.Grid)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .google.protobuf.Timestamp timestamp = 1;
-  if (this->has_timestamp()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, this->_internal_timestamp(), deterministic, target);
+  if (this->_internal_has_timestamp()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::timestamp(this),
+        _Internal::timestamp(this).GetCachedSize(), target, stream);
   }
 
   // string frame_id = 2;
-  if (this->frame_id().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->frame_id().data(), static_cast<int>(this->frame_id().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+  if (!this->_internal_frame_id().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_frame_id().data(), static_cast<int>(this->_internal_frame_id().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "foxglove.Grid.frame_id");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        2, this->frame_id(), target);
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_frame_id(), target);
   }
 
   // .foxglove.Pose pose = 3;
-  if (this->has_pose()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, this->_internal_pose(), deterministic, target);
+  if (this->_internal_has_pose()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(3, _Internal::pose(this),
+        _Internal::pose(this).GetCachedSize(), target, stream);
   }
 
   // fixed32 column_count = 4;
-  if (this->column_count() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFixed32ToArray(4, this->column_count(), target);
+  if (this->_internal_column_count() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteFixed32ToArray(4, this->_internal_column_count(), target);
   }
 
   // .foxglove.Vector2 cell_size = 5;
-  if (this->has_cell_size()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        5, this->_internal_cell_size(), deterministic, target);
+  if (this->_internal_has_cell_size()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(5, _Internal::cell_size(this),
+        _Internal::cell_size(this).GetCachedSize(), target, stream);
   }
 
   // fixed32 row_stride = 6;
-  if (this->row_stride() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFixed32ToArray(6, this->row_stride(), target);
+  if (this->_internal_row_stride() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteFixed32ToArray(6, this->_internal_row_stride(), target);
   }
 
   // fixed32 cell_stride = 7;
-  if (this->cell_stride() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteFixed32ToArray(7, this->cell_stride(), target);
+  if (this->_internal_cell_stride() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteFixed32ToArray(7, this->_internal_cell_stride(), target);
   }
 
   // repeated .foxglove.PackedElementField fields = 8;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->fields_size()); i < n; i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        8, this->fields(static_cast<int>(i)), deterministic, target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_fields_size()); i < n; i++) {
+    const auto& repfield = this->_internal_fields(i);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(8, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   // bytes data = 9;
-  if (this->data().size() > 0) {
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
-        9, this->data(), target);
+  if (!this->_internal_data().empty()) {
+    target = stream->WriteBytesMaybeAliased(
+        9, this->_internal_data(), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:foxglove.Grid)
   return target;
@@ -589,133 +469,114 @@ size_t Grid::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:foxglove.Grid)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // repeated .foxglove.PackedElementField fields = 8;
-  {
-    unsigned int count = static_cast<unsigned int>(this->fields_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          this->fields(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_fields_size();
+  for (const auto& msg : this->_impl_.fields_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // string frame_id = 2;
-  if (this->frame_id().size() > 0) {
+  if (!this->_internal_frame_id().empty()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->frame_id());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_frame_id());
   }
 
   // bytes data = 9;
-  if (this->data().size() > 0) {
+  if (!this->_internal_data().empty()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::BytesSize(
-        this->data());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_data());
   }
 
   // .google.protobuf.Timestamp timestamp = 1;
-  if (this->has_timestamp()) {
+  if (this->_internal_has_timestamp()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *timestamp_);
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.timestamp_);
   }
 
   // .foxglove.Pose pose = 3;
-  if (this->has_pose()) {
+  if (this->_internal_has_pose()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *pose_);
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.pose_);
   }
 
   // .foxglove.Vector2 cell_size = 5;
-  if (this->has_cell_size()) {
+  if (this->_internal_has_cell_size()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *cell_size_);
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.cell_size_);
   }
 
   // fixed32 column_count = 4;
-  if (this->column_count() != 0) {
+  if (this->_internal_column_count() != 0) {
     total_size += 1 + 4;
   }
 
   // fixed32 row_stride = 6;
-  if (this->row_stride() != 0) {
+  if (this->_internal_row_stride() != 0) {
     total_size += 1 + 4;
   }
 
   // fixed32 cell_stride = 7;
-  if (this->cell_stride() != 0) {
+  if (this->_internal_cell_stride() != 0) {
     total_size += 1 + 4;
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Grid::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:foxglove.Grid)
-  GOOGLE_DCHECK_NE(&from, this);
-  const Grid* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const Grid>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:foxglove.Grid)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:foxglove.Grid)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Grid::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Grid::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Grid::GetClassData() const { return &_class_data_; }
 
-void Grid::MergeFrom(const Grid& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:foxglove.Grid)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+
+void Grid::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Grid*>(&to_msg);
+  auto& from = static_cast<const Grid&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:foxglove.Grid)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  fields_.MergeFrom(from.fields_);
-  if (from.frame_id().size() > 0) {
-
-    frame_id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.frame_id_);
+  _this->_impl_.fields_.MergeFrom(from._impl_.fields_);
+  if (!from._internal_frame_id().empty()) {
+    _this->_internal_set_frame_id(from._internal_frame_id());
   }
-  if (from.data().size() > 0) {
-
-    data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.data_);
+  if (!from._internal_data().empty()) {
+    _this->_internal_set_data(from._internal_data());
   }
-  if (from.has_timestamp()) {
-    mutable_timestamp()->::google::protobuf::Timestamp::MergeFrom(from.timestamp());
+  if (from._internal_has_timestamp()) {
+    _this->_internal_mutable_timestamp()->::PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(
+        from._internal_timestamp());
   }
-  if (from.has_pose()) {
-    mutable_pose()->::foxglove::Pose::MergeFrom(from.pose());
+  if (from._internal_has_pose()) {
+    _this->_internal_mutable_pose()->::foxglove::Pose::MergeFrom(
+        from._internal_pose());
   }
-  if (from.has_cell_size()) {
-    mutable_cell_size()->::foxglove::Vector2::MergeFrom(from.cell_size());
+  if (from._internal_has_cell_size()) {
+    _this->_internal_mutable_cell_size()->::foxglove::Vector2::MergeFrom(
+        from._internal_cell_size());
   }
-  if (from.column_count() != 0) {
-    set_column_count(from.column_count());
+  if (from._internal_column_count() != 0) {
+    _this->_internal_set_column_count(from._internal_column_count());
   }
-  if (from.row_stride() != 0) {
-    set_row_stride(from.row_stride());
+  if (from._internal_row_stride() != 0) {
+    _this->_internal_set_row_stride(from._internal_row_stride());
   }
-  if (from.cell_stride() != 0) {
-    set_cell_stride(from.cell_stride());
+  if (from._internal_cell_stride() != 0) {
+    _this->_internal_set_cell_stride(from._internal_cell_stride());
   }
-}
-
-void Grid::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:foxglove.Grid)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Grid::CopyFrom(const Grid& from) {
@@ -729,40 +590,42 @@ bool Grid::IsInitialized() const {
   return true;
 }
 
-void Grid::Swap(Grid* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void Grid::InternalSwap(Grid* other) {
   using std::swap;
-  CastToBase(&fields_)->InternalSwap(CastToBase(&other->fields_));
-  frame_id_.Swap(&other->frame_id_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  data_.Swap(&other->data_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  swap(timestamp_, other->timestamp_);
-  swap(pose_, other->pose_);
-  swap(cell_size_, other->cell_size_);
-  swap(column_count_, other->column_count_);
-  swap(row_stride_, other->row_stride_);
-  swap(cell_stride_, other->cell_stride_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.fields_.InternalSwap(&other->_impl_.fields_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.frame_id_, lhs_arena,
+      &other->_impl_.frame_id_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.data_, lhs_arena,
+      &other->_impl_.data_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(Grid, _impl_.cell_stride_)
+      + sizeof(Grid::_impl_.cell_stride_)
+      - PROTOBUF_FIELD_OFFSET(Grid, _impl_.timestamp_)>(
+          reinterpret_cast<char*>(&_impl_.timestamp_),
+          reinterpret_cast<char*>(&other->_impl_.timestamp_));
 }
 
-::google::protobuf::Metadata Grid::GetMetadata() const {
-  protobuf_foxglove_2fGrid_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_foxglove_2fGrid_2eproto::file_level_metadata[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata Grid::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_foxglove_2fGrid_2eproto_getter, &descriptor_table_foxglove_2fGrid_2eproto_once,
+      file_level_metadata_foxglove_2fGrid_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace foxglove
-namespace google {
-namespace protobuf {
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::foxglove::Grid* Arena::CreateMaybeMessage< ::foxglove::Grid >(Arena* arena) {
-  return Arena::CreateInternal< ::foxglove::Grid >(arena);
+PROTOBUF_NAMESPACE_OPEN
+template<> PROTOBUF_NOINLINE ::foxglove::Grid*
+Arena::CreateMaybeMessage< ::foxglove::Grid >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::foxglove::Grid >(arena);
 }
-}  // namespace protobuf
-}  // namespace google
+PROTOBUF_NAMESPACE_CLOSE
 
 // @@protoc_insertion_point(global_scope)
+#include <google/protobuf/port_undef.inc>

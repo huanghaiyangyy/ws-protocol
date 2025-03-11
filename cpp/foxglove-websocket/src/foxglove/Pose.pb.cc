@@ -5,320 +5,254 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
-#include <google/protobuf/stubs/port.h>
 #include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/wire_format_lite_inl.h>
+#include <google/protobuf/extension_set.h>
+#include <google/protobuf/wire_format_lite.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
+#include <google/protobuf/port_def.inc>
 
-namespace protobuf_foxglove_2fQuaternion_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_foxglove_2fQuaternion_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Quaternion;
-}  // namespace protobuf_foxglove_2fQuaternion_2eproto
-namespace protobuf_foxglove_2fVector3_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_foxglove_2fVector3_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Vector3;
-}  // namespace protobuf_foxglove_2fVector3_2eproto
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace foxglove {
-class PoseDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<Pose>
-      _instance;
-} _Pose_default_instance_;
+PROTOBUF_CONSTEXPR Pose::Pose(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.position_)*/nullptr
+  , /*decltype(_impl_.orientation_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct PoseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR PoseDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~PoseDefaultTypeInternal() {}
+  union {
+    Pose _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PoseDefaultTypeInternal _Pose_default_instance_;
 }  // namespace foxglove
-namespace protobuf_foxglove_2fPose_2eproto {
-static void InitDefaultsPose() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_foxglove_2fPose_2eproto[1];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_foxglove_2fPose_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_foxglove_2fPose_2eproto = nullptr;
 
-  {
-    void* ptr = &::foxglove::_Pose_default_instance_;
-    new (ptr) ::foxglove::Pose();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::foxglove::Pose::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<2> scc_info_Pose =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsPose}, {
-      &protobuf_foxglove_2fVector3_2eproto::scc_info_Vector3.base,
-      &protobuf_foxglove_2fQuaternion_2eproto::scc_info_Quaternion.base,}};
-
-void InitDefaults() {
-  ::google::protobuf::internal::InitSCC(&scc_info_Pose.base);
-}
-
-::google::protobuf::Metadata file_level_metadata[1];
-
-const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_foxglove_2fPose_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::Pose, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::Pose, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::Pose, position_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::Pose, orientation_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::foxglove::Pose, _impl_.position_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::Pose, _impl_.orientation_),
 };
-static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::foxglove::Pose)},
-};
-
-static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::foxglove::_Pose_default_instance_),
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::foxglove::Pose)},
 };
 
-void protobuf_AssignDescriptors() {
-  AddDescriptors();
-  AssignDescriptors(
-      "foxglove/Pose.proto", schemas, file_default_instances, TableStruct::offsets,
-      file_level_metadata, NULL, NULL);
+static const ::_pb::Message* const file_default_instances[] = {
+  &::foxglove::_Pose_default_instance_._instance,
+};
+
+const char descriptor_table_protodef_foxglove_2fPose_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n\023foxglove/Pose.proto\022\010foxglove\032\031foxglov"
+  "e/Quaternion.proto\032\026foxglove/Vector3.pro"
+  "to\"V\n\004Pose\022#\n\010position\030\001 \001(\0132\021.foxglove."
+  "Vector3\022)\n\013orientation\030\002 \001(\0132\024.foxglove."
+  "Quaternionb\006proto3"
+  ;
+static const ::_pbi::DescriptorTable* const descriptor_table_foxglove_2fPose_2eproto_deps[2] = {
+  &::descriptor_table_foxglove_2fQuaternion_2eproto,
+  &::descriptor_table_foxglove_2fVector3_2eproto,
+};
+static ::_pbi::once_flag descriptor_table_foxglove_2fPose_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_foxglove_2fPose_2eproto = {
+    false, false, 178, descriptor_table_protodef_foxglove_2fPose_2eproto,
+    "foxglove/Pose.proto",
+    &descriptor_table_foxglove_2fPose_2eproto_once, descriptor_table_foxglove_2fPose_2eproto_deps, 2, 1,
+    schemas, file_default_instances, TableStruct_foxglove_2fPose_2eproto::offsets,
+    file_level_metadata_foxglove_2fPose_2eproto, file_level_enum_descriptors_foxglove_2fPose_2eproto,
+    file_level_service_descriptors_foxglove_2fPose_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_foxglove_2fPose_2eproto_getter() {
+  return &descriptor_table_foxglove_2fPose_2eproto;
 }
 
-void protobuf_AssignDescriptorsOnce() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, protobuf_AssignDescriptors);
-}
-
-void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
-void protobuf_RegisterTypes(const ::std::string&) {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 1);
-}
-
-void AddDescriptorsImpl() {
-  InitDefaults();
-  static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\023foxglove/Pose.proto\022\010foxglove\032\031foxglov"
-      "e/Quaternion.proto\032\026foxglove/Vector3.pro"
-      "to\"V\n\004Pose\022#\n\010position\030\001 \001(\0132\021.foxglove."
-      "Vector3\022)\n\013orientation\030\002 \001(\0132\024.foxglove."
-      "Quaternionb\006proto3"
-  };
-  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 178);
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
-    "foxglove/Pose.proto", &protobuf_RegisterTypes);
-  ::protobuf_foxglove_2fQuaternion_2eproto::AddDescriptors();
-  ::protobuf_foxglove_2fVector3_2eproto::AddDescriptors();
-}
-
-void AddDescriptors() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, AddDescriptorsImpl);
-}
-// Force AddDescriptors() to be called at dynamic initialization time.
-struct StaticDescriptorInitializer {
-  StaticDescriptorInitializer() {
-    AddDescriptors();
-  }
-} static_descriptor_initializer;
-}  // namespace protobuf_foxglove_2fPose_2eproto
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_foxglove_2fPose_2eproto(&descriptor_table_foxglove_2fPose_2eproto);
 namespace foxglove {
 
 // ===================================================================
 
-void Pose::InitAsDefaultInstance() {
-  ::foxglove::_Pose_default_instance_._instance.get_mutable()->position_ = const_cast< ::foxglove::Vector3*>(
-      ::foxglove::Vector3::internal_default_instance());
-  ::foxglove::_Pose_default_instance_._instance.get_mutable()->orientation_ = const_cast< ::foxglove::Quaternion*>(
-      ::foxglove::Quaternion::internal_default_instance());
+class Pose::_Internal {
+ public:
+  static const ::foxglove::Vector3& position(const Pose* msg);
+  static const ::foxglove::Quaternion& orientation(const Pose* msg);
+};
+
+const ::foxglove::Vector3&
+Pose::_Internal::position(const Pose* msg) {
+  return *msg->_impl_.position_;
+}
+const ::foxglove::Quaternion&
+Pose::_Internal::orientation(const Pose* msg) {
+  return *msg->_impl_.orientation_;
 }
 void Pose::clear_position() {
-  if (GetArenaNoVirtual() == NULL && position_ != NULL) {
-    delete position_;
+  if (GetArenaForAllocation() == nullptr && _impl_.position_ != nullptr) {
+    delete _impl_.position_;
   }
-  position_ = NULL;
+  _impl_.position_ = nullptr;
 }
 void Pose::clear_orientation() {
-  if (GetArenaNoVirtual() == NULL && orientation_ != NULL) {
-    delete orientation_;
+  if (GetArenaForAllocation() == nullptr && _impl_.orientation_ != nullptr) {
+    delete _impl_.orientation_;
   }
-  orientation_ = NULL;
+  _impl_.orientation_ = nullptr;
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int Pose::kPositionFieldNumber;
-const int Pose::kOrientationFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-Pose::Pose()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_foxglove_2fPose_2eproto::scc_info_Pose.base);
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:foxglove.Pose)
+Pose::Pose(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:foxglove.Pose)
 }
 Pose::Pose(const Pose& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_position()) {
-    position_ = new ::foxglove::Vector3(*from.position_);
-  } else {
-    position_ = NULL;
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  Pose* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.position_){nullptr}
+    , decltype(_impl_.orientation_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_position()) {
+    _this->_impl_.position_ = new ::foxglove::Vector3(*from._impl_.position_);
   }
-  if (from.has_orientation()) {
-    orientation_ = new ::foxglove::Quaternion(*from.orientation_);
-  } else {
-    orientation_ = NULL;
+  if (from._internal_has_orientation()) {
+    _this->_impl_.orientation_ = new ::foxglove::Quaternion(*from._impl_.orientation_);
   }
   // @@protoc_insertion_point(copy_constructor:foxglove.Pose)
 }
 
-void Pose::SharedCtor() {
-  ::memset(&position_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&orientation_) -
-      reinterpret_cast<char*>(&position_)) + sizeof(orientation_));
+inline void Pose::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.position_){nullptr}
+    , decltype(_impl_.orientation_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 Pose::~Pose() {
   // @@protoc_insertion_point(destructor:foxglove.Pose)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
 
-void Pose::SharedDtor() {
-  if (this != internal_default_instance()) delete position_;
-  if (this != internal_default_instance()) delete orientation_;
+inline void Pose::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.position_;
+  if (this != internal_default_instance()) delete _impl_.orientation_;
 }
 
 void Pose::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* Pose::descriptor() {
-  ::protobuf_foxglove_2fPose_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_foxglove_2fPose_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const Pose& Pose::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_foxglove_2fPose_2eproto::scc_info_Pose.base);
-  return *internal_default_instance();
-}
-
 
 void Pose::Clear() {
 // @@protoc_insertion_point(message_clear_start:foxglove.Pose)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == NULL && position_ != NULL) {
-    delete position_;
+  if (GetArenaForAllocation() == nullptr && _impl_.position_ != nullptr) {
+    delete _impl_.position_;
   }
-  position_ = NULL;
-  if (GetArenaNoVirtual() == NULL && orientation_ != NULL) {
-    delete orientation_;
+  _impl_.position_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.orientation_ != nullptr) {
+    delete _impl_.orientation_;
   }
-  orientation_ = NULL;
-  _internal_metadata_.Clear();
+  _impl_.orientation_ = nullptr;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-bool Pose::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:foxglove.Pose)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+const char* Pose::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
       // .foxglove.Vector3 position = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_position()));
-        } else {
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_position(), ptr);
+          CHK_(ptr);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // .foxglove.Quaternion orientation = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_orientation()));
-        } else {
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_orientation(), ptr);
+          CHK_(ptr);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
     }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:foxglove.Pose)
-  return true;
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:foxglove.Pose)
-  return false;
-#undef DO_
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-void Pose::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:foxglove.Pose)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .foxglove.Vector3 position = 1;
-  if (this->has_position()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, this->_internal_position(), output);
-  }
-
-  // .foxglove.Quaternion orientation = 2;
-  if (this->has_orientation()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, this->_internal_orientation(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:foxglove.Pose)
-}
-
-::google::protobuf::uint8* Pose::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+uint8_t* Pose::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:foxglove.Pose)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .foxglove.Vector3 position = 1;
-  if (this->has_position()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, this->_internal_position(), deterministic, target);
+  if (this->_internal_has_position()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::position(this),
+        _Internal::position(this).GetCachedSize(), target, stream);
   }
 
   // .foxglove.Quaternion orientation = 2;
-  if (this->has_orientation()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, this->_internal_orientation(), deterministic, target);
+  if (this->_internal_has_orientation()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(2, _Internal::orientation(this),
+        _Internal::orientation(this).GetCachedSize(), target, stream);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:foxglove.Pose)
   return target;
@@ -328,65 +262,51 @@ size_t Pose::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:foxglove.Pose)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // .foxglove.Vector3 position = 1;
-  if (this->has_position()) {
+  if (this->_internal_has_position()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *position_);
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.position_);
   }
 
   // .foxglove.Quaternion orientation = 2;
-  if (this->has_orientation()) {
+  if (this->_internal_has_orientation()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *orientation_);
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.orientation_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void Pose::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:foxglove.Pose)
-  GOOGLE_DCHECK_NE(&from, this);
-  const Pose* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const Pose>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:foxglove.Pose)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:foxglove.Pose)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData Pose::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    Pose::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Pose::GetClassData() const { return &_class_data_; }
 
-void Pose::MergeFrom(const Pose& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:foxglove.Pose)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+
+void Pose::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<Pose*>(&to_msg);
+  auto& from = static_cast<const Pose&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:foxglove.Pose)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_position()) {
-    mutable_position()->::foxglove::Vector3::MergeFrom(from.position());
+  if (from._internal_has_position()) {
+    _this->_internal_mutable_position()->::foxglove::Vector3::MergeFrom(
+        from._internal_position());
   }
-  if (from.has_orientation()) {
-    mutable_orientation()->::foxglove::Quaternion::MergeFrom(from.orientation());
+  if (from._internal_has_orientation()) {
+    _this->_internal_mutable_orientation()->::foxglove::Quaternion::MergeFrom(
+        from._internal_orientation());
   }
-}
-
-void Pose::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:foxglove.Pose)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void Pose::CopyFrom(const Pose& from) {
@@ -400,31 +320,31 @@ bool Pose::IsInitialized() const {
   return true;
 }
 
-void Pose::Swap(Pose* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void Pose::InternalSwap(Pose* other) {
   using std::swap;
-  swap(position_, other->position_);
-  swap(orientation_, other->orientation_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(Pose, _impl_.orientation_)
+      + sizeof(Pose::_impl_.orientation_)
+      - PROTOBUF_FIELD_OFFSET(Pose, _impl_.position_)>(
+          reinterpret_cast<char*>(&_impl_.position_),
+          reinterpret_cast<char*>(&other->_impl_.position_));
 }
 
-::google::protobuf::Metadata Pose::GetMetadata() const {
-  protobuf_foxglove_2fPose_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_foxglove_2fPose_2eproto::file_level_metadata[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata Pose::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_foxglove_2fPose_2eproto_getter, &descriptor_table_foxglove_2fPose_2eproto_once,
+      file_level_metadata_foxglove_2fPose_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace foxglove
-namespace google {
-namespace protobuf {
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::foxglove::Pose* Arena::CreateMaybeMessage< ::foxglove::Pose >(Arena* arena) {
-  return Arena::CreateInternal< ::foxglove::Pose >(arena);
+PROTOBUF_NAMESPACE_OPEN
+template<> PROTOBUF_NOINLINE ::foxglove::Pose*
+Arena::CreateMaybeMessage< ::foxglove::Pose >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::foxglove::Pose >(arena);
 }
-}  // namespace protobuf
-}  // namespace google
+PROTOBUF_NAMESPACE_CLOSE
 
 // @@protoc_insertion_point(global_scope)
+#include <google/protobuf/port_undef.inc>

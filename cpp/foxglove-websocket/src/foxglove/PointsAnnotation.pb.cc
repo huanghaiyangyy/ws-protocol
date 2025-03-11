@@ -5,142 +5,108 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
-#include <google/protobuf/stubs/port.h>
 #include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/wire_format_lite_inl.h>
+#include <google/protobuf/extension_set.h>
+#include <google/protobuf/wire_format_lite.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
+#include <google/protobuf/port_def.inc>
 
-namespace protobuf_foxglove_2fColor_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_foxglove_2fColor_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Color;
-}  // namespace protobuf_foxglove_2fColor_2eproto
-namespace protobuf_foxglove_2fPoint2_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_foxglove_2fPoint2_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Point2;
-}  // namespace protobuf_foxglove_2fPoint2_2eproto
-namespace protobuf_google_2fprotobuf_2ftimestamp_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_google_2fprotobuf_2ftimestamp_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Timestamp;
-}  // namespace protobuf_google_2fprotobuf_2ftimestamp_2eproto
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace foxglove {
-class PointsAnnotationDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<PointsAnnotation>
-      _instance;
-} _PointsAnnotation_default_instance_;
+PROTOBUF_CONSTEXPR PointsAnnotation::PointsAnnotation(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.points_)*/{}
+  , /*decltype(_impl_.outline_colors_)*/{}
+  , /*decltype(_impl_.timestamp_)*/nullptr
+  , /*decltype(_impl_.outline_color_)*/nullptr
+  , /*decltype(_impl_.fill_color_)*/nullptr
+  , /*decltype(_impl_.thickness_)*/0
+  , /*decltype(_impl_.type_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct PointsAnnotationDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR PointsAnnotationDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~PointsAnnotationDefaultTypeInternal() {}
+  union {
+    PointsAnnotation _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PointsAnnotationDefaultTypeInternal _PointsAnnotation_default_instance_;
 }  // namespace foxglove
-namespace protobuf_foxglove_2fPointsAnnotation_2eproto {
-static void InitDefaultsPointsAnnotation() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_foxglove_2fPointsAnnotation_2eproto[1];
+static const ::_pb::EnumDescriptor* file_level_enum_descriptors_foxglove_2fPointsAnnotation_2eproto[1];
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_foxglove_2fPointsAnnotation_2eproto = nullptr;
 
-  {
-    void* ptr = &::foxglove::_PointsAnnotation_default_instance_;
-    new (ptr) ::foxglove::PointsAnnotation();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::foxglove::PointsAnnotation::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<3> scc_info_PointsAnnotation =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 3, InitDefaultsPointsAnnotation}, {
-      &protobuf_google_2fprotobuf_2ftimestamp_2eproto::scc_info_Timestamp.base,
-      &protobuf_foxglove_2fPoint2_2eproto::scc_info_Point2.base,
-      &protobuf_foxglove_2fColor_2eproto::scc_info_Color.base,}};
-
-void InitDefaults() {
-  ::google::protobuf::internal::InitSCC(&scc_info_PointsAnnotation.base);
-}
-
-::google::protobuf::Metadata file_level_metadata[1];
-const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[1];
-
-const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_foxglove_2fPointsAnnotation_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::PointsAnnotation, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::PointsAnnotation, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::PointsAnnotation, timestamp_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::PointsAnnotation, type_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::PointsAnnotation, points_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::PointsAnnotation, outline_color_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::PointsAnnotation, outline_colors_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::PointsAnnotation, fill_color_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::PointsAnnotation, thickness_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::foxglove::PointsAnnotation, _impl_.timestamp_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::PointsAnnotation, _impl_.type_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::PointsAnnotation, _impl_.points_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::PointsAnnotation, _impl_.outline_color_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::PointsAnnotation, _impl_.outline_colors_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::PointsAnnotation, _impl_.fill_color_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::PointsAnnotation, _impl_.thickness_),
 };
-static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::foxglove::PointsAnnotation)},
-};
-
-static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::foxglove::_PointsAnnotation_default_instance_),
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::foxglove::PointsAnnotation)},
 };
 
-void protobuf_AssignDescriptors() {
-  AddDescriptors();
-  AssignDescriptors(
-      "foxglove/PointsAnnotation.proto", schemas, file_default_instances, TableStruct::offsets,
-      file_level_metadata, file_level_enum_descriptors, NULL);
+static const ::_pb::Message* const file_default_instances[] = {
+  &::foxglove::_PointsAnnotation_default_instance_._instance,
+};
+
+const char descriptor_table_protodef_foxglove_2fPointsAnnotation_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n\037foxglove/PointsAnnotation.proto\022\010foxgl"
+  "ove\032\024foxglove/Color.proto\032\025foxglove/Poin"
+  "t2.proto\032\037google/protobuf/timestamp.prot"
+  "o\"\352\002\n\020PointsAnnotation\022-\n\ttimestamp\030\001 \001("
+  "\0132\032.google.protobuf.Timestamp\022-\n\004type\030\002 "
+  "\001(\0162\037.foxglove.PointsAnnotation.Type\022 \n\006"
+  "points\030\003 \003(\0132\020.foxglove.Point2\022&\n\routlin"
+  "e_color\030\004 \001(\0132\017.foxglove.Color\022\'\n\016outlin"
+  "e_colors\030\005 \003(\0132\017.foxglove.Color\022#\n\nfill_"
+  "color\030\006 \001(\0132\017.foxglove.Color\022\021\n\tthicknes"
+  "s\030\007 \001(\001\"M\n\004Type\022\013\n\007UNKNOWN\020\000\022\n\n\006POINTS\020\001"
+  "\022\r\n\tLINE_LOOP\020\002\022\016\n\nLINE_STRIP\020\003\022\r\n\tLINE_"
+  "LIST\020\004b\006proto3"
+  ;
+static const ::_pbi::DescriptorTable* const descriptor_table_foxglove_2fPointsAnnotation_2eproto_deps[3] = {
+  &::descriptor_table_foxglove_2fColor_2eproto,
+  &::descriptor_table_foxglove_2fPoint2_2eproto,
+  &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
+};
+static ::_pbi::once_flag descriptor_table_foxglove_2fPointsAnnotation_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_foxglove_2fPointsAnnotation_2eproto = {
+    false, false, 494, descriptor_table_protodef_foxglove_2fPointsAnnotation_2eproto,
+    "foxglove/PointsAnnotation.proto",
+    &descriptor_table_foxglove_2fPointsAnnotation_2eproto_once, descriptor_table_foxglove_2fPointsAnnotation_2eproto_deps, 3, 1,
+    schemas, file_default_instances, TableStruct_foxglove_2fPointsAnnotation_2eproto::offsets,
+    file_level_metadata_foxglove_2fPointsAnnotation_2eproto, file_level_enum_descriptors_foxglove_2fPointsAnnotation_2eproto,
+    file_level_service_descriptors_foxglove_2fPointsAnnotation_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_foxglove_2fPointsAnnotation_2eproto_getter() {
+  return &descriptor_table_foxglove_2fPointsAnnotation_2eproto;
 }
 
-void protobuf_AssignDescriptorsOnce() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, protobuf_AssignDescriptors);
-}
-
-void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
-void protobuf_RegisterTypes(const ::std::string&) {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 1);
-}
-
-void AddDescriptorsImpl() {
-  InitDefaults();
-  static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\037foxglove/PointsAnnotation.proto\022\010foxgl"
-      "ove\032\024foxglove/Color.proto\032\025foxglove/Poin"
-      "t2.proto\032\037google/protobuf/timestamp.prot"
-      "o\"\352\002\n\020PointsAnnotation\022-\n\ttimestamp\030\001 \001("
-      "\0132\032.google.protobuf.Timestamp\022-\n\004type\030\002 "
-      "\001(\0162\037.foxglove.PointsAnnotation.Type\022 \n\006"
-      "points\030\003 \003(\0132\020.foxglove.Point2\022&\n\routlin"
-      "e_color\030\004 \001(\0132\017.foxglove.Color\022\'\n\016outlin"
-      "e_colors\030\005 \003(\0132\017.foxglove.Color\022#\n\nfill_"
-      "color\030\006 \001(\0132\017.foxglove.Color\022\021\n\tthicknes"
-      "s\030\007 \001(\001\"M\n\004Type\022\013\n\007UNKNOWN\020\000\022\n\n\006POINTS\020\001"
-      "\022\r\n\tLINE_LOOP\020\002\022\016\n\nLINE_STRIP\020\003\022\r\n\tLINE_"
-      "LIST\020\004b\006proto3"
-  };
-  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 494);
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
-    "foxglove/PointsAnnotation.proto", &protobuf_RegisterTypes);
-  ::protobuf_foxglove_2fColor_2eproto::AddDescriptors();
-  ::protobuf_foxglove_2fPoint2_2eproto::AddDescriptors();
-  ::protobuf_google_2fprotobuf_2ftimestamp_2eproto::AddDescriptors();
-}
-
-void AddDescriptors() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, AddDescriptorsImpl);
-}
-// Force AddDescriptors() to be called at dynamic initialization time.
-struct StaticDescriptorInitializer {
-  StaticDescriptorInitializer() {
-    AddDescriptors();
-  }
-} static_descriptor_initializer;
-}  // namespace protobuf_foxglove_2fPointsAnnotation_2eproto
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_foxglove_2fPointsAnnotation_2eproto(&descriptor_table_foxglove_2fPointsAnnotation_2eproto);
 namespace foxglove {
-const ::google::protobuf::EnumDescriptor* PointsAnnotation_Type_descriptor() {
-  protobuf_foxglove_2fPointsAnnotation_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_foxglove_2fPointsAnnotation_2eproto::file_level_enum_descriptors[0];
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* PointsAnnotation_Type_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_foxglove_2fPointsAnnotation_2eproto);
+  return file_level_enum_descriptors_foxglove_2fPointsAnnotation_2eproto[0];
 }
 bool PointsAnnotation_Type_IsValid(int value) {
   switch (value) {
@@ -155,389 +121,320 @@ bool PointsAnnotation_Type_IsValid(int value) {
   }
 }
 
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const PointsAnnotation_Type PointsAnnotation::UNKNOWN;
-const PointsAnnotation_Type PointsAnnotation::POINTS;
-const PointsAnnotation_Type PointsAnnotation::LINE_LOOP;
-const PointsAnnotation_Type PointsAnnotation::LINE_STRIP;
-const PointsAnnotation_Type PointsAnnotation::LINE_LIST;
-const PointsAnnotation_Type PointsAnnotation::Type_MIN;
-const PointsAnnotation_Type PointsAnnotation::Type_MAX;
-const int PointsAnnotation::Type_ARRAYSIZE;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+#if (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
+constexpr PointsAnnotation_Type PointsAnnotation::UNKNOWN;
+constexpr PointsAnnotation_Type PointsAnnotation::POINTS;
+constexpr PointsAnnotation_Type PointsAnnotation::LINE_LOOP;
+constexpr PointsAnnotation_Type PointsAnnotation::LINE_STRIP;
+constexpr PointsAnnotation_Type PointsAnnotation::LINE_LIST;
+constexpr PointsAnnotation_Type PointsAnnotation::Type_MIN;
+constexpr PointsAnnotation_Type PointsAnnotation::Type_MAX;
+constexpr int PointsAnnotation::Type_ARRAYSIZE;
+#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || (_MSC_VER >= 1900 && _MSC_VER < 1912))
 
 // ===================================================================
 
-void PointsAnnotation::InitAsDefaultInstance() {
-  ::foxglove::_PointsAnnotation_default_instance_._instance.get_mutable()->timestamp_ = const_cast< ::google::protobuf::Timestamp*>(
-      ::google::protobuf::Timestamp::internal_default_instance());
-  ::foxglove::_PointsAnnotation_default_instance_._instance.get_mutable()->outline_color_ = const_cast< ::foxglove::Color*>(
-      ::foxglove::Color::internal_default_instance());
-  ::foxglove::_PointsAnnotation_default_instance_._instance.get_mutable()->fill_color_ = const_cast< ::foxglove::Color*>(
-      ::foxglove::Color::internal_default_instance());
+class PointsAnnotation::_Internal {
+ public:
+  static const ::PROTOBUF_NAMESPACE_ID::Timestamp& timestamp(const PointsAnnotation* msg);
+  static const ::foxglove::Color& outline_color(const PointsAnnotation* msg);
+  static const ::foxglove::Color& fill_color(const PointsAnnotation* msg);
+};
+
+const ::PROTOBUF_NAMESPACE_ID::Timestamp&
+PointsAnnotation::_Internal::timestamp(const PointsAnnotation* msg) {
+  return *msg->_impl_.timestamp_;
+}
+const ::foxglove::Color&
+PointsAnnotation::_Internal::outline_color(const PointsAnnotation* msg) {
+  return *msg->_impl_.outline_color_;
+}
+const ::foxglove::Color&
+PointsAnnotation::_Internal::fill_color(const PointsAnnotation* msg) {
+  return *msg->_impl_.fill_color_;
 }
 void PointsAnnotation::clear_timestamp() {
-  if (GetArenaNoVirtual() == NULL && timestamp_ != NULL) {
-    delete timestamp_;
+  if (GetArenaForAllocation() == nullptr && _impl_.timestamp_ != nullptr) {
+    delete _impl_.timestamp_;
   }
-  timestamp_ = NULL;
+  _impl_.timestamp_ = nullptr;
 }
 void PointsAnnotation::clear_points() {
-  points_.Clear();
+  _impl_.points_.Clear();
 }
 void PointsAnnotation::clear_outline_color() {
-  if (GetArenaNoVirtual() == NULL && outline_color_ != NULL) {
-    delete outline_color_;
+  if (GetArenaForAllocation() == nullptr && _impl_.outline_color_ != nullptr) {
+    delete _impl_.outline_color_;
   }
-  outline_color_ = NULL;
+  _impl_.outline_color_ = nullptr;
 }
 void PointsAnnotation::clear_outline_colors() {
-  outline_colors_.Clear();
+  _impl_.outline_colors_.Clear();
 }
 void PointsAnnotation::clear_fill_color() {
-  if (GetArenaNoVirtual() == NULL && fill_color_ != NULL) {
-    delete fill_color_;
+  if (GetArenaForAllocation() == nullptr && _impl_.fill_color_ != nullptr) {
+    delete _impl_.fill_color_;
   }
-  fill_color_ = NULL;
+  _impl_.fill_color_ = nullptr;
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int PointsAnnotation::kTimestampFieldNumber;
-const int PointsAnnotation::kTypeFieldNumber;
-const int PointsAnnotation::kPointsFieldNumber;
-const int PointsAnnotation::kOutlineColorFieldNumber;
-const int PointsAnnotation::kOutlineColorsFieldNumber;
-const int PointsAnnotation::kFillColorFieldNumber;
-const int PointsAnnotation::kThicknessFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-PointsAnnotation::PointsAnnotation()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_foxglove_2fPointsAnnotation_2eproto::scc_info_PointsAnnotation.base);
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:foxglove.PointsAnnotation)
+PointsAnnotation::PointsAnnotation(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:foxglove.PointsAnnotation)
 }
 PointsAnnotation::PointsAnnotation(const PointsAnnotation& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      points_(from.points_),
-      outline_colors_(from.outline_colors_) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_timestamp()) {
-    timestamp_ = new ::google::protobuf::Timestamp(*from.timestamp_);
-  } else {
-    timestamp_ = NULL;
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  PointsAnnotation* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.points_){from._impl_.points_}
+    , decltype(_impl_.outline_colors_){from._impl_.outline_colors_}
+    , decltype(_impl_.timestamp_){nullptr}
+    , decltype(_impl_.outline_color_){nullptr}
+    , decltype(_impl_.fill_color_){nullptr}
+    , decltype(_impl_.thickness_){}
+    , decltype(_impl_.type_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_timestamp()) {
+    _this->_impl_.timestamp_ = new ::PROTOBUF_NAMESPACE_ID::Timestamp(*from._impl_.timestamp_);
   }
-  if (from.has_outline_color()) {
-    outline_color_ = new ::foxglove::Color(*from.outline_color_);
-  } else {
-    outline_color_ = NULL;
+  if (from._internal_has_outline_color()) {
+    _this->_impl_.outline_color_ = new ::foxglove::Color(*from._impl_.outline_color_);
   }
-  if (from.has_fill_color()) {
-    fill_color_ = new ::foxglove::Color(*from.fill_color_);
-  } else {
-    fill_color_ = NULL;
+  if (from._internal_has_fill_color()) {
+    _this->_impl_.fill_color_ = new ::foxglove::Color(*from._impl_.fill_color_);
   }
-  ::memcpy(&thickness_, &from.thickness_,
-    static_cast<size_t>(reinterpret_cast<char*>(&type_) -
-    reinterpret_cast<char*>(&thickness_)) + sizeof(type_));
+  ::memcpy(&_impl_.thickness_, &from._impl_.thickness_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.type_) -
+    reinterpret_cast<char*>(&_impl_.thickness_)) + sizeof(_impl_.type_));
   // @@protoc_insertion_point(copy_constructor:foxglove.PointsAnnotation)
 }
 
-void PointsAnnotation::SharedCtor() {
-  ::memset(&timestamp_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&type_) -
-      reinterpret_cast<char*>(&timestamp_)) + sizeof(type_));
+inline void PointsAnnotation::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.points_){arena}
+    , decltype(_impl_.outline_colors_){arena}
+    , decltype(_impl_.timestamp_){nullptr}
+    , decltype(_impl_.outline_color_){nullptr}
+    , decltype(_impl_.fill_color_){nullptr}
+    , decltype(_impl_.thickness_){0}
+    , decltype(_impl_.type_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 PointsAnnotation::~PointsAnnotation() {
   // @@protoc_insertion_point(destructor:foxglove.PointsAnnotation)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
 
-void PointsAnnotation::SharedDtor() {
-  if (this != internal_default_instance()) delete timestamp_;
-  if (this != internal_default_instance()) delete outline_color_;
-  if (this != internal_default_instance()) delete fill_color_;
+inline void PointsAnnotation::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.points_.~RepeatedPtrField();
+  _impl_.outline_colors_.~RepeatedPtrField();
+  if (this != internal_default_instance()) delete _impl_.timestamp_;
+  if (this != internal_default_instance()) delete _impl_.outline_color_;
+  if (this != internal_default_instance()) delete _impl_.fill_color_;
 }
 
 void PointsAnnotation::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* PointsAnnotation::descriptor() {
-  ::protobuf_foxglove_2fPointsAnnotation_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_foxglove_2fPointsAnnotation_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const PointsAnnotation& PointsAnnotation::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_foxglove_2fPointsAnnotation_2eproto::scc_info_PointsAnnotation.base);
-  return *internal_default_instance();
-}
-
 
 void PointsAnnotation::Clear() {
 // @@protoc_insertion_point(message_clear_start:foxglove.PointsAnnotation)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  points_.Clear();
-  outline_colors_.Clear();
-  if (GetArenaNoVirtual() == NULL && timestamp_ != NULL) {
-    delete timestamp_;
+  _impl_.points_.Clear();
+  _impl_.outline_colors_.Clear();
+  if (GetArenaForAllocation() == nullptr && _impl_.timestamp_ != nullptr) {
+    delete _impl_.timestamp_;
   }
-  timestamp_ = NULL;
-  if (GetArenaNoVirtual() == NULL && outline_color_ != NULL) {
-    delete outline_color_;
+  _impl_.timestamp_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.outline_color_ != nullptr) {
+    delete _impl_.outline_color_;
   }
-  outline_color_ = NULL;
-  if (GetArenaNoVirtual() == NULL && fill_color_ != NULL) {
-    delete fill_color_;
+  _impl_.outline_color_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.fill_color_ != nullptr) {
+    delete _impl_.fill_color_;
   }
-  fill_color_ = NULL;
-  ::memset(&thickness_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&type_) -
-      reinterpret_cast<char*>(&thickness_)) + sizeof(type_));
-  _internal_metadata_.Clear();
+  _impl_.fill_color_ = nullptr;
+  ::memset(&_impl_.thickness_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.type_) -
+      reinterpret_cast<char*>(&_impl_.thickness_)) + sizeof(_impl_.type_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-bool PointsAnnotation::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:foxglove.PointsAnnotation)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+const char* PointsAnnotation::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
       // .google.protobuf.Timestamp timestamp = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_timestamp()));
-        } else {
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_timestamp(), ptr);
+          CHK_(ptr);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // .foxglove.PointsAnnotation.Type type = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-          int value;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_type(static_cast< ::foxglove::PointsAnnotation_Type >(value));
-        } else {
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_type(static_cast<::foxglove::PointsAnnotation_Type>(val));
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // repeated .foxglove.Point2 points = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-                input, add_points()));
-        } else {
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_points(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // .foxglove.Color outline_color = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_outline_color()));
-        } else {
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_outline_color(), ptr);
+          CHK_(ptr);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // repeated .foxglove.Color outline_colors = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-                input, add_outline_colors()));
-        } else {
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_outline_colors(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<42>(ptr));
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // .foxglove.Color fill_color = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_fill_color()));
-        } else {
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
+          ptr = ctx->ParseMessage(_internal_mutable_fill_color(), ptr);
+          CHK_(ptr);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // double thickness = 7;
-      case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(57u /* 57 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &thickness_)));
-        } else {
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 57)) {
+          _impl_.thickness_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
     }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:foxglove.PointsAnnotation)
-  return true;
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:foxglove.PointsAnnotation)
-  return false;
-#undef DO_
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-void PointsAnnotation::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:foxglove.PointsAnnotation)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .google.protobuf.Timestamp timestamp = 1;
-  if (this->has_timestamp()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, this->_internal_timestamp(), output);
-  }
-
-  // .foxglove.PointsAnnotation.Type type = 2;
-  if (this->type() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      2, this->type(), output);
-  }
-
-  // repeated .foxglove.Point2 points = 3;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->points_size()); i < n; i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3,
-      this->points(static_cast<int>(i)),
-      output);
-  }
-
-  // .foxglove.Color outline_color = 4;
-  if (this->has_outline_color()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, this->_internal_outline_color(), output);
-  }
-
-  // repeated .foxglove.Color outline_colors = 5;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->outline_colors_size()); i < n; i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      5,
-      this->outline_colors(static_cast<int>(i)),
-      output);
-  }
-
-  // .foxglove.Color fill_color = 6;
-  if (this->has_fill_color()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      6, this->_internal_fill_color(), output);
-  }
-
-  // double thickness = 7;
-  if (this->thickness() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(7, this->thickness(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:foxglove.PointsAnnotation)
-}
-
-::google::protobuf::uint8* PointsAnnotation::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+uint8_t* PointsAnnotation::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:foxglove.PointsAnnotation)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .google.protobuf.Timestamp timestamp = 1;
-  if (this->has_timestamp()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, this->_internal_timestamp(), deterministic, target);
+  if (this->_internal_has_timestamp()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::timestamp(this),
+        _Internal::timestamp(this).GetCachedSize(), target, stream);
   }
 
   // .foxglove.PointsAnnotation.Type type = 2;
-  if (this->type() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      2, this->type(), target);
+  if (this->_internal_type() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      2, this->_internal_type(), target);
   }
 
   // repeated .foxglove.Point2 points = 3;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->points_size()); i < n; i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, this->points(static_cast<int>(i)), deterministic, target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_points_size()); i < n; i++) {
+    const auto& repfield = this->_internal_points(i);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(3, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   // .foxglove.Color outline_color = 4;
-  if (this->has_outline_color()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        4, this->_internal_outline_color(), deterministic, target);
+  if (this->_internal_has_outline_color()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(4, _Internal::outline_color(this),
+        _Internal::outline_color(this).GetCachedSize(), target, stream);
   }
 
   // repeated .foxglove.Color outline_colors = 5;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->outline_colors_size()); i < n; i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        5, this->outline_colors(static_cast<int>(i)), deterministic, target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_outline_colors_size()); i < n; i++) {
+    const auto& repfield = this->_internal_outline_colors(i);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        InternalWriteMessage(5, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   // .foxglove.Color fill_color = 6;
-  if (this->has_fill_color()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        6, this->_internal_fill_color(), deterministic, target);
+  if (this->_internal_has_fill_color()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(6, _Internal::fill_color(this),
+        _Internal::fill_color(this).GetCachedSize(), target, stream);
   }
 
   // double thickness = 7;
-  if (this->thickness() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(7, this->thickness(), target);
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_thickness = this->_internal_thickness();
+  uint64_t raw_thickness;
+  memcpy(&raw_thickness, &tmp_thickness, sizeof(tmp_thickness));
+  if (raw_thickness != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(7, this->_internal_thickness(), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:foxglove.PointsAnnotation)
   return target;
@@ -547,116 +444,103 @@ size_t PointsAnnotation::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:foxglove.PointsAnnotation)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // repeated .foxglove.Point2 points = 3;
-  {
-    unsigned int count = static_cast<unsigned int>(this->points_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          this->points(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_points_size();
+  for (const auto& msg : this->_impl_.points_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // repeated .foxglove.Color outline_colors = 5;
-  {
-    unsigned int count = static_cast<unsigned int>(this->outline_colors_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          this->outline_colors(static_cast<int>(i)));
-    }
+  total_size += 1UL * this->_internal_outline_colors_size();
+  for (const auto& msg : this->_impl_.outline_colors_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // .google.protobuf.Timestamp timestamp = 1;
-  if (this->has_timestamp()) {
+  if (this->_internal_has_timestamp()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *timestamp_);
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.timestamp_);
   }
 
   // .foxglove.Color outline_color = 4;
-  if (this->has_outline_color()) {
+  if (this->_internal_has_outline_color()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *outline_color_);
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.outline_color_);
   }
 
   // .foxglove.Color fill_color = 6;
-  if (this->has_fill_color()) {
+  if (this->_internal_has_fill_color()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *fill_color_);
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.fill_color_);
   }
 
   // double thickness = 7;
-  if (this->thickness() != 0) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_thickness = this->_internal_thickness();
+  uint64_t raw_thickness;
+  memcpy(&raw_thickness, &tmp_thickness, sizeof(tmp_thickness));
+  if (raw_thickness != 0) {
     total_size += 1 + 8;
   }
 
   // .foxglove.PointsAnnotation.Type type = 2;
-  if (this->type() != 0) {
+  if (this->_internal_type() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->type());
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_type());
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void PointsAnnotation::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:foxglove.PointsAnnotation)
-  GOOGLE_DCHECK_NE(&from, this);
-  const PointsAnnotation* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const PointsAnnotation>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:foxglove.PointsAnnotation)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:foxglove.PointsAnnotation)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData PointsAnnotation::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    PointsAnnotation::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*PointsAnnotation::GetClassData() const { return &_class_data_; }
 
-void PointsAnnotation::MergeFrom(const PointsAnnotation& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:foxglove.PointsAnnotation)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+
+void PointsAnnotation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<PointsAnnotation*>(&to_msg);
+  auto& from = static_cast<const PointsAnnotation&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:foxglove.PointsAnnotation)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  points_.MergeFrom(from.points_);
-  outline_colors_.MergeFrom(from.outline_colors_);
-  if (from.has_timestamp()) {
-    mutable_timestamp()->::google::protobuf::Timestamp::MergeFrom(from.timestamp());
+  _this->_impl_.points_.MergeFrom(from._impl_.points_);
+  _this->_impl_.outline_colors_.MergeFrom(from._impl_.outline_colors_);
+  if (from._internal_has_timestamp()) {
+    _this->_internal_mutable_timestamp()->::PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(
+        from._internal_timestamp());
   }
-  if (from.has_outline_color()) {
-    mutable_outline_color()->::foxglove::Color::MergeFrom(from.outline_color());
+  if (from._internal_has_outline_color()) {
+    _this->_internal_mutable_outline_color()->::foxglove::Color::MergeFrom(
+        from._internal_outline_color());
   }
-  if (from.has_fill_color()) {
-    mutable_fill_color()->::foxglove::Color::MergeFrom(from.fill_color());
+  if (from._internal_has_fill_color()) {
+    _this->_internal_mutable_fill_color()->::foxglove::Color::MergeFrom(
+        from._internal_fill_color());
   }
-  if (from.thickness() != 0) {
-    set_thickness(from.thickness());
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_thickness = from._internal_thickness();
+  uint64_t raw_thickness;
+  memcpy(&raw_thickness, &tmp_thickness, sizeof(tmp_thickness));
+  if (raw_thickness != 0) {
+    _this->_internal_set_thickness(from._internal_thickness());
   }
-  if (from.type() != 0) {
-    set_type(from.type());
+  if (from._internal_type() != 0) {
+    _this->_internal_set_type(from._internal_type());
   }
-}
-
-void PointsAnnotation::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:foxglove.PointsAnnotation)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void PointsAnnotation::CopyFrom(const PointsAnnotation& from) {
@@ -670,36 +554,33 @@ bool PointsAnnotation::IsInitialized() const {
   return true;
 }
 
-void PointsAnnotation::Swap(PointsAnnotation* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void PointsAnnotation::InternalSwap(PointsAnnotation* other) {
   using std::swap;
-  CastToBase(&points_)->InternalSwap(CastToBase(&other->points_));
-  CastToBase(&outline_colors_)->InternalSwap(CastToBase(&other->outline_colors_));
-  swap(timestamp_, other->timestamp_);
-  swap(outline_color_, other->outline_color_);
-  swap(fill_color_, other->fill_color_);
-  swap(thickness_, other->thickness_);
-  swap(type_, other->type_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.points_.InternalSwap(&other->_impl_.points_);
+  _impl_.outline_colors_.InternalSwap(&other->_impl_.outline_colors_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(PointsAnnotation, _impl_.type_)
+      + sizeof(PointsAnnotation::_impl_.type_)
+      - PROTOBUF_FIELD_OFFSET(PointsAnnotation, _impl_.timestamp_)>(
+          reinterpret_cast<char*>(&_impl_.timestamp_),
+          reinterpret_cast<char*>(&other->_impl_.timestamp_));
 }
 
-::google::protobuf::Metadata PointsAnnotation::GetMetadata() const {
-  protobuf_foxglove_2fPointsAnnotation_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_foxglove_2fPointsAnnotation_2eproto::file_level_metadata[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata PointsAnnotation::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_foxglove_2fPointsAnnotation_2eproto_getter, &descriptor_table_foxglove_2fPointsAnnotation_2eproto_once,
+      file_level_metadata_foxglove_2fPointsAnnotation_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace foxglove
-namespace google {
-namespace protobuf {
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::foxglove::PointsAnnotation* Arena::CreateMaybeMessage< ::foxglove::PointsAnnotation >(Arena* arena) {
-  return Arena::CreateInternal< ::foxglove::PointsAnnotation >(arena);
+PROTOBUF_NAMESPACE_OPEN
+template<> PROTOBUF_NOINLINE ::foxglove::PointsAnnotation*
+Arena::CreateMaybeMessage< ::foxglove::PointsAnnotation >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::foxglove::PointsAnnotation >(arena);
 }
-}  // namespace protobuf
-}  // namespace google
+PROTOBUF_NAMESPACE_CLOSE
 
 // @@protoc_insertion_point(global_scope)
+#include <google/protobuf/port_undef.inc>

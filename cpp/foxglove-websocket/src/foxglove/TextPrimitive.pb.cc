@@ -5,452 +5,358 @@
 
 #include <algorithm>
 
-#include <google/protobuf/stubs/common.h>
-#include <google/protobuf/stubs/port.h>
 #include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/wire_format_lite_inl.h>
+#include <google/protobuf/extension_set.h>
+#include <google/protobuf/wire_format_lite.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
+#include <google/protobuf/port_def.inc>
 
-namespace protobuf_foxglove_2fColor_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_foxglove_2fColor_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Color;
-}  // namespace protobuf_foxglove_2fColor_2eproto
-namespace protobuf_foxglove_2fPose_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_foxglove_2fPose_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_Pose;
-}  // namespace protobuf_foxglove_2fPose_2eproto
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace foxglove {
-class TextPrimitiveDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<TextPrimitive>
-      _instance;
-} _TextPrimitive_default_instance_;
+PROTOBUF_CONSTEXPR TextPrimitive::TextPrimitive(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.text_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.pose_)*/nullptr
+  , /*decltype(_impl_.color_)*/nullptr
+  , /*decltype(_impl_.font_size_)*/0
+  , /*decltype(_impl_.billboard_)*/false
+  , /*decltype(_impl_.scale_invariant_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct TextPrimitiveDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR TextPrimitiveDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~TextPrimitiveDefaultTypeInternal() {}
+  union {
+    TextPrimitive _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 TextPrimitiveDefaultTypeInternal _TextPrimitive_default_instance_;
 }  // namespace foxglove
-namespace protobuf_foxglove_2fTextPrimitive_2eproto {
-static void InitDefaultsTextPrimitive() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_foxglove_2fTextPrimitive_2eproto[1];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_foxglove_2fTextPrimitive_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_foxglove_2fTextPrimitive_2eproto = nullptr;
 
-  {
-    void* ptr = &::foxglove::_TextPrimitive_default_instance_;
-    new (ptr) ::foxglove::TextPrimitive();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::foxglove::TextPrimitive::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<2> scc_info_TextPrimitive =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsTextPrimitive}, {
-      &protobuf_foxglove_2fPose_2eproto::scc_info_Pose.base,
-      &protobuf_foxglove_2fColor_2eproto::scc_info_Color.base,}};
-
-void InitDefaults() {
-  ::google::protobuf::internal::InitSCC(&scc_info_TextPrimitive.base);
-}
-
-::google::protobuf::Metadata file_level_metadata[1];
-
-const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_foxglove_2fTextPrimitive_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::TextPrimitive, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::TextPrimitive, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::TextPrimitive, pose_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::TextPrimitive, billboard_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::TextPrimitive, font_size_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::TextPrimitive, scale_invariant_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::TextPrimitive, color_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::foxglove::TextPrimitive, text_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::foxglove::TextPrimitive, _impl_.pose_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::TextPrimitive, _impl_.billboard_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::TextPrimitive, _impl_.font_size_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::TextPrimitive, _impl_.scale_invariant_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::TextPrimitive, _impl_.color_),
+  PROTOBUF_FIELD_OFFSET(::foxglove::TextPrimitive, _impl_.text_),
 };
-static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::foxglove::TextPrimitive)},
-};
-
-static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::foxglove::_TextPrimitive_default_instance_),
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::foxglove::TextPrimitive)},
 };
 
-void protobuf_AssignDescriptors() {
-  AddDescriptors();
-  AssignDescriptors(
-      "foxglove/TextPrimitive.proto", schemas, file_default_instances, TableStruct::offsets,
-      file_level_metadata, NULL, NULL);
+static const ::_pb::Message* const file_default_instances[] = {
+  &::foxglove::_TextPrimitive_default_instance_._instance,
+};
+
+const char descriptor_table_protodef_foxglove_2fTextPrimitive_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
+  "\n\034foxglove/TextPrimitive.proto\022\010foxglove"
+  "\032\024foxglove/Color.proto\032\023foxglove/Pose.pr"
+  "oto\"\232\001\n\rTextPrimitive\022\034\n\004pose\030\001 \001(\0132\016.fo"
+  "xglove.Pose\022\021\n\tbillboard\030\002 \001(\010\022\021\n\tfont_s"
+  "ize\030\003 \001(\001\022\027\n\017scale_invariant\030\004 \001(\010\022\036\n\005co"
+  "lor\030\005 \001(\0132\017.foxglove.Color\022\014\n\004text\030\006 \001(\t"
+  "b\006proto3"
+  ;
+static const ::_pbi::DescriptorTable* const descriptor_table_foxglove_2fTextPrimitive_2eproto_deps[2] = {
+  &::descriptor_table_foxglove_2fColor_2eproto,
+  &::descriptor_table_foxglove_2fPose_2eproto,
+};
+static ::_pbi::once_flag descriptor_table_foxglove_2fTextPrimitive_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_foxglove_2fTextPrimitive_2eproto = {
+    false, false, 248, descriptor_table_protodef_foxglove_2fTextPrimitive_2eproto,
+    "foxglove/TextPrimitive.proto",
+    &descriptor_table_foxglove_2fTextPrimitive_2eproto_once, descriptor_table_foxglove_2fTextPrimitive_2eproto_deps, 2, 1,
+    schemas, file_default_instances, TableStruct_foxglove_2fTextPrimitive_2eproto::offsets,
+    file_level_metadata_foxglove_2fTextPrimitive_2eproto, file_level_enum_descriptors_foxglove_2fTextPrimitive_2eproto,
+    file_level_service_descriptors_foxglove_2fTextPrimitive_2eproto,
+};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_foxglove_2fTextPrimitive_2eproto_getter() {
+  return &descriptor_table_foxglove_2fTextPrimitive_2eproto;
 }
 
-void protobuf_AssignDescriptorsOnce() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, protobuf_AssignDescriptors);
-}
-
-void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
-void protobuf_RegisterTypes(const ::std::string&) {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 1);
-}
-
-void AddDescriptorsImpl() {
-  InitDefaults();
-  static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\034foxglove/TextPrimitive.proto\022\010foxglove"
-      "\032\024foxglove/Color.proto\032\023foxglove/Pose.pr"
-      "oto\"\232\001\n\rTextPrimitive\022\034\n\004pose\030\001 \001(\0132\016.fo"
-      "xglove.Pose\022\021\n\tbillboard\030\002 \001(\010\022\021\n\tfont_s"
-      "ize\030\003 \001(\001\022\027\n\017scale_invariant\030\004 \001(\010\022\036\n\005co"
-      "lor\030\005 \001(\0132\017.foxglove.Color\022\014\n\004text\030\006 \001(\t"
-      "b\006proto3"
-  };
-  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 248);
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
-    "foxglove/TextPrimitive.proto", &protobuf_RegisterTypes);
-  ::protobuf_foxglove_2fColor_2eproto::AddDescriptors();
-  ::protobuf_foxglove_2fPose_2eproto::AddDescriptors();
-}
-
-void AddDescriptors() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, AddDescriptorsImpl);
-}
-// Force AddDescriptors() to be called at dynamic initialization time.
-struct StaticDescriptorInitializer {
-  StaticDescriptorInitializer() {
-    AddDescriptors();
-  }
-} static_descriptor_initializer;
-}  // namespace protobuf_foxglove_2fTextPrimitive_2eproto
+// Force running AddDescriptors() at dynamic initialization time.
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_foxglove_2fTextPrimitive_2eproto(&descriptor_table_foxglove_2fTextPrimitive_2eproto);
 namespace foxglove {
 
 // ===================================================================
 
-void TextPrimitive::InitAsDefaultInstance() {
-  ::foxglove::_TextPrimitive_default_instance_._instance.get_mutable()->pose_ = const_cast< ::foxglove::Pose*>(
-      ::foxglove::Pose::internal_default_instance());
-  ::foxglove::_TextPrimitive_default_instance_._instance.get_mutable()->color_ = const_cast< ::foxglove::Color*>(
-      ::foxglove::Color::internal_default_instance());
+class TextPrimitive::_Internal {
+ public:
+  static const ::foxglove::Pose& pose(const TextPrimitive* msg);
+  static const ::foxglove::Color& color(const TextPrimitive* msg);
+};
+
+const ::foxglove::Pose&
+TextPrimitive::_Internal::pose(const TextPrimitive* msg) {
+  return *msg->_impl_.pose_;
+}
+const ::foxglove::Color&
+TextPrimitive::_Internal::color(const TextPrimitive* msg) {
+  return *msg->_impl_.color_;
 }
 void TextPrimitive::clear_pose() {
-  if (GetArenaNoVirtual() == NULL && pose_ != NULL) {
-    delete pose_;
+  if (GetArenaForAllocation() == nullptr && _impl_.pose_ != nullptr) {
+    delete _impl_.pose_;
   }
-  pose_ = NULL;
+  _impl_.pose_ = nullptr;
 }
 void TextPrimitive::clear_color() {
-  if (GetArenaNoVirtual() == NULL && color_ != NULL) {
-    delete color_;
+  if (GetArenaForAllocation() == nullptr && _impl_.color_ != nullptr) {
+    delete _impl_.color_;
   }
-  color_ = NULL;
+  _impl_.color_ = nullptr;
 }
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int TextPrimitive::kPoseFieldNumber;
-const int TextPrimitive::kBillboardFieldNumber;
-const int TextPrimitive::kFontSizeFieldNumber;
-const int TextPrimitive::kScaleInvariantFieldNumber;
-const int TextPrimitive::kColorFieldNumber;
-const int TextPrimitive::kTextFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-TextPrimitive::TextPrimitive()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_foxglove_2fTextPrimitive_2eproto::scc_info_TextPrimitive.base);
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:foxglove.TextPrimitive)
+TextPrimitive::TextPrimitive(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:foxglove.TextPrimitive)
 }
 TextPrimitive::TextPrimitive(const TextPrimitive& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  text_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.text().size() > 0) {
-    text_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.text_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  TextPrimitive* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.text_){}
+    , decltype(_impl_.pose_){nullptr}
+    , decltype(_impl_.color_){nullptr}
+    , decltype(_impl_.font_size_){}
+    , decltype(_impl_.billboard_){}
+    , decltype(_impl_.scale_invariant_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.text_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.text_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_text().empty()) {
+    _this->_impl_.text_.Set(from._internal_text(), 
+      _this->GetArenaForAllocation());
   }
-  if (from.has_pose()) {
-    pose_ = new ::foxglove::Pose(*from.pose_);
-  } else {
-    pose_ = NULL;
+  if (from._internal_has_pose()) {
+    _this->_impl_.pose_ = new ::foxglove::Pose(*from._impl_.pose_);
   }
-  if (from.has_color()) {
-    color_ = new ::foxglove::Color(*from.color_);
-  } else {
-    color_ = NULL;
+  if (from._internal_has_color()) {
+    _this->_impl_.color_ = new ::foxglove::Color(*from._impl_.color_);
   }
-  ::memcpy(&font_size_, &from.font_size_,
-    static_cast<size_t>(reinterpret_cast<char*>(&scale_invariant_) -
-    reinterpret_cast<char*>(&font_size_)) + sizeof(scale_invariant_));
+  ::memcpy(&_impl_.font_size_, &from._impl_.font_size_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.scale_invariant_) -
+    reinterpret_cast<char*>(&_impl_.font_size_)) + sizeof(_impl_.scale_invariant_));
   // @@protoc_insertion_point(copy_constructor:foxglove.TextPrimitive)
 }
 
-void TextPrimitive::SharedCtor() {
-  text_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&pose_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&scale_invariant_) -
-      reinterpret_cast<char*>(&pose_)) + sizeof(scale_invariant_));
+inline void TextPrimitive::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.text_){}
+    , decltype(_impl_.pose_){nullptr}
+    , decltype(_impl_.color_){nullptr}
+    , decltype(_impl_.font_size_){0}
+    , decltype(_impl_.billboard_){false}
+    , decltype(_impl_.scale_invariant_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.text_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.text_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 TextPrimitive::~TextPrimitive() {
   // @@protoc_insertion_point(destructor:foxglove.TextPrimitive)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
 }
 
-void TextPrimitive::SharedDtor() {
-  text_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != internal_default_instance()) delete pose_;
-  if (this != internal_default_instance()) delete color_;
+inline void TextPrimitive::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.text_.Destroy();
+  if (this != internal_default_instance()) delete _impl_.pose_;
+  if (this != internal_default_instance()) delete _impl_.color_;
 }
 
 void TextPrimitive::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* TextPrimitive::descriptor() {
-  ::protobuf_foxglove_2fTextPrimitive_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_foxglove_2fTextPrimitive_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const TextPrimitive& TextPrimitive::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_foxglove_2fTextPrimitive_2eproto::scc_info_TextPrimitive.base);
-  return *internal_default_instance();
-}
-
 
 void TextPrimitive::Clear() {
 // @@protoc_insertion_point(message_clear_start:foxglove.TextPrimitive)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  text_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (GetArenaNoVirtual() == NULL && pose_ != NULL) {
-    delete pose_;
+  _impl_.text_.ClearToEmpty();
+  if (GetArenaForAllocation() == nullptr && _impl_.pose_ != nullptr) {
+    delete _impl_.pose_;
   }
-  pose_ = NULL;
-  if (GetArenaNoVirtual() == NULL && color_ != NULL) {
-    delete color_;
+  _impl_.pose_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.color_ != nullptr) {
+    delete _impl_.color_;
   }
-  color_ = NULL;
-  ::memset(&font_size_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&scale_invariant_) -
-      reinterpret_cast<char*>(&font_size_)) + sizeof(scale_invariant_));
-  _internal_metadata_.Clear();
+  _impl_.color_ = nullptr;
+  ::memset(&_impl_.font_size_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.scale_invariant_) -
+      reinterpret_cast<char*>(&_impl_.font_size_)) + sizeof(_impl_.scale_invariant_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-bool TextPrimitive::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:foxglove.TextPrimitive)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+const char* TextPrimitive::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
       // .foxglove.Pose pose = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_pose()));
-        } else {
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_pose(), ptr);
+          CHK_(ptr);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // bool billboard = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &billboard_)));
-        } else {
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.billboard_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // double font_size = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(25u /* 25 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &font_size_)));
-        } else {
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 25)) {
+          _impl_.font_size_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
+          ptr += sizeof(double);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // bool scale_invariant = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &scale_invariant_)));
-        } else {
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          _impl_.scale_invariant_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // .foxglove.Color color = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_color()));
-        } else {
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
+          ptr = ctx->ParseMessage(_internal_mutable_color(), ptr);
+          CHK_(ptr);
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
+        continue;
       // string text = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_text()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->text().data(), static_cast<int>(this->text().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "foxglove.TextPrimitive.text"));
-        } else {
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 50)) {
+          auto str = _internal_mutable_text();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "foxglove.TextPrimitive.text"));
+        } else
           goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
     }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:foxglove.TextPrimitive)
-  return true;
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
 failure:
-  // @@protoc_insertion_point(parse_failure:foxglove.TextPrimitive)
-  return false;
-#undef DO_
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
 }
 
-void TextPrimitive::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:foxglove.TextPrimitive)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .foxglove.Pose pose = 1;
-  if (this->has_pose()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, this->_internal_pose(), output);
-  }
-
-  // bool billboard = 2;
-  if (this->billboard() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->billboard(), output);
-  }
-
-  // double font_size = 3;
-  if (this->font_size() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(3, this->font_size(), output);
-  }
-
-  // bool scale_invariant = 4;
-  if (this->scale_invariant() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(4, this->scale_invariant(), output);
-  }
-
-  // .foxglove.Color color = 5;
-  if (this->has_color()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      5, this->_internal_color(), output);
-  }
-
-  // string text = 6;
-  if (this->text().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->text().data(), static_cast<int>(this->text().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "foxglove.TextPrimitive.text");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      6, this->text(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:foxglove.TextPrimitive)
-}
-
-::google::protobuf::uint8* TextPrimitive::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+uint8_t* TextPrimitive::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:foxglove.TextPrimitive)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .foxglove.Pose pose = 1;
-  if (this->has_pose()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, this->_internal_pose(), deterministic, target);
+  if (this->_internal_has_pose()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, _Internal::pose(this),
+        _Internal::pose(this).GetCachedSize(), target, stream);
   }
 
   // bool billboard = 2;
-  if (this->billboard() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->billboard(), target);
+  if (this->_internal_billboard() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(2, this->_internal_billboard(), target);
   }
 
   // double font_size = 3;
-  if (this->font_size() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(3, this->font_size(), target);
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_font_size = this->_internal_font_size();
+  uint64_t raw_font_size;
+  memcpy(&raw_font_size, &tmp_font_size, sizeof(tmp_font_size));
+  if (raw_font_size != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteDoubleToArray(3, this->_internal_font_size(), target);
   }
 
   // bool scale_invariant = 4;
-  if (this->scale_invariant() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(4, this->scale_invariant(), target);
+  if (this->_internal_scale_invariant() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(4, this->_internal_scale_invariant(), target);
   }
 
   // .foxglove.Color color = 5;
-  if (this->has_color()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        5, this->_internal_color(), deterministic, target);
+  if (this->_internal_has_color()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(5, _Internal::color(this),
+        _Internal::color(this).GetCachedSize(), target, stream);
   }
 
   // string text = 6;
-  if (this->text().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->text().data(), static_cast<int>(this->text().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+  if (!this->_internal_text().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_text().data(), static_cast<int>(this->_internal_text().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "foxglove.TextPrimitive.text");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        6, this->text(), target);
+    target = stream->WriteStringMaybeAliased(
+        6, this->_internal_text(), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:foxglove.TextPrimitive)
   return target;
@@ -460,100 +366,93 @@ size_t TextPrimitive::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:foxglove.TextPrimitive)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // string text = 6;
-  if (this->text().size() > 0) {
+  if (!this->_internal_text().empty()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->text());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_text());
   }
 
   // .foxglove.Pose pose = 1;
-  if (this->has_pose()) {
+  if (this->_internal_has_pose()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *pose_);
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.pose_);
   }
 
   // .foxglove.Color color = 5;
-  if (this->has_color()) {
+  if (this->_internal_has_color()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *color_);
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.color_);
   }
 
   // double font_size = 3;
-  if (this->font_size() != 0) {
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_font_size = this->_internal_font_size();
+  uint64_t raw_font_size;
+  memcpy(&raw_font_size, &tmp_font_size, sizeof(tmp_font_size));
+  if (raw_font_size != 0) {
     total_size += 1 + 8;
   }
 
   // bool billboard = 2;
-  if (this->billboard() != 0) {
+  if (this->_internal_billboard() != 0) {
     total_size += 1 + 1;
   }
 
   // bool scale_invariant = 4;
-  if (this->scale_invariant() != 0) {
+  if (this->_internal_scale_invariant() != 0) {
     total_size += 1 + 1;
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void TextPrimitive::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:foxglove.TextPrimitive)
-  GOOGLE_DCHECK_NE(&from, this);
-  const TextPrimitive* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const TextPrimitive>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:foxglove.TextPrimitive)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:foxglove.TextPrimitive)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData TextPrimitive::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    TextPrimitive::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*TextPrimitive::GetClassData() const { return &_class_data_; }
 
-void TextPrimitive::MergeFrom(const TextPrimitive& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:foxglove.TextPrimitive)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+
+void TextPrimitive::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<TextPrimitive*>(&to_msg);
+  auto& from = static_cast<const TextPrimitive&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:foxglove.TextPrimitive)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.text().size() > 0) {
-
-    text_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.text_);
+  if (!from._internal_text().empty()) {
+    _this->_internal_set_text(from._internal_text());
   }
-  if (from.has_pose()) {
-    mutable_pose()->::foxglove::Pose::MergeFrom(from.pose());
+  if (from._internal_has_pose()) {
+    _this->_internal_mutable_pose()->::foxglove::Pose::MergeFrom(
+        from._internal_pose());
   }
-  if (from.has_color()) {
-    mutable_color()->::foxglove::Color::MergeFrom(from.color());
+  if (from._internal_has_color()) {
+    _this->_internal_mutable_color()->::foxglove::Color::MergeFrom(
+        from._internal_color());
   }
-  if (from.font_size() != 0) {
-    set_font_size(from.font_size());
+  static_assert(sizeof(uint64_t) == sizeof(double), "Code assumes uint64_t and double are the same size.");
+  double tmp_font_size = from._internal_font_size();
+  uint64_t raw_font_size;
+  memcpy(&raw_font_size, &tmp_font_size, sizeof(tmp_font_size));
+  if (raw_font_size != 0) {
+    _this->_internal_set_font_size(from._internal_font_size());
   }
-  if (from.billboard() != 0) {
-    set_billboard(from.billboard());
+  if (from._internal_billboard() != 0) {
+    _this->_internal_set_billboard(from._internal_billboard());
   }
-  if (from.scale_invariant() != 0) {
-    set_scale_invariant(from.scale_invariant());
+  if (from._internal_scale_invariant() != 0) {
+    _this->_internal_set_scale_invariant(from._internal_scale_invariant());
   }
-}
-
-void TextPrimitive::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:foxglove.TextPrimitive)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void TextPrimitive::CopyFrom(const TextPrimitive& from) {
@@ -567,36 +466,37 @@ bool TextPrimitive::IsInitialized() const {
   return true;
 }
 
-void TextPrimitive::Swap(TextPrimitive* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
 void TextPrimitive::InternalSwap(TextPrimitive* other) {
   using std::swap;
-  text_.Swap(&other->text_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  swap(pose_, other->pose_);
-  swap(color_, other->color_);
-  swap(font_size_, other->font_size_);
-  swap(billboard_, other->billboard_);
-  swap(scale_invariant_, other->scale_invariant_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.text_, lhs_arena,
+      &other->_impl_.text_, rhs_arena
+  );
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(TextPrimitive, _impl_.scale_invariant_)
+      + sizeof(TextPrimitive::_impl_.scale_invariant_)
+      - PROTOBUF_FIELD_OFFSET(TextPrimitive, _impl_.pose_)>(
+          reinterpret_cast<char*>(&_impl_.pose_),
+          reinterpret_cast<char*>(&other->_impl_.pose_));
 }
 
-::google::protobuf::Metadata TextPrimitive::GetMetadata() const {
-  protobuf_foxglove_2fTextPrimitive_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_foxglove_2fTextPrimitive_2eproto::file_level_metadata[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata TextPrimitive::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_foxglove_2fTextPrimitive_2eproto_getter, &descriptor_table_foxglove_2fTextPrimitive_2eproto_once,
+      file_level_metadata_foxglove_2fTextPrimitive_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace foxglove
-namespace google {
-namespace protobuf {
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::foxglove::TextPrimitive* Arena::CreateMaybeMessage< ::foxglove::TextPrimitive >(Arena* arena) {
-  return Arena::CreateInternal< ::foxglove::TextPrimitive >(arena);
+PROTOBUF_NAMESPACE_OPEN
+template<> PROTOBUF_NOINLINE ::foxglove::TextPrimitive*
+Arena::CreateMaybeMessage< ::foxglove::TextPrimitive >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::foxglove::TextPrimitive >(arena);
 }
-}  // namespace protobuf
-}  // namespace google
+PROTOBUF_NAMESPACE_CLOSE
 
 // @@protoc_insertion_point(global_scope)
+#include <google/protobuf/port_undef.inc>
